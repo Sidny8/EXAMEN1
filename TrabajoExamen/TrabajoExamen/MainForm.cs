@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace TrabajoExamen
 {
@@ -28,6 +29,31 @@ namespace TrabajoExamen
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
+		}
+		
+		void TxtContraseñaEnter(object sender, EventArgs e)
+		{
+			if(txtUser.Text == "USUARIO")
+			{
+			txtUserio.Text ="";
+			txtUserio.ForeColor=Color.Black;
+			}
+		}
+		
+		void TxtContraseñaLeave(object sender, EventArgs e)
+		{
+			if(txtUsuario.Text == "USUARIO")
+			{
+			txtUsario.Text ="";
+			txtUsuario.ForeColor=Color.Black;
+			}
+		}
+		
+		void BtnAccederClick(object sender, EventArgs e)
+		{
+			if(txtContraseña.Text==123 && txtUsuario.Text =="Admin"){
+				MessageBox.Show("Digamos que cambiio")
+			}
 		}
 	}
 }
