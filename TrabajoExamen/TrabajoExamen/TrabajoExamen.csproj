@@ -47,12 +47,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DetallesEmpleado.cs" />
+    <Compile Include="DetallesEmpleado.Designer.cs">
+      <DependentUpon>DetallesEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Postres.cs" />
+    <Compile Include="Postres.Designer.cs">
+      <DependentUpon>Postres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostresTicket.cs" />
+    <Compile Include="PostresTicket.Designer.cs">
+      <DependentUpon>PostresTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Postres.resx">
+      <DependentUpon>Postres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostresTicket.resx">
+      <DependentUpon>PostresTicket.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
