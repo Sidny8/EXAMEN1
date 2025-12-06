@@ -66,6 +66,8 @@ namespace TrabajoExamen
 			this.txtUsuario.Name = "txtUsuario";
 			this.txtUsuario.Size = new System.Drawing.Size(100, 20);
 			this.txtUsuario.TabIndex = 2;
+			this.txtUsuario.Enter += new System.EventHandler(this.TxtUsuarioEnter);
+			this.txtUsuario.Leave += new System.EventHandler(this.TxtUsuarioLeave);
 			// 
 			// txtContraseña
 			// 

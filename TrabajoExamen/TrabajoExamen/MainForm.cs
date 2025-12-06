@@ -33,26 +33,46 @@ namespace TrabajoExamen
 		
 		void TxtContraseñaEnter(object sender, EventArgs e)
 		{
-			if(txtUser.Text == "USUARIO")
+			if(txtContraseña.Text == "")
 			{
-			txtUserio.Text ="";
-			txtUserio.ForeColor=Color.Black;
+				txtContraseña.Text ="";
+				txtContraseña.ForeColor=Color.Black;
+				txtContraseña.UseSystemPasswordChar=true;
 			}
 		}
 		
 		void TxtContraseñaLeave(object sender, EventArgs e)
 		{
-			if(txtUsuario.Text == "USUARIO")
+			if(txtContraseña.Text == "")
 			{
-			txtUsario.Text ="";
-			txtUsuario.ForeColor=Color.Black;
+				txtContraseña.Text ="";
+				txtContraseña.ForeColor=Color.DimGray;
+				txtContraseña.UseSystemPasswordChar=false;
 			}
 		}
 		
 		void BtnAccederClick(object sender, EventArgs e)
 		{
-			if(txtContraseña.Text==123 && txtUsuario.Text =="Admin"){
-				MessageBox.Show("Digamos que cambiio")
+			if(txtContraseña.Text== "123" && txtUsuario.Text =="Admin"){
+				MessageBox.Show("Digamos que cambio");
+			}
+		}
+		
+		void TxtUsuarioEnter(object sender, EventArgs e)
+		{
+			if(txtUsuario.Text == "USUARIO")
+			{
+				txtUsuario.Text ="";
+				txtUsuario.ForeColor=Color.Black;
+			}
+		}
+		
+		void TxtUsuarioLeave(object sender, EventArgs e)
+		{
+			if(txtUsuario.Text == "USUARIO")
+			{
+				txtUsuario.Text ="";
+				txtUsuario.ForeColor=Color.DimGray;
 			}
 		}
 	}
