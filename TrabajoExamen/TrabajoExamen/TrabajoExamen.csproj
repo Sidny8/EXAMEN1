@@ -47,6 +47,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClaseDeDetalles.cs" />
     <Compile Include="DetallesEmpleado.cs" />
     <Compile Include="DetallesEmpleado.Designer.cs">
       <DependentUpon>DetallesEmpleado.cs</DependentUpon>
@@ -67,6 +68,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DetallesEmpleado.resx">
+      <DependentUpon>DetallesEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Postres.resx">
       <DependentUpon>Postres.cs</DependentUpon>
     </EmbeddedResource>

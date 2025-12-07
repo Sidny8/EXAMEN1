@@ -36,6 +36,7 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.radioButton2 = new System.Windows.Forms.RadioButton();
 			this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -46,24 +47,26 @@ namespace TrabajoExamen
 			this.label4 = new System.Windows.Forms.Label();
 			this.txtPrecio = new System.Windows.Forms.TextBox();
 			this.txtCant = new System.Windows.Forms.TextBox();
-			this.txtTotal = new System.Windows.Forms.TextBox();
 			this.lvProductos = new System.Windows.Forms.ListView();
 			this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
 			this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
 			this.columnHeader3 = new System.Windows.Forms.ColumnHeader();
 			this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
 			this.label5 = new System.Windows.Forms.Label();
-			this.txtSubT = new System.Windows.Forms.TextBox();
-			this.txtDes = new System.Windows.Forms.TextBox();
-			this.txtImpN = new System.Windows.Forms.TextBox();
 			this.txtImpP = new System.Windows.Forms.TextBox();
-			this.txtCam = new System.Windows.Forms.TextBox();
 			this.button1 = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
-			this.button4 = new System.Windows.Forms.Button();
-			this.button5 = new System.Windows.Forms.Button();
+			this.btnAgregar = new System.Windows.Forms.Button();
+			this.btnEliminar = new System.Windows.Forms.Button();
+			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
+			this.lblTotal = new System.Windows.Forms.Label();
+			this.lblimpP = new System.Windows.Forms.Label();
+			this.lblSub = new System.Windows.Forms.Label();
+			this.lblDes = new System.Windows.Forms.Label();
+			this.lblCambio = new System.Windows.Forms.Label();
 			this.groupBox1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupBox1
@@ -85,6 +88,7 @@ namespace TrabajoExamen
 			this.radioButton2.TabStop = true;
 			this.radioButton2.Text = "SALADO";
 			this.radioButton2.UseVisualStyleBackColor = true;
+			this.radioButton2.CheckedChanged += new System.EventHandler(this.RadioButton2CheckedChanged);
 			// 
 			// radioButton1
 			// 
@@ -95,6 +99,7 @@ namespace TrabajoExamen
 			this.radioButton1.TabStop = true;
 			this.radioButton1.Text = "DULCE";
 			this.radioButton1.UseVisualStyleBackColor = true;
+			this.radioButton1.CheckedChanged += new System.EventHandler(this.RadioButton1CheckedChanged);
 			// 
 			// label1
 			// 
@@ -107,10 +112,11 @@ namespace TrabajoExamen
 			// cboProducto
 			// 
 			this.cboProducto.FormattingEnabled = true;
-			this.cboProducto.Location = new System.Drawing.Point(159, 83);
+			this.cboProducto.Location = new System.Drawing.Point(142, 82);
 			this.cboProducto.Name = "cboProducto";
-			this.cboProducto.Size = new System.Drawing.Size(121, 21);
+			this.cboProducto.Size = new System.Drawing.Size(154, 21);
 			this.cboProducto.TabIndex = 2;
+			this.cboProducto.SelectionChangeCommitted += new System.EventHandler(this.CboProductoSelectionChangeCommitted);
 			// 
 			// label2
 			// 
@@ -130,7 +136,7 @@ namespace TrabajoExamen
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(277, 109);
+			this.label4.Location = new System.Drawing.Point(225, 109);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(100, 23);
 			this.label4.TabIndex = 5;
@@ -149,13 +155,7 @@ namespace TrabajoExamen
 			this.txtCant.Name = "txtCant";
 			this.txtCant.Size = new System.Drawing.Size(100, 20);
 			this.txtCant.TabIndex = 7;
-			// 
-			// txtTotal
-			// 
-			this.txtTotal.Location = new System.Drawing.Point(225, 136);
-			this.txtTotal.Name = "txtTotal";
-			this.txtTotal.Size = new System.Drawing.Size(100, 20);
-			this.txtTotal.TabIndex = 8;
+			this.txtCant.TextChanged += new System.EventHandler(this.TxtCantTextChanged);
 			// 
 			// lvProductos
 			// 
@@ -165,9 +165,9 @@ namespace TrabajoExamen
 									this.columnHeader3,
 									this.columnHeader4});
 			this.lvProductos.GridLines = true;
-			this.lvProductos.Location = new System.Drawing.Point(13, 179);
+			this.lvProductos.Location = new System.Drawing.Point(31, 172);
 			this.lvProductos.Name = "lvProductos";
-			this.lvProductos.Size = new System.Drawing.Size(312, 98);
+			this.lvProductos.Size = new System.Drawing.Size(400, 114);
 			this.lvProductos.TabIndex = 9;
 			this.lvProductos.UseCompatibleStateImageBehavior = false;
 			this.lvProductos.View = System.Windows.Forms.View.Details;
@@ -175,19 +175,22 @@ namespace TrabajoExamen
 			// columnHeader1
 			// 
 			this.columnHeader1.Text = "Producto";
-			this.columnHeader1.Width = 120;
+			this.columnHeader1.Width = 148;
 			// 
 			// columnHeader2
 			// 
 			this.columnHeader2.Text = "Precio";
+			this.columnHeader2.Width = 96;
 			// 
 			// columnHeader3
 			// 
 			this.columnHeader3.Text = "Cantidad";
+			this.columnHeader3.Width = 94;
 			// 
 			// columnHeader4
 			// 
 			this.columnHeader4.Text = "Total";
+			this.columnHeader4.Width = 55;
 			// 
 			// label5
 			// 
@@ -197,40 +200,12 @@ namespace TrabajoExamen
 			this.label5.TabIndex = 10;
 			this.label5.Text = "label5";
 			// 
-			// txtSubT
-			// 
-			this.txtSubT.Location = new System.Drawing.Point(49, 292);
-			this.txtSubT.Name = "txtSubT";
-			this.txtSubT.Size = new System.Drawing.Size(100, 20);
-			this.txtSubT.TabIndex = 11;
-			// 
-			// txtDes
-			// 
-			this.txtDes.Location = new System.Drawing.Point(171, 292);
-			this.txtDes.Name = "txtDes";
-			this.txtDes.Size = new System.Drawing.Size(100, 20);
-			this.txtDes.TabIndex = 12;
-			// 
-			// txtImpN
-			// 
-			this.txtImpN.Location = new System.Drawing.Point(291, 292);
-			this.txtImpN.Name = "txtImpN";
-			this.txtImpN.Size = new System.Drawing.Size(47, 20);
-			this.txtImpN.TabIndex = 13;
-			// 
 			// txtImpP
 			// 
-			this.txtImpP.Location = new System.Drawing.Point(291, 319);
+			this.txtImpP.Location = new System.Drawing.Point(383, 318);
 			this.txtImpP.Name = "txtImpP";
-			this.txtImpP.Size = new System.Drawing.Size(47, 20);
+			this.txtImpP.Size = new System.Drawing.Size(60, 20);
 			this.txtImpP.TabIndex = 14;
-			// 
-			// txtCam
-			// 
-			this.txtCam.Location = new System.Drawing.Point(291, 345);
-			this.txtCam.Name = "txtCam";
-			this.txtCam.Size = new System.Drawing.Size(47, 20);
-			this.txtCam.TabIndex = 15;
 			// 
 			// button1
 			// 
@@ -258,43 +233,89 @@ namespace TrabajoExamen
 			this.button3.TabIndex = 18;
 			this.button3.Text = "Imprimir";
 			this.button3.UseVisualStyleBackColor = true;
+			this.button3.Click += new System.EventHandler(this.Button3Click);
 			// 
-			// button4
+			// btnAgregar
 			// 
-			this.button4.Location = new System.Drawing.Point(345, 80);
-			this.button4.Name = "button4";
-			this.button4.Size = new System.Drawing.Size(107, 23);
-			this.button4.TabIndex = 19;
-			this.button4.Text = "Agregar Producto";
-			this.button4.UseVisualStyleBackColor = true;
+			this.btnAgregar.Location = new System.Drawing.Point(345, 80);
+			this.btnAgregar.Name = "btnAgregar";
+			this.btnAgregar.Size = new System.Drawing.Size(107, 23);
+			this.btnAgregar.TabIndex = 19;
+			this.btnAgregar.Text = "Agregar Producto";
+			this.btnAgregar.UseVisualStyleBackColor = true;
+			this.btnAgregar.Click += new System.EventHandler(this.Button4Click);
 			// 
-			// button5
+			// btnEliminar
 			// 
-			this.button5.Location = new System.Drawing.Point(345, 118);
-			this.button5.Name = "button5";
-			this.button5.Size = new System.Drawing.Size(107, 23);
-			this.button5.TabIndex = 20;
-			this.button5.Text = "Eliminar Producto";
-			this.button5.UseVisualStyleBackColor = true;
+			this.btnEliminar.Location = new System.Drawing.Point(345, 118);
+			this.btnEliminar.Name = "btnEliminar";
+			this.btnEliminar.Size = new System.Drawing.Size(107, 23);
+			this.btnEliminar.TabIndex = 20;
+			this.btnEliminar.Text = "Eliminar Producto";
+			this.btnEliminar.UseVisualStyleBackColor = true;
+			// 
+			// erpError
+			// 
+			this.erpError.ContainerControl = this;
+			// 
+			// lblTotal
+			// 
+			this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblTotal.Location = new System.Drawing.Point(225, 133);
+			this.lblTotal.Name = "lblTotal";
+			this.lblTotal.Size = new System.Drawing.Size(100, 23);
+			this.lblTotal.TabIndex = 21;
+			// 
+			// lblimpP
+			// 
+			this.lblimpP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblimpP.Location = new System.Drawing.Point(383, 291);
+			this.lblimpP.Name = "lblimpP";
+			this.lblimpP.Size = new System.Drawing.Size(60, 24);
+			this.lblimpP.TabIndex = 22;
+			// 
+			// lblSub
+			// 
+			this.lblSub.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblSub.Location = new System.Drawing.Point(65, 291);
+			this.lblSub.Name = "lblSub";
+			this.lblSub.Size = new System.Drawing.Size(100, 23);
+			this.lblSub.TabIndex = 23;
+			// 
+			// lblDes
+			// 
+			this.lblDes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblDes.Location = new System.Drawing.Point(225, 291);
+			this.lblDes.Name = "lblDes";
+			this.lblDes.Size = new System.Drawing.Size(100, 23);
+			this.lblDes.TabIndex = 24;
+			// 
+			// lblCambio
+			// 
+			this.lblCambio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblCambio.Location = new System.Drawing.Point(383, 341);
+			this.lblCambio.Name = "lblCambio";
+			this.lblCambio.Size = new System.Drawing.Size(60, 18);
+			this.lblCambio.TabIndex = 25;
 			// 
 			// Postres
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(464, 371);
-			this.Controls.Add(this.button5);
-			this.Controls.Add(this.button4);
+			this.Controls.Add(this.lblCambio);
+			this.Controls.Add(this.lblDes);
+			this.Controls.Add(this.lblSub);
+			this.Controls.Add(this.lblimpP);
+			this.Controls.Add(this.lblTotal);
+			this.Controls.Add(this.btnEliminar);
+			this.Controls.Add(this.btnAgregar);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);
 			this.Controls.Add(this.button1);
-			this.Controls.Add(this.txtCam);
 			this.Controls.Add(this.txtImpP);
-			this.Controls.Add(this.txtImpN);
-			this.Controls.Add(this.txtDes);
-			this.Controls.Add(this.txtSubT);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.lvProductos);
-			this.Controls.Add(this.txtTotal);
 			this.Controls.Add(this.txtCant);
 			this.Controls.Add(this.txtPrecio);
 			this.Controls.Add(this.label4);
@@ -305,27 +326,30 @@ namespace TrabajoExamen
 			this.Controls.Add(this.groupBox1);
 			this.Name = "Postres";
 			this.Text = "POSTRES (PASTELERIA)";
+			this.Load += new System.EventHandler(this.PostresLoad);
 			this.groupBox1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
-		private System.Windows.Forms.Button button5;
-		private System.Windows.Forms.Button button4;
+		private System.Windows.Forms.Label lblCambio;
+		private System.Windows.Forms.Label lblDes;
+		private System.Windows.Forms.Label lblSub;
+		private System.Windows.Forms.Label lblimpP;
+		private System.Windows.Forms.Label lblTotal;
+		private System.Windows.Forms.ErrorProvider erpError;
+		private System.Windows.Forms.Button btnEliminar;
+		private System.Windows.Forms.Button btnAgregar;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button button2;
 		private System.Windows.Forms.Button button1;
-		private System.Windows.Forms.TextBox txtCam;
 		private System.Windows.Forms.TextBox txtImpP;
-		private System.Windows.Forms.TextBox txtImpN;
-		private System.Windows.Forms.TextBox txtDes;
-		private System.Windows.Forms.TextBox txtSubT;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.ColumnHeader columnHeader4;
 		private System.Windows.Forms.ColumnHeader columnHeader3;
 		private System.Windows.Forms.ColumnHeader columnHeader2;
 		private System.Windows.Forms.ColumnHeader columnHeader1;
 		private System.Windows.Forms.ListView lvProductos;
-		private System.Windows.Forms.TextBox txtTotal;
 		private System.Windows.Forms.TextBox txtCant;
 		private System.Windows.Forms.TextBox txtPrecio;
 		private System.Windows.Forms.Label label4;
