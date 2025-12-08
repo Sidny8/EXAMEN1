@@ -19,6 +19,7 @@ namespace TrabajoExamen
 	/// </summary>
 	public partial class MainForm : Form
 	{
+		int intentos = 1;
 		public MainForm()
 		{
 			//
@@ -55,6 +56,16 @@ namespace TrabajoExamen
 		{
 			if(txtContraseña.Text== "123" && txtUsuario.Text =="Admin"){
 				MessageBox.Show("Digamos que cambio");
+			}else{
+				MessageBox.Show("Usuario o contraseña imcorrectos","Error", MessageBoxButtons.OK, MessageBoxIcon.Question);
+				intentos+=1;
+				txtUsuario.Clear();
+				txtContraseña.Clear();
+				if(intentos > 3)
+				{
+				MessageBox.Show("Has Agotado tus 3 intentos","No puedes acceder",MessageBoxButtons.OK, MessageBoxIcon.Question);
+				Application.Exit();
+				}
 			}
 		}
 		
