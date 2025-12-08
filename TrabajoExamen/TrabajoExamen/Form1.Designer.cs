@@ -36,12 +36,54 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+			this.detallesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.postresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.menuStrip1.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// menuStrip1
+			// 
+			this.menuStrip1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+									this.detallesToolStripMenuItem,
+									this.postresToolStripMenuItem});
+			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+			this.menuStrip1.MdiWindowListItem = this.postresToolStripMenuItem;
+			this.menuStrip1.Name = "menuStrip1";
+			this.menuStrip1.Size = new System.Drawing.Size(284, 24);
+			this.menuStrip1.TabIndex = 0;
+			this.menuStrip1.Text = "menuStrip1";
+			// 
+			// detallesToolStripMenuItem
+			// 
+			this.detallesToolStripMenuItem.Name = "detallesToolStripMenuItem";
+			this.detallesToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+			this.detallesToolStripMenuItem.Text = "Detalles";
+			// 
+			// postresToolStripMenuItem
+			// 
+			this.postresToolStripMenuItem.Name = "postresToolStripMenuItem";
+			this.postresToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+			this.postresToolStripMenuItem.Text = "Postres";
 			// 
 			// Form1
 			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Text = "Form1";
+			this.ClientSize = new System.Drawing.Size(284, 261);
+			this.Controls.Add(this.menuStrip1);
+			this.IsMdiContainer = true;
+			this.MainMenuStrip = this.menuStrip1;
 			this.Name = "Form1";
+			this.Text = "Form1";
+			this.menuStrip1.ResumeLayout(false);
+			this.menuStrip1.PerformLayout();
+			this.ResumeLayout(false);
+			this.PerformLayout();
 		}
+		private System.Windows.Forms.ToolStripMenuItem postresToolStripMenuItem;
+		private System.Windows.Forms.ToolStripMenuItem detallesToolStripMenuItem;
+		private System.Windows.Forms.MenuStrip menuStrip1;
 	}
 }
