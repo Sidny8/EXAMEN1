@@ -63,8 +63,8 @@ namespace TrabajoExamen
 			this.lblTotal = new System.Windows.Forms.Label();
 			this.lblimpP = new System.Windows.Forms.Label();
 			this.lblSub = new System.Windows.Forms.Label();
-			this.lblDes = new System.Windows.Forms.Label();
 			this.lblCambio = new System.Windows.Forms.Label();
+			this.txtDes = new System.Windows.Forms.TextBox();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
@@ -206,6 +206,7 @@ namespace TrabajoExamen
 			this.txtImpP.Name = "txtImpP";
 			this.txtImpP.Size = new System.Drawing.Size(60, 20);
 			this.txtImpP.TabIndex = 14;
+			this.txtImpP.TextChanged += new System.EventHandler(this.TxtImpPTextChanged);
 			// 
 			// button1
 			// 
@@ -282,14 +283,6 @@ namespace TrabajoExamen
 			this.lblSub.Size = new System.Drawing.Size(100, 23);
 			this.lblSub.TabIndex = 23;
 			// 
-			// lblDes
-			// 
-			this.lblDes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblDes.Location = new System.Drawing.Point(225, 291);
-			this.lblDes.Name = "lblDes";
-			this.lblDes.Size = new System.Drawing.Size(100, 23);
-			this.lblDes.TabIndex = 24;
-			// 
 			// lblCambio
 			// 
 			this.lblCambio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -298,13 +291,21 @@ namespace TrabajoExamen
 			this.lblCambio.Size = new System.Drawing.Size(60, 18);
 			this.lblCambio.TabIndex = 25;
 			// 
+			// txtDes
+			// 
+			this.txtDes.Location = new System.Drawing.Point(194, 295);
+			this.txtDes.Name = "txtDes";
+			this.txtDes.Size = new System.Drawing.Size(100, 20);
+			this.txtDes.TabIndex = 26;
+			this.txtDes.TextChanged += new System.EventHandler(this.TxtDesTextChanged);
+			// 
 			// Postres
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(464, 371);
+			this.Controls.Add(this.txtDes);
 			this.Controls.Add(this.lblCambio);
-			this.Controls.Add(this.lblDes);
 			this.Controls.Add(this.lblSub);
 			this.Controls.Add(this.lblimpP);
 			this.Controls.Add(this.lblTotal);
@@ -332,8 +333,8 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.TextBox txtDes;
 		private System.Windows.Forms.Label lblCambio;
-		private System.Windows.Forms.Label lblDes;
 		private System.Windows.Forms.Label lblSub;
 		private System.Windows.Forms.Label lblimpP;
 		private System.Windows.Forms.Label lblTotal;

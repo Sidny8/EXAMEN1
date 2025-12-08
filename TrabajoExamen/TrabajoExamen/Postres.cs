@@ -18,7 +18,7 @@ namespace TrabajoExamen
 	/// </summary>
 	public partial class Postres : Form{
 		
-		double precio, des=0, sub, total, impP, Cambio=0;	
+		double precio, des=0, sub, tot, impP, Cambio=0, preciot=0;	
 		int cant, cont=1;
 		
 	string produc;
@@ -40,8 +40,12 @@ namespace TrabajoExamen
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		//Metodo de cambio
-		//private bool 
+		//Metodo de limpieza
+		private void Limpiar(){
+			txtCant.Text="0";
+			cboProducto.Text="";
+			txtPrecio.Clear();
+		}
 
 		void Button3Click(object sender, EventArgs e)
 		{
@@ -55,46 +59,24 @@ namespace TrabajoExamen
 			produc=cboProducto.Text;
 			precio= Convert.ToDouble(txtPrecio.Text);
 			cant= Convert.ToInt32(txtCant.Text);
-			impP= Convert.ToDouble(txtImpP.Text);
-			sub= cant*precio;
+			sub = cant*precio;
 			
-			//Sacando los descuentos
-			if(sub >= 200 && cont<3){
-				des= sub * 0.10;
-			}
-			if(cont >=3 && sub < 200){
-				des= sub * 0.07;
-			}
-			if(cont >= 3 && sub >= 200){
-				des= sub * 0.15;
-			}
-			
-			total = sub - des;
-			if(impP > total){
-				Cambio= impP - total;
-			}
-			if(impP == total){
-				Cambio=0;
-			}
-			if(impP < total){
-				erpError.SetError(txtImpP,"No completa la cantidad esperada");
-				txtImpP.Clear();
-			}
 			
 			//Agregacion de elementos a la tabla
 			ListViewItem fila=new ListViewItem(produc);
 			fila.SubItems.Add(precio.ToString());
 			fila.SubItems.Add(cant.ToString());
-			fila.SubItems.Add(total.ToString());
+			fila.SubItems.Add(sub.ToString());
 			lvProductos.Items.Add(fila);
 			
 			//Agregacion a los lbl o txt
-			lblTotal.Text= total.ToString();
-			lblimpP.Text= total.ToString();
-			lblSub.Text= sub.ToString();
-			lblDes.Text= des.ToString();
-			lblCambio.Text= Cambio.ToString();
-			cont+= 1;
+			
+			preciot += sub;
+			lblSub.Text= preciot.ToString();
+			lblTotal.Text= sub.ToString();
+			
+			Limpiar();
+			//
 		}
 		
 		void RadioButton1CheckedChanged(object sender, EventArgs e)
@@ -108,7 +90,6 @@ namespace TrabajoExamen
 		void RadioButton2CheckedChanged(object sender, EventArgs e)
 		{
 			cboProducto.Items.Clear();
-			//cboProducto.DataSource= itemsB;
 			cont1 = 2;
 			cboProducto.Items.AddRange(opciones1);
 		}
@@ -135,7 +116,6 @@ namespace TrabajoExamen
 		{
 			precio= Convert.ToDouble(txtPrecio.Text);
 			cant= Convert.ToInt32(txtCant.Text);
-			
 			if((precio * cant) >= 200 && cont<3){
 				des= (precio * cant) * 0.10;
 			}
@@ -145,8 +125,20 @@ namespace TrabajoExamen
 			if(cont >= 3 && (precio*cant) >= 200){
 				des= (precio * cant) * 0.15;
 			}
-			
-			lblTotal.Text= Convert.ToString(precio*cant - des);
+			lblTotal.Text= Convert.ToString(precio*cant);
+		}
+		
+		void TxtDesTextChanged(object sender, EventArgs e)
+		{
+			des = Convert.ToDouble(txtDes.Text);
+			tot = preciot - des;
+			lblimpP.Text= tot.ToString();
+		}
+		
+		void TxtImpPTextChanged(object sender, EventArgs e)
+		{
+			impP = Convert.ToDouble(txtImpP.Text);
+			lblCambio.Text= Convert.ToString(impP - tot);
 		}
 	}
 }
