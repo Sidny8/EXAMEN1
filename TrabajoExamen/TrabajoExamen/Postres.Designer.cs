@@ -116,6 +116,7 @@ namespace TrabajoExamen
 			this.cboProducto.Name = "cboProducto";
 			this.cboProducto.Size = new System.Drawing.Size(154, 21);
 			this.cboProducto.TabIndex = 2;
+			this.cboProducto.SelectedIndexChanged += new System.EventHandler(this.CboProductoSelectedIndexChanged);
 			this.cboProducto.SelectionChangeCommitted += new System.EventHandler(this.CboProductoSelectionChangeCommitted);
 			// 
 			// label2

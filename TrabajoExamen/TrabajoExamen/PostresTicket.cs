@@ -21,6 +21,7 @@ namespace TrabajoExamen
 		public double descPK;
 		public double subPK;
 		public double totPK;
+		public ListViewItem filaPK = new ListViewItem();
 		public PostresTicket()
 		{
 			//
@@ -39,6 +40,7 @@ namespace TrabajoExamen
 			lblSub.Text= subPK.ToString();
 			lblTotal.Text= totPK.ToString();
 			lblFecha.Text= DateTime.Now.ToString("dd/MM/yyyy");
+			listView1.Items.Add(filaPK);
 		}
 		
 		void BtnRgresarClick(object sender, EventArgs e)

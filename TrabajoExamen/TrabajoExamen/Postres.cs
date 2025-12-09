@@ -20,15 +20,14 @@ namespace TrabajoExamen
 		
 		double precio, des=0, sub, tot, impP, preciot=0;	
 		int cant;
-		ListViewItem fila=new ListViewItem();
 		
-	string produc;
-	string[] opciones = { "Pastel Tres Leches", "Pastel de chocolate", "Pastel de queso", "Pastel de frutas", "Pastel Red Velvet" };
-	string[] opciones1 = { "Quiches", "Muffins", "Arroz con Leche", "Waffles", "Enyucado"  };
-	int[] example = { 55, 110, 220, 440, 880 };
-	int[] example1 = { 56, 111, 221, 441, 881 };
-	int cont1 = 0;
-	int val = 0;
+		string produc;
+		string[] opciones = { "Pastel Tres Leches", "Pastel de chocolate", "Pastel de queso", "Pastel de frutas", "Pastel Red Velvet" };
+		string[] opciones1 = { "Quiches", "Muffins", "Arroz con Leche", "Waffles", "Enyucado"  };
+		int[] example = { 55, 110, 220, 440, 880 };
+		int[] example1 = { 56, 111, 221, 441, 881 };
+		int cont1 = 0;
+		int val = 0;
 	
 		public Postres()
 		{
@@ -43,7 +42,7 @@ namespace TrabajoExamen
 		}
 		//Metodo de limpieza
 		private void Limpiar(){
-			txtCant.Text="0";
+			txtCant.Text="";
 			cboProducto.Text="";
 			txtPrecio.Clear();
 		}
@@ -62,19 +61,59 @@ namespace TrabajoExamen
 		}
 		//Metodo para escribir la cantidad
 		private bool Cant(){
-			if(string.IsNullOrEmpty(txtCant.Text)){
-				erpError.SetError(txtCant,"Debe ingresar una cantidad");
-				return false;
-			}else{
-				erpError.SetError(txtCant,"");
-				return true;
-			}
+			int cants;
+            if(!int.TryParse(txtCant.Text, out cants) || txtCant.Text == ""){
+                erpError.SetError(txtCant,"Debe de poner una cantidad numerica entera");
+                txtCant.Clear();
+                txtCant.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtCant,"");
+                return true;
+            }
+		}
+		//Metodo para validar los descuentos
+		private bool Des(){
+            double dest;
+            if(!double.TryParse(txtDes.Text, out dest) || txtDes.Text == ""){
+                erpError.SetError(txtDes,"Debe de poner un descuento aunque sea 0");
+                txtDes.Clear();
+                txtDes.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtDes,"");
+                return true;
+            }
+		}
+		private bool Pago(){
+			double pagst;
+            if(!double.TryParse(txtImpP.Text, out pagst) || txtImpP.Text == ""){
+                erpError.SetError(txtImpP,"Debe de poner un descuento aunque sea 0");
+                txtImpP.Clear();
+                txtImpP.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtImpP,"");
+                return true;
+            }
 		}
 
 		//Teletrasportador a ticket
 		void Button3Click(object sender, EventArgs e)
 		{
+			//Validacion de cosas:
+			if(Des()==false){
+				return;
+			}
+			
 			PostresTicket pk = new PostresTicket();
+			pk.filaPK= new ListViewItem(produc);
+			pk.filaPK.SubItems.Add(precio.ToString());
+			pk.filaPK.SubItems.Add(cant.ToString());
+			pk.filaPK.SubItems.Add(tot.ToString());
 			
 			pk.descPK= Convert.ToDouble(txtDes.Text);
 			pk.totPK= Convert.ToDouble(lblimpP.Text);
@@ -98,9 +137,8 @@ namespace TrabajoExamen
 			cant= Convert.ToInt32(txtCant.Text);
 			sub = cant*precio;
 			
-			
 			//Agregacion de elementos a la tabla
-			fila.SubItems.Add(produc);
+			ListViewItem fila=new ListViewItem(produc);
 			fila.SubItems.Add(precio.ToString());
 			fila.SubItems.Add(cant.ToString());
 			fila.SubItems.Add(sub.ToString());
@@ -159,36 +197,47 @@ namespace TrabajoExamen
 		//El sacar los calculos despues de decir o miestras dices la cantidad
 		void TxtCantTextChanged(object sender, EventArgs e)
 		{
-			precio= Convert.ToDouble(txtPrecio.Text);
-			cant= Convert.ToInt32(txtCant.Text);
-			lblTotal.Text= Convert.ToString(precio*cant);
+			if(txtCant.Text != "" && Cant()!= false){
+				precio= Convert.ToDouble(txtPrecio.Text);
+				cant= Convert.ToInt32(txtCant.Text);
+				lblTotal.Text= Convert.ToString(precio*cant);
+			}
 		}
 		
 		//El descuento
 		void TxtDesTextChanged(object sender, EventArgs e)
 		{
-			des = Convert.ToDouble(txtDes.Text);
-			tot = preciot - des;
-			lblimpP.Text= tot.ToString();
+			if(txtDes.Text != "" && Des()!=false){
+				des = Convert.ToDouble(txtDes.Text);
+				tot = preciot - des;
+				lblimpP.Text= tot.ToString();
+			}
 		}
 		
 		//Para pagar
 		void TxtImpPTextChanged(object sender, EventArgs e)
 		{
-			impP = Convert.ToDouble(txtImpP.Text);
-			lblCambio.Text= Convert.ToString(impP - tot);
+			if(txtImpP.Text!="" && Pago()!=false){
+				impP = Convert.ToDouble(txtImpP.Text);
+				lblCambio.Text= Convert.ToString(impP - tot);
+			}
 		}
 		
 		//Eliminacion de datos
 		void Button2Click(object sender, EventArgs e)
 		{	
 			Limpiar();
-			lblCambio.Text="0";
-			lblimpP.Text="0";
-			lblSub.Text="0";
-			lblTotal.Text="0";
-			txtDes.Text="0";
-			txtImpP.Text="0";
+			lblCambio.Text="";
+			lblimpP.Text="";
+			lblSub.Text="";
+			lblTotal.Text="";
+			txtDes.Text="";
+			txtImpP.Text="";
+		}
+		
+		void CboProductoSelectedIndexChanged(object sender, EventArgs e)
+		{
+			
 		}
 	}
 }

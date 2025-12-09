@@ -144,6 +144,7 @@ namespace TrabajoExamen
 			// columnHeader1
 			// 
 			this.columnHeader1.Text = "Producto";
+			this.columnHeader1.Width = 142;
 			// 
 			// columnHeader2
 			// 
@@ -157,7 +158,7 @@ namespace TrabajoExamen
 			// columnHeader4
 			// 
 			this.columnHeader4.Text = "Total";
-			this.columnHeader4.Width = 48;
+			this.columnHeader4.Width = 44;
 			// 
 			// PostresTicket
 			// 
