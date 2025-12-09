@@ -47,6 +47,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Calificacion.cs" />
+    <Compile Include="Calificacion.Designer.cs">
+      <DependentUpon>Calificacion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conversiones de Temperaturas.cs" />
     <Compile Include="Conversiones de Temperaturas.Designer.cs">
       <DependentUpon>Conversiones de Temperaturas.cs</DependentUpon>
@@ -63,6 +67,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Calificacion.resx">
+      <DependentUpon>Calificacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Conversiones de Temperaturas.resx">
       <DependentUpon>Conversiones de Temperaturas.cs</DependentUpon>
     </EmbeddedResource>
