@@ -17,6 +17,10 @@ namespace TrabajoExamen
 	/// </summary>
 	public partial class PostresTicket : Form
 	{
+		
+		public double descPK;
+		public double subPK;
+		public double totPK;
 		public PostresTicket()
 		{
 			//
@@ -27,6 +31,21 @@ namespace TrabajoExamen
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
+		}
+		
+		void PostresTicketLoad(object sender, EventArgs e)
+		{
+			lblDescuento.Text= descPK.ToString();
+			lblSub.Text= subPK.ToString();
+			lblTotal.Text= totPK.ToString();
+			lblFecha.Text= DateTime.Now.ToString("dd/MM/yyyy");
+		}
+		
+		void BtnRgresarClick(object sender, EventArgs e)
+		{
+			Postres post = new Postres();
+			post.Show();
+			this.Hide();
 		}
 	}
 }

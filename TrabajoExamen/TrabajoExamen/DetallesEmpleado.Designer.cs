@@ -120,7 +120,8 @@ namespace TrabajoExamen
 									"Gerente",
 									"Servicios",
 									"Conserje",
-									"Junior"});
+									"Junior",
+									"Master"});
 			this.cboPuesto.Location = new System.Drawing.Point(132, 109);
 			this.cboPuesto.Name = "cboPuesto";
 			this.cboPuesto.Size = new System.Drawing.Size(128, 21);
