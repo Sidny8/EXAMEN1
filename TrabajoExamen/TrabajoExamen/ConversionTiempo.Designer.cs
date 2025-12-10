@@ -165,6 +165,7 @@ namespace TrabajoExamen
 			this.btnsalir.TabIndex = 21;
 			this.btnsalir.Text = "SALIR";
 			this.btnsalir.UseVisualStyleBackColor = false;
+			this.btnsalir.Click += new System.EventHandler(this.BtnsalirClick);
 			// 
 			// ConversionTiempo
 			// 

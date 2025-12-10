@@ -78,5 +78,10 @@ namespace TrabajoExamen
        		   txtresultado.Text = conversion.ToString();
    			 }    		
 		}
+		
+		void BtnsalirClick(object sender, EventArgs e)
+		{
+			this.Close();
+		}
 	}
 }
