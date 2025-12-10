@@ -28,5 +28,24 @@ namespace TrabajoExamen
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
+		
+		void BtnCalcularClick(object sender, EventArgs e)
+		{
+			double AreaBase, Altura, volumen;
+			AreaBase=Convert.ToDouble(txtAreaBase.Text);
+			Altura=Convert.ToDouble(txtAltura.Text);
+			
+			volumen=(AreaBase*Altura) / 3;
+			
+			lblVolumen.Text=volumen.ToString();
+		}
+		
+		void BtnLimpiarClick(object sender, EventArgs e)
+		{
+			txtAreaBase.Text=string.Empty;
+			txtAltura.Text=string.Empty;
+			lblVolumen.Text=string.Empty;
+			txtAreaBase.Focus();
+		}
 	}
 }

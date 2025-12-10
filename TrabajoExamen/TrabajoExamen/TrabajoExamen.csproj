@@ -111,6 +111,9 @@
     <EmbeddedResource Include="VoluEsfera.resx">
       <DependentUpon>VoluEsfera.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="VoluPirámide.resx">
+      <DependentUpon>VoluPirámide.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
