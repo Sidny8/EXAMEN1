@@ -59,6 +59,10 @@
     <Compile Include="ConversionMasa.Designer.cs">
       <DependentUpon>ConversionMasa.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConversionTiempo.cs" />
+    <Compile Include="ConversionTiempo.Designer.cs">
+      <DependentUpon>ConversionTiempo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs" />
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -83,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConversionMasa.resx">
       <DependentUpon>ConversionMasa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConversionTiempo.resx">
+      <DependentUpon>ConversionTiempo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

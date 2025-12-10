@@ -117,9 +117,10 @@ namespace TrabajoExamen
 			// txtnombre
 			// 
 			this.txtnombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.txtnombre.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtnombre.Location = new System.Drawing.Point(30, 42);
 			this.txtnombre.Name = "txtnombre";
-			this.txtnombre.Size = new System.Drawing.Size(100, 20);
+			this.txtnombre.Size = new System.Drawing.Size(100, 21);
 			this.txtnombre.TabIndex = 13;
 			// 
 			// cboespecialidad
@@ -143,17 +144,19 @@ namespace TrabajoExamen
 			// txt1
 			// 
 			this.txt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.txt1.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt1.Location = new System.Drawing.Point(315, 44);
 			this.txt1.Name = "txt1";
-			this.txt1.Size = new System.Drawing.Size(100, 20);
+			this.txt1.Size = new System.Drawing.Size(100, 21);
 			this.txt1.TabIndex = 20;
 			// 
 			// txt2
 			// 
 			this.txt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.txt2.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt2.Location = new System.Drawing.Point(435, 44);
 			this.txt2.Name = "txt2";
-			this.txt2.Size = new System.Drawing.Size(100, 20);
+			this.txt2.Size = new System.Drawing.Size(100, 21);
 			this.txt2.TabIndex = 21;
 			// 
 			// label6
@@ -219,9 +222,10 @@ namespace TrabajoExamen
 			// txt3
 			// 
 			this.txt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.txt3.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt3.Location = new System.Drawing.Point(371, 112);
 			this.txt3.Name = "txt3";
-			this.txt3.Size = new System.Drawing.Size(100, 20);
+			this.txt3.Size = new System.Drawing.Size(100, 21);
 			this.txt3.TabIndex = 27;
 			// 
 			// label9
@@ -309,6 +313,7 @@ namespace TrabajoExamen
 									this.columnHeader4,
 									this.columnHeader5,
 									this.columnHeader6});
+			this.listView1.Font = new System.Drawing.Font("Script MT Bold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.listView1.Location = new System.Drawing.Point(28, 318);
 			this.listView1.Name = "listView1";
 			this.listView1.Size = new System.Drawing.Size(572, 143);
@@ -354,10 +359,11 @@ namespace TrabajoExamen
 			// 
 			// txtpromediogral
 			// 
-			this.txtpromediogral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.txtpromediogral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.txtpromediogral.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtpromediogral.Location = new System.Drawing.Point(461, 483);
 			this.txtpromediogral.Name = "txtpromediogral";
-			this.txtpromediogral.Size = new System.Drawing.Size(133, 20);
+			this.txtpromediogral.Size = new System.Drawing.Size(133, 21);
 			this.txtpromediogral.TabIndex = 36;
 			// 
 			// Calificacion
@@ -375,6 +381,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.label1);
 			this.Name = "Calificacion";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Calificacion";
 			this.Load += new System.EventHandler(this.CalificacionLoad);
 			this.groupBox1.ResumeLayout(false);
