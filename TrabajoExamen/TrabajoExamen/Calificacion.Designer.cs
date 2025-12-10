@@ -116,6 +116,7 @@ namespace TrabajoExamen
 			// 
 			// txtnombre
 			// 
+			this.txtnombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.txtnombre.Location = new System.Drawing.Point(30, 42);
 			this.txtnombre.Name = "txtnombre";
 			this.txtnombre.Size = new System.Drawing.Size(100, 20);
@@ -123,6 +124,7 @@ namespace TrabajoExamen
 			// 
 			// cboespecialidad
 			// 
+			this.cboespecialidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.cboespecialidad.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cboespecialidad.FormattingEnabled = true;
 			this.cboespecialidad.Items.AddRange(new object[] {
@@ -140,6 +142,7 @@ namespace TrabajoExamen
 			// 
 			// txt1
 			// 
+			this.txt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.txt1.Location = new System.Drawing.Point(315, 44);
 			this.txt1.Name = "txt1";
 			this.txt1.Size = new System.Drawing.Size(100, 20);
@@ -147,6 +150,7 @@ namespace TrabajoExamen
 			// 
 			// txt2
 			// 
+			this.txt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.txt2.Location = new System.Drawing.Point(435, 44);
 			this.txt2.Name = "txt2";
 			this.txt2.Size = new System.Drawing.Size(100, 20);
@@ -163,6 +167,7 @@ namespace TrabajoExamen
 			// 
 			// cbosemestre
 			// 
+			this.cbosemestre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.cbosemestre.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbosemestre.FormattingEnabled = true;
 			this.cbosemestre.Items.AddRange(new object[] {
@@ -185,6 +190,7 @@ namespace TrabajoExamen
 			// 
 			// cboasignatura
 			// 
+			this.cboasignatura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.cboasignatura.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cboasignatura.FormattingEnabled = true;
 			this.cboasignatura.Items.AddRange(new object[] {
@@ -212,6 +218,7 @@ namespace TrabajoExamen
 			// 
 			// txt3
 			// 
+			this.txt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.txt3.Location = new System.Drawing.Point(371, 112);
 			this.txt3.Name = "txt3";
 			this.txt3.Size = new System.Drawing.Size(100, 20);
@@ -228,6 +235,7 @@ namespace TrabajoExamen
 			// 
 			// txtfecha
 			// 
+			this.txtfecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.txtfecha.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtfecha.Location = new System.Drawing.Point(227, 151);
 			this.txtfecha.Name = "txtfecha";
@@ -346,6 +354,7 @@ namespace TrabajoExamen
 			// 
 			// txtpromediogral
 			// 
+			this.txtpromediogral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.txtpromediogral.Location = new System.Drawing.Point(461, 483);
 			this.txtpromediogral.Name = "txtpromediogral";
 			this.txtpromediogral.Size = new System.Drawing.Size(133, 20);
@@ -355,6 +364,7 @@ namespace TrabajoExamen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(645, 517);
 			this.Controls.Add(this.txtpromediogral);
 			this.Controls.Add(this.label10);

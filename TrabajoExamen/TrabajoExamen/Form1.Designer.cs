@@ -60,6 +60,7 @@ namespace TrabajoExamen
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.postresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.masaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -193,7 +194,8 @@ namespace TrabajoExamen
 			this.conversionesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
 									this.longToolStripMenuItem,
 									this.temperaturasToolStripMenuItem,
-									this.tiempoToolStripMenuItem});
+									this.tiempoToolStripMenuItem,
+									this.masaToolStripMenuItem});
 			this.conversionesToolStripMenuItem.Name = "conversionesToolStripMenuItem";
 			this.conversionesToolStripMenuItem.Size = new System.Drawing.Size(90, 20);
 			this.conversionesToolStripMenuItem.Text = "Conversiones";
@@ -203,7 +205,6 @@ namespace TrabajoExamen
 			this.longToolStripMenuItem.Name = "longToolStripMenuItem";
 			this.longToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
 			this.longToolStripMenuItem.Text = "Longitud";
-			
 			// 
 			// temperaturasToolStripMenuItem
 			// 
@@ -240,6 +241,12 @@ namespace TrabajoExamen
 			this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
 			this.empleadosToolStripMenuItem.Text = "Empleados";
 			// 
+			// masaToolStripMenuItem
+			// 
+			this.masaToolStripMenuItem.Name = "masaToolStripMenuItem";
+			this.masaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.masaToolStripMenuItem.Text = "Masa";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -255,6 +262,7 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ToolStripMenuItem masaToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
 		private System.Windows.Forms.ToolStripMenuItem postresToolStripMenuItem1;
 		private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;

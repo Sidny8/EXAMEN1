@@ -28,10 +28,5 @@ namespace TrabajoExamen
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		
-		
-		
-		
-		
 	}
 }
