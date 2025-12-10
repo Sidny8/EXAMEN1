@@ -51,19 +51,65 @@
     <Compile Include="AreaCuadrado.Designer.cs">
       <DependentUpon>AreaCuadrado.cs</DependentUpon>
     </Compile>
+    <Compile Include="AreaRectangulo.cs" />
+    <Compile Include="AreaRectangulo.Designer.cs">
+      <DependentUpon>AreaRectangulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AreaTriangulo.cs" />
+    <Compile Include="AreaTriangulo.Designer.cs">
+      <DependentUpon>AreaTriangulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PeriCircunferencia.cs" />
+    <Compile Include="PeriCircunferencia.Designer.cs">
+      <DependentUpon>PeriCircunferencia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PeriTrapecio.cs" />
+    <Compile Include="PeriTrapecio.Designer.cs">
+      <DependentUpon>PeriTrapecio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VoluCubo.cs" />
+    <Compile Include="VoluCubo.Designer.cs">
+      <DependentUpon>VoluCubo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoluEsfera.cs" />
+    <Compile Include="VoluEsfera.Designer.cs">
+      <DependentUpon>VoluEsfera.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VoluPirámide.cs" />
+    <Compile Include="VoluPirámide.Designer.cs">
+      <DependentUpon>VoluPirámide.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AreaCuadrado.resx">
       <DependentUpon>AreaCuadrado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AreaRectangulo.resx">
+      <DependentUpon>AreaRectangulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AreaTriangulo.resx">
+      <DependentUpon>AreaTriangulo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriCircunferencia.resx">
+      <DependentUpon>PeriCircunferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PeriTrapecio.resx">
+      <DependentUpon>PeriTrapecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoluCubo.resx">
+      <DependentUpon>VoluCubo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VoluEsfera.resx">
+      <DependentUpon>VoluEsfera.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
