@@ -20,7 +20,7 @@ namespace TrabajoExamen
 	public partial class DetallesEmpleado : Form
 	{
 		string estado;
-		List<ClaseDeDetalles> milista =new List<ClaseDeDetalles>();
+		List<ClaseDeDetalles> milista = new List<ClaseDeDetalles>();
 		public DetallesEmpleado()
 		{
 			//
@@ -152,20 +152,14 @@ namespace TrabajoExamen
 		//Metodo para la eliminacion
 		public bool Eliminacion(int codigot)
         {
-            /// CREAR LA CONEXIÓN, CONFIGURAR Y ABRIRLA
             MySqlConnection cn = new MySqlConnection();
             cn.ConnectionString = "server=localhost; database=Examen; user=root;pwd=root;";
             cn.Open();
-            /// ELIMINAR EL REGISTRO A LA BASE DE DATOS
 
-            string strSQL = "delete from Empleados(codigo, nombre, puesto, fecha, sexo, estado)" +
-                "where codigo = codigot;";
-            MySqlCommand comando = new MySqlCommand(strSQL, cn);
-            comando.Parameters.AddWithValue("Codigo", codigot);
-            
+            string strSQL = "delete from Empleados where codigo = " + codigot;
+       		MySqlCommand comando = new MySqlCommand(strSQL, cn);
             comando.ExecuteNonQuery();
-            MessageBox.Show("Producto eliminado");
-            /// FINALIZAMOS LA CONEXION CERRAMOS TODO
+            MessageBox.Show("Empleado eliminado");
 
             comando.Dispose();
             cn.Close();
@@ -174,6 +168,16 @@ namespace TrabajoExamen
         }
 
 		
+		public void llenar()
+		{
+			milista = new ClaseDeDetalles().ObtenerEmpleados();
+   			 for (int i = 0; i < milista.Count; i++)
+    		{
+        		dgvDatos.Rows.Add(milista[i].Codigo, milista[i].Nombre, milista[i].Puesto, milista[i].Fecha, milista[i].Sexo, milista[i].Estado);
+    		}
+		}
+
+
 		void Button2Click(object sender, EventArgs e)
 		{
 			pictureBox1.Visible=false;
@@ -236,16 +240,19 @@ namespace TrabajoExamen
             Empleado.Fecha=int.Parse(txtNaci.Text);
             Empleado.Sexo=cboSex.SelectedItem.ToString();
           	Empleado.Estado=estado;
-
+			
           	//Hacer la union de las listas
             milista.Add(Empleado);
-            dgvDatos.DataSource=null;
-            dgvDatos.DataSource =milista;
+            //dgvDatos.DataSource=null;
+            //dgvDatos.Rows.Add(milista);
             
+           
             AgregarProducto(int.Parse(txtCodigo.Text),txtCodigo.Text,cboPuesto.SelectedItem.ToString(),int.Parse(txtNaci.Text),
                             cboSex.SelectedItem.ToString(), estado);
-            
+            dgvDatos.Rows.Clear();
+            llenar();
             Limpiar();
+            //List<ClaseDeDetalles> milista = new ClaseDeDetalles().ObtenerEmpleados();
 
             txtCodigo.Focus();
 
@@ -253,6 +260,7 @@ namespace TrabajoExamen
 		
 		void BtnLimpiarClick(object sender, EventArgs e)
 		{
+			dgvDatos.Rows.Clear();
 			Limpiar();
 		}
 		
@@ -271,16 +279,25 @@ namespace TrabajoExamen
 				if(Respuesta == DialogResult.Yes){
 					foreach(ClaseDeDetalles Empleado in milista){
 						if(Empleado.Codigo==int.Parse(txtCodigo.Text)){
-								milista.Remove(Empleado);
-								Eliminacion(int.Parse(txtCodigo.Text));
-								break;
+							Eliminacion(int.Parse(txtCodigo.Text));	
+							milista.Remove(Empleado);
+							break;
 						}
 					}
+					dgvDatos.Rows.Clear();
 					Limpiar();
-					dgvDatos.DataSource=null;
-					dgvDatos.DataSource=milista;
+					//dgvDatos.DataSource=null;
+					//dgvDatos.Rows.Add(milista);
+					llenar();
 				}	
 			}
+		}
+		
+		void DetallesEmpleadoLoad(object sender, EventArgs e)
+		{
+			
+			dgvDatos.Rows.Clear();
+    		llenar();
 		}
 	}
 }

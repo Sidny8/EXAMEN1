@@ -51,6 +51,12 @@ namespace TrabajoExamen
 			this.btnActuallizar = new System.Windows.Forms.Button();
 			this.btnQuitar = new System.Windows.Forms.Button();
 			this.dgvDatos = new System.Windows.Forms.DataGridView();
+			this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.btnGuardar = new System.Windows.Forms.Button();
 			this.btnEliminar = new System.Windows.Forms.Button();
 			this.btnLimpiar = new System.Windows.Forms.Button();
@@ -156,7 +162,7 @@ namespace TrabajoExamen
 			this.cboSex.Items.AddRange(new object[] {
 									"Femenino",
 									"Masculino",
-									"No Binarie",
+									"No Biarie",
 									"Prefiero No Decir"});
 			this.cboSex.Location = new System.Drawing.Point(74, 184);
 			this.cboSex.Name = "cboSex";
@@ -186,14 +192,51 @@ namespace TrabajoExamen
 			// dgvDatos
 			// 
 			this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			this.dgvDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+									this.Column1,
+									this.Column2,
+									this.Column3,
+									this.Column4,
+									this.Column5,
+									this.Column6});
 			this.dgvDatos.Location = new System.Drawing.Point(13, 218);
 			this.dgvDatos.Name = "dgvDatos";
-			this.dgvDatos.Size = new System.Drawing.Size(546, 97);
+			this.dgvDatos.Size = new System.Drawing.Size(590, 196);
 			this.dgvDatos.TabIndex = 13;
+			// 
+			// Column1
+			// 
+			this.Column1.HeaderText = "Codigo";
+			this.Column1.Name = "Column1";
+			// 
+			// Column2
+			// 
+			this.Column2.HeaderText = "Nombre";
+			this.Column2.Name = "Column2";
+			// 
+			// Column3
+			// 
+			this.Column3.HeaderText = "Puesto";
+			this.Column3.Name = "Column3";
+			// 
+			// Column4
+			// 
+			this.Column4.HeaderText = "Fecha";
+			this.Column4.Name = "Column4";
+			// 
+			// Column5
+			// 
+			this.Column5.HeaderText = "Sexo";
+			this.Column5.Name = "Column5";
+			// 
+			// Column6
+			// 
+			this.Column6.HeaderText = "Estado";
+			this.Column6.Name = "Column6";
 			// 
 			// btnGuardar
 			// 
-			this.btnGuardar.Location = new System.Drawing.Point(298, 323);
+			this.btnGuardar.Location = new System.Drawing.Point(337, 420);
 			this.btnGuardar.Name = "btnGuardar";
 			this.btnGuardar.Size = new System.Drawing.Size(75, 23);
 			this.btnGuardar.TabIndex = 14;
@@ -203,7 +246,7 @@ namespace TrabajoExamen
 			// 
 			// btnEliminar
 			// 
-			this.btnEliminar.Location = new System.Drawing.Point(387, 323);
+			this.btnEliminar.Location = new System.Drawing.Point(433, 420);
 			this.btnEliminar.Name = "btnEliminar";
 			this.btnEliminar.Size = new System.Drawing.Size(75, 23);
 			this.btnEliminar.TabIndex = 15;
@@ -213,7 +256,7 @@ namespace TrabajoExamen
 			// 
 			// btnLimpiar
 			// 
-			this.btnLimpiar.Location = new System.Drawing.Point(478, 321);
+			this.btnLimpiar.Location = new System.Drawing.Point(528, 420);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
 			this.btnLimpiar.TabIndex = 16;
@@ -267,7 +310,7 @@ namespace TrabajoExamen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(571, 358);
+			this.ClientSize = new System.Drawing.Size(615, 455);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.btnLimpiar);
@@ -289,6 +332,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.label1);
 			this.Name = "DetallesEmpleado";
 			this.Text = "DetallesEmpleado";
+			this.Load += new System.EventHandler(this.DetallesEmpleadoLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).EndInit();
 			this.groupBox1.ResumeLayout(false);
@@ -296,6 +340,12 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
 		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.RadioButton radioButton1;
 		private System.Windows.Forms.RadioButton radioButton2;
