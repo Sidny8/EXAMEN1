@@ -24,7 +24,7 @@ namespace TrabajoExamen
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Postres());
+			Application.Run(new DetallesEmpleado());
 		}
 		
 	}

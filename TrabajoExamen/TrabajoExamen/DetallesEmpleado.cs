@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace TrabajoExamen
 {
@@ -120,6 +121,58 @@ namespace TrabajoExamen
 			}
 			return false;
 		}
+		//Metodo para la conexion
+		public bool AgregarProducto(int codigo, string nombre, string puesto, int fecha, string sexo, string estado)
+        {
+            /// CREAR LA CONEXIÓN, CONFIGURAR Y ABRIRLA
+            MySqlConnection cn = new MySqlConnection();
+            cn.ConnectionString = "server=localhost; database=Examen; user=root;pwd=root;";
+            cn.Open();
+            /// AGREGAR EL REGISTRO A LA BASE DE DATOS
+            string strSQL = "insert into Empleados (codigo, nombre, puesto, fecha, sexo, estado)" +
+                " values (@codigo, @nombre, @puesto, @fecha, @sexo, @estado)";
+            MySqlCommand comando = new MySqlCommand(strSQL, cn);
+            comando.Parameters.AddWithValue("Codigo", codigo);
+            comando.Parameters.AddWithValue("Nombre", nombre);
+            comando.Parameters.AddWithValue("Puesto",puesto);
+            comando.Parameters.AddWithValue("Fecha", fecha);
+            comando.Parameters.AddWithValue("Sexo", sexo);
+            comando.Parameters.AddWithValue("Estado", estado);
+            
+            comando.ExecuteNonQuery();
+            MessageBox.Show("Producto agregado");
+            /// FINALIZAMOS LA CONEXION CERRAMOS TODO
+
+            comando.Dispose();
+            cn.Close();
+            cn.Dispose();
+            return true;
+        }
+		
+		//Metodo para la eliminacion
+		public bool Eliminacion(int codigot)
+        {
+            /// CREAR LA CONEXIÓN, CONFIGURAR Y ABRIRLA
+            MySqlConnection cn = new MySqlConnection();
+            cn.ConnectionString = "server=localhost; database=Examen; user=root;pwd=root;";
+            cn.Open();
+            /// ELIMINAR EL REGISTRO A LA BASE DE DATOS
+
+            string strSQL = "delete from Empleados(codigo, nombre, puesto, fecha, sexo, estado)" +
+                "where codigo = codigot;";
+            MySqlCommand comando = new MySqlCommand(strSQL, cn);
+            comando.Parameters.AddWithValue("Codigo", codigot);
+            
+            comando.ExecuteNonQuery();
+            MessageBox.Show("Producto eliminado");
+            /// FINALIZAMOS LA CONEXION CERRAMOS TODO
+
+            comando.Dispose();
+            cn.Close();
+            cn.Dispose();
+            return true;
+        }
+
 		
 		void Button2Click(object sender, EventArgs e)
 		{
@@ -188,6 +241,10 @@ namespace TrabajoExamen
             milista.Add(Empleado);
             dgvDatos.DataSource=null;
             dgvDatos.DataSource =milista;
+            
+            AgregarProducto(int.Parse(txtCodigo.Text),txtCodigo.Text,cboPuesto.SelectedItem.ToString(),int.Parse(txtNaci.Text),
+                            cboSex.SelectedItem.ToString(), estado);
+            
             Limpiar();
 
             txtCodigo.Focus();
@@ -215,6 +272,7 @@ namespace TrabajoExamen
 					foreach(ClaseDeDetalles Empleado in milista){
 						if(Empleado.Codigo==int.Parse(txtCodigo.Text)){
 								milista.Remove(Empleado);
+								Eliminacion(int.Parse(txtCodigo.Text));
 								break;
 						}
 					}

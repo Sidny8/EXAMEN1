@@ -217,6 +217,7 @@ namespace TrabajoExamen
 			this.button1.TabIndex = 16;
 			this.button1.Text = "Guardar";
 			this.button1.UseVisualStyleBackColor = true;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
 			// 
 			// button2
 			// 
@@ -256,6 +257,7 @@ namespace TrabajoExamen
 			this.btnEliminar.TabIndex = 20;
 			this.btnEliminar.Text = "Eliminar Producto";
 			this.btnEliminar.UseVisualStyleBackColor = true;
+			this.btnEliminar.Click += new System.EventHandler(this.BtnEliminarClick);
 			// 
 			// erpError
 			// 

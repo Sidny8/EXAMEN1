@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace TrabajoExamen
 {
@@ -20,8 +21,8 @@ namespace TrabajoExamen
 		
 		double precio, des=0, sub, tot, impP, preciot=0;	
 		int cant;
-		
 		string produc;
+		
 		string[] opciones = { "Pastel Tres Leches", "Pastel de chocolate", "Pastel de queso", "Pastel de frutas", "Pastel Red Velvet" };
 		string[] opciones1 = { "Quiches", "Muffins", "Arroz con Leche", "Waffles", "Enyucado"  };
 		int[] example = { 55, 110, 220, 440, 880 };
@@ -100,6 +101,31 @@ namespace TrabajoExamen
                 return true;
             }
 		}
+		
+		//Metodo de la conexion, para agregar
+		public bool AgregarProducto(string produc, double precio, int cantimy, double totalmy)
+        {
+            /// CREAR LA CONEXIÓN, CONFIGURAR Y ABRIRLA
+            MySqlConnection cn = new MySqlConnection();
+            cn.ConnectionString = "server=localhost; database=Examen; user=root;pwd=root;";
+            cn.Open();
+            /// AGREGAR EL REGISTRO A LA BASE DE DATOS
+            string strSQL = "insert into Productos (productos, precio, cantidad, total)" +
+                " values (@productos, @precio, @cantidad, @total)";
+            MySqlCommand comando = new MySqlCommand(strSQL, cn);
+            comando.Parameters.AddWithValue("Productos", produc);
+            comando.Parameters.AddWithValue("Precio", precio);
+            comando.Parameters.AddWithValue("Cantidad",cantimy);
+            comando.Parameters.AddWithValue("Total", totalmy);
+            comando.ExecuteNonQuery();
+            MessageBox.Show("Producto agregado");
+            /// FINALIZAMOS LA CONEXION CERRAMOS TODO
+
+            comando.Dispose();
+            cn.Close();
+            cn.Dispose();
+            return true;
+        }
 
 		//Teletrasportador a ticket
 		void Button3Click(object sender, EventArgs e)
@@ -149,6 +175,8 @@ namespace TrabajoExamen
 			preciot += sub;
 			lblSub.Text= preciot.ToString();
 			lblTotal.Text= sub.ToString();
+			
+			
 			
 			Limpiar();
 			//
@@ -236,6 +264,16 @@ namespace TrabajoExamen
 		}
 		
 		void CboProductoSelectedIndexChanged(object sender, EventArgs e)
+		{
+			
+		}
+		
+		void Button1Click(object sender, EventArgs e)
+		{
+			AgregarProducto(produc,precio,cant,tot);
+		}
+		
+		void BtnEliminarClick(object sender, EventArgs e)
 		{
 			
 		}
