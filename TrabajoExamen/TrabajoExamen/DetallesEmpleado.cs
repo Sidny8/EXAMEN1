@@ -35,7 +35,7 @@ namespace TrabajoExamen
 		//Metodo de limpieza
 		private void Limpiar(){
 			txtCodigo.Clear();
-			txtNaci.Clear();
+			dtpFecha.Text="";
 			txtNombre.Clear();
 			cboPuesto.SelectedIndex=-1;
 			cboSex.SelectedIndex=-1;
@@ -82,13 +82,13 @@ namespace TrabajoExamen
 		//Metodo de validacion la fecha
 		private bool ValidarFecha(){
 			int fecha;
-			if(!int.TryParse(txtNaci.Text,out fecha) || txtNaci.Text==""){
+			if(!int.TryParse(dtpFecha.Text,out fecha) || dtpFecha.Text==""){
 				erpError.SetError(txtCodigo,"Debe de poner una fecha");
-                txtNaci.Clear();
-                txtNaci.Focus();
+                dtpFecha.Text="";
+                dtpFecha.Focus();
                 return false;
 			}else{
-				erpError.SetError(txtNaci,"");
+				erpError.SetError(dtpFecha,"");
 				return true;
 			}
 		}
@@ -237,7 +237,7 @@ namespace TrabajoExamen
 			Empleado.Codigo = int.Parse(txtCodigo.Text);
 			Empleado.Nombre=txtNombre.Text;
             Empleado.Puesto =cboPuesto.SelectedItem.ToString();
-            Empleado.Fecha=int.Parse(txtNaci.Text);
+            Empleado.Fecha=int.Parse(dtpFecha.Text);
             Empleado.Sexo=cboSex.SelectedItem.ToString();
           	Empleado.Estado=estado;
 			
@@ -247,7 +247,7 @@ namespace TrabajoExamen
             //dgvDatos.Rows.Add(milista);
             
            
-            AgregarProducto(int.Parse(txtCodigo.Text),txtCodigo.Text,cboPuesto.SelectedItem.ToString(),int.Parse(txtNaci.Text),
+            AgregarProducto(int.Parse(txtCodigo.Text),txtCodigo.Text,cboPuesto.SelectedItem.ToString(),int.Parse(dtpFecha.Text),
                             cboSex.SelectedItem.ToString(), estado);
             dgvDatos.Rows.Clear();
             llenar();

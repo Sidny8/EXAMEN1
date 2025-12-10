@@ -45,7 +45,6 @@ namespace TrabajoExamen
 			this.label3 = new System.Windows.Forms.Label();
 			this.cboPuesto = new System.Windows.Forms.ComboBox();
 			this.label4 = new System.Windows.Forms.Label();
-			this.txtNaci = new System.Windows.Forms.TextBox();
 			this.label5 = new System.Windows.Forms.Label();
 			this.cboSex = new System.Windows.Forms.ComboBox();
 			this.btnActuallizar = new System.Windows.Forms.Button();
@@ -65,6 +64,7 @@ namespace TrabajoExamen
 			this.radioButton2 = new System.Windows.Forms.RadioButton();
 			this.radioButton1 = new System.Windows.Forms.RadioButton();
 			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
+			this.dtpFecha = new System.Windows.Forms.DateTimePicker();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
 			this.groupBox1.SuspendLayout();
@@ -140,13 +140,6 @@ namespace TrabajoExamen
 			this.label4.Size = new System.Drawing.Size(113, 23);
 			this.label4.TabIndex = 7;
 			this.label4.Text = "Fecha de nacimiento";
-			// 
-			// txtNaci
-			// 
-			this.txtNaci.Location = new System.Drawing.Point(132, 149);
-			this.txtNaci.Name = "txtNaci";
-			this.txtNaci.Size = new System.Drawing.Size(128, 20);
-			this.txtNaci.TabIndex = 8;
 			// 
 			// label5
 			// 
@@ -306,11 +299,19 @@ namespace TrabajoExamen
 			// 
 			this.erpError.ContainerControl = this;
 			// 
+			// dtpFecha
+			// 
+			this.dtpFecha.Location = new System.Drawing.Point(132, 149);
+			this.dtpFecha.Name = "dtpFecha";
+			this.dtpFecha.Size = new System.Drawing.Size(200, 20);
+			this.dtpFecha.TabIndex = 19;
+			// 
 			// DetallesEmpleado
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(615, 455);
+			this.Controls.Add(this.dtpFecha);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.btnLimpiar);
@@ -321,7 +322,6 @@ namespace TrabajoExamen
 			this.Controls.Add(this.btnActuallizar);
 			this.Controls.Add(this.cboSex);
 			this.Controls.Add(this.label5);
-			this.Controls.Add(this.txtNaci);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.cboPuesto);
 			this.Controls.Add(this.label3);
@@ -340,6 +340,7 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.DateTimePicker dtpFecha;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
@@ -359,7 +360,6 @@ namespace TrabajoExamen
 		private System.Windows.Forms.Button btnActuallizar;
 		private System.Windows.Forms.ComboBox cboSex;
 		private System.Windows.Forms.Label label5;
-		private System.Windows.Forms.TextBox txtNaci;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.ComboBox cboPuesto;
 		private System.Windows.Forms.Label label3;
