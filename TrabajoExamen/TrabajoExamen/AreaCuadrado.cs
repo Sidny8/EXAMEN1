@@ -47,5 +47,10 @@ namespace TrabajoExamen
 			lblArea.Text=string.Empty;
 			txtLadoA.Focus();
 		}
+		
+		void AreaCuadradoLoad(object sender, EventArgs e)
+		{
+			pictureBox1.Image=Resource1.cuadrado; 
+		}
 	}
 }

@@ -45,5 +45,10 @@ namespace TrabajoExamen
 			lblVolumen.Text=string.Empty;
 			txtLado.Focus();
 		}
+		
+		void VoluCuboLoad(object sender, EventArgs e)
+		{
+			pictureBox1.Image=Resource1.cubo;
+		}
 	}
 }

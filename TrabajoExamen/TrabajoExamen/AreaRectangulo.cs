@@ -47,5 +47,10 @@ namespace TrabajoExamen
 			lblArea.Text=string.Empty;
 			txtBase.Focus();
 		}
+		
+		void AreaRectanguloLoad(object sender, EventArgs e)
+		{
+			pictureBox1.Image=Resource1.rectangulo;
+		}
 	}
 }

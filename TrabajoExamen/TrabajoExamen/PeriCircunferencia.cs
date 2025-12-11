@@ -45,5 +45,10 @@ namespace TrabajoExamen
 			lblPerimetro.Text=string.Empty;
 			txtDiametro.Focus();
 		}
+		
+		void PeriCircunferenciaLoad(object sender, EventArgs e)
+		{
+			pictureBox1.Image=Resource1.circulo;
+		}
 	}
 }

@@ -45,5 +45,10 @@ namespace TrabajoExamen
 			lblVolumen.Text=string.Empty;
 			txtRadio.Focus();
 		}
+		
+		void VoluEsferaLoad(object sender, EventArgs e)
+		{
+			pictureBox1.Image=Resource1.esfera;
+		}
 	}
 }

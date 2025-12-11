@@ -47,5 +47,10 @@ namespace TrabajoExamen
 			lblVolumen.Text=string.Empty;
 			txtAreaBase.Focus();
 		}
+		
+		void VoluPirámideLoad(object sender, EventArgs e)
+		{
+			pictureBox1.Image=Resource1.piramide;
+		}
 	}
 }

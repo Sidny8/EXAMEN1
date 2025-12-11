@@ -67,6 +67,7 @@ namespace TrabajoExamen
 			this.pictureBox1.Location = new System.Drawing.Point(196, 76);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(109, 102);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 37;
 			this.pictureBox1.TabStop = false;
 			// 
@@ -129,6 +130,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.label1);
 			this.Name = "PeriCircunferencia";
 			this.Text = "PeriCircunferencia";
+			this.Load += new System.EventHandler(this.PeriCircunferenciaLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

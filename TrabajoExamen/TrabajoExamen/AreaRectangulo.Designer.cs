@@ -69,6 +69,7 @@ namespace TrabajoExamen
 			this.pictureBox1.Location = new System.Drawing.Point(175, 109);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(100, 88);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 17;
 			this.pictureBox1.TabStop = false;
 			// 
@@ -148,6 +149,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.label1);
 			this.Name = "AreaRectangulo";
 			this.Text = "AreaRectangulo";
+			this.Load += new System.EventHandler(this.AreaRectanguloLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();

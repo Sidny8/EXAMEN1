@@ -73,6 +73,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <DependentUpon>Resource1.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Include="VoluCubo.cs" />
     <Compile Include="VoluCubo.Designer.cs">
       <DependentUpon>VoluCubo.cs</DependentUpon>
@@ -104,6 +108,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PeriTrapecio.resx">
       <DependentUpon>PeriTrapecio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="VoluCubo.resx">
       <DependentUpon>VoluCubo.cs</DependentUpon>

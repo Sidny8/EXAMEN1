@@ -51,5 +51,10 @@ namespace TrabajoExamen
 			lblPerimetro.Text=string.Empty;
 			txtLadoA.Focus();
 		}
+		
+		void PeriTrapecioLoad(object sender, EventArgs e)
+		{
+			pictureBox1.Image=Resource1.trapecio;
+		}
 	}
 }
