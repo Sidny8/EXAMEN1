@@ -55,7 +55,9 @@ namespace TrabajoExamen
 		void BtnAccederClick(object sender, EventArgs e)
 		{
 			if(txtContraseña.Text== "123" && txtUsuario.Text =="Admin"){
-				MessageBox.Show("Digamos que cambio");
+				Form1 Menu = new Form1();
+				Menu.Show();
+				this.Hide();
 			}else{
 				MessageBox.Show("Usuario o contraseña imcorrectos","Error", MessageBoxButtons.OK, MessageBoxIcon.Question);
 				intentos+=1;

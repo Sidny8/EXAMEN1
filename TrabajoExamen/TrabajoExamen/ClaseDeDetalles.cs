@@ -29,7 +29,7 @@ namespace TrabajoExamen
 		{
    			 MySqlConnection cn = new MySqlConnection();
     		/// CREAR LA CONEXIÓN, CONFIGURAR Y ABRIRLA
-   			cn.ConnectionString = cn.ConnectionString = "server=localhost; database=Examen; user=root; pwd=";
+   			cn.ConnectionString = cn.ConnectionString = "server=localhost; database=Examen; user=root; pwd=root";
     		cn.Open();
 
    			List<ClaseDeDetalles> adm = new List<ClaseDeDetalles>();

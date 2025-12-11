@@ -161,6 +161,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PeriTrapecio.resx">
       <DependentUpon>PeriTrapecio.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="DetallesEmpleado.resx">

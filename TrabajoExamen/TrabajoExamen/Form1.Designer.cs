@@ -56,11 +56,11 @@ namespace TrabajoExamen
 			this.longToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.temperaturasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.tiempoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+			this.masaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.boletaDeCalificacionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.postresToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
 			this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.masaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -105,12 +105,14 @@ namespace TrabajoExamen
 			this.perímetroToolStripMenuItem.Name = "perímetroToolStripMenuItem";
 			this.perímetroToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
 			this.perímetroToolStripMenuItem.Text = "Factorial";
+			this.perímetroToolStripMenuItem.Click += new System.EventHandler(this.PerímetroToolStripMenuItemClick);
 			// 
 			// fibonnaciToolStripMenuItem
 			// 
 			this.fibonnaciToolStripMenuItem.Name = "fibonnaciToolStripMenuItem";
 			this.fibonnaciToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
 			this.fibonnaciToolStripMenuItem.Text = "Fibonnaci";
+			this.fibonnaciToolStripMenuItem.Click += new System.EventHandler(this.FibonnaciToolStripMenuItemClick);
 			// 
 			// áreaToolStripMenuItem
 			// 
@@ -127,18 +129,21 @@ namespace TrabajoExamen
 			this.cuadrádoToolStripMenuItem.Name = "cuadrádoToolStripMenuItem";
 			this.cuadrádoToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
 			this.cuadrádoToolStripMenuItem.Text = "Cuadrado";
+			this.cuadrádoToolStripMenuItem.Click += new System.EventHandler(this.CuadrádoToolStripMenuItemClick);
 			// 
 			// rectánguloToolStripMenuItem
 			// 
 			this.rectánguloToolStripMenuItem.Name = "rectánguloToolStripMenuItem";
 			this.rectánguloToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
 			this.rectánguloToolStripMenuItem.Text = "Rectángulo";
+			this.rectánguloToolStripMenuItem.Click += new System.EventHandler(this.RectánguloToolStripMenuItemClick);
 			// 
 			// triánguloToolStripMenuItem
 			// 
 			this.triánguloToolStripMenuItem.Name = "triánguloToolStripMenuItem";
 			this.triánguloToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
 			this.triánguloToolStripMenuItem.Text = "Triángulo";
+			this.triánguloToolStripMenuItem.Click += new System.EventHandler(this.TriánguloToolStripMenuItemClick);
 			// 
 			// perímetroToolStripMenuItem1
 			// 
@@ -154,12 +159,14 @@ namespace TrabajoExamen
 			this.circunferenciaToolStripMenuItem.Name = "circunferenciaToolStripMenuItem";
 			this.circunferenciaToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
 			this.circunferenciaToolStripMenuItem.Text = "Circunferencia";
+			this.circunferenciaToolStripMenuItem.Click += new System.EventHandler(this.CircunferenciaToolStripMenuItemClick);
 			// 
 			// trapecioToolStripMenuItem
 			// 
 			this.trapecioToolStripMenuItem.Name = "trapecioToolStripMenuItem";
 			this.trapecioToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
 			this.trapecioToolStripMenuItem.Text = "Trapecio";
+			this.trapecioToolStripMenuItem.Click += new System.EventHandler(this.TrapecioToolStripMenuItemClick);
 			// 
 			// volumenToolStripMenuItem
 			// 
@@ -176,18 +183,21 @@ namespace TrabajoExamen
 			this.esferaToolStripMenuItem.Name = "esferaToolStripMenuItem";
 			this.esferaToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
 			this.esferaToolStripMenuItem.Text = "Esfera";
+			this.esferaToolStripMenuItem.Click += new System.EventHandler(this.EsferaToolStripMenuItemClick);
 			// 
 			// cuboToolStripMenuItem
 			// 
 			this.cuboToolStripMenuItem.Name = "cuboToolStripMenuItem";
 			this.cuboToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
 			this.cuboToolStripMenuItem.Text = "Cubo";
+			this.cuboToolStripMenuItem.Click += new System.EventHandler(this.CuboToolStripMenuItemClick);
 			// 
 			// pirámideToolStripMenuItem
 			// 
 			this.pirámideToolStripMenuItem.Name = "pirámideToolStripMenuItem";
 			this.pirámideToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
 			this.pirámideToolStripMenuItem.Text = "Pirámide";
+			this.pirámideToolStripMenuItem.Click += new System.EventHandler(this.PirámideToolStripMenuItemClick);
 			// 
 			// conversionesToolStripMenuItem
 			// 
@@ -203,26 +213,37 @@ namespace TrabajoExamen
 			// longToolStripMenuItem
 			// 
 			this.longToolStripMenuItem.Name = "longToolStripMenuItem";
-			this.longToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.longToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
 			this.longToolStripMenuItem.Text = "Longitud";
+			this.longToolStripMenuItem.Click += new System.EventHandler(this.LongToolStripMenuItemClick);
 			// 
 			// temperaturasToolStripMenuItem
 			// 
 			this.temperaturasToolStripMenuItem.Name = "temperaturasToolStripMenuItem";
-			this.temperaturasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.temperaturasToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
 			this.temperaturasToolStripMenuItem.Text = "Temperatura";
+			this.temperaturasToolStripMenuItem.Click += new System.EventHandler(this.TemperaturasToolStripMenuItemClick);
 			// 
 			// tiempoToolStripMenuItem
 			// 
 			this.tiempoToolStripMenuItem.Name = "tiempoToolStripMenuItem";
-			this.tiempoToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+			this.tiempoToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
 			this.tiempoToolStripMenuItem.Text = "Tiempo";
+			this.tiempoToolStripMenuItem.Click += new System.EventHandler(this.TiempoToolStripMenuItemClick);
+			// 
+			// masaToolStripMenuItem
+			// 
+			this.masaToolStripMenuItem.Name = "masaToolStripMenuItem";
+			this.masaToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+			this.masaToolStripMenuItem.Text = "Masa";
+			this.masaToolStripMenuItem.Click += new System.EventHandler(this.MasaToolStripMenuItemClick);
 			// 
 			// boletaDeCalificacionesToolStripMenuItem
 			// 
 			this.boletaDeCalificacionesToolStripMenuItem.Name = "boletaDeCalificacionesToolStripMenuItem";
 			this.boletaDeCalificacionesToolStripMenuItem.Size = new System.Drawing.Size(144, 20);
 			this.boletaDeCalificacionesToolStripMenuItem.Text = "Boleta de Calificaciones";
+			this.boletaDeCalificacionesToolStripMenuItem.Click += new System.EventHandler(this.BoletaDeCalificacionesToolStripMenuItemClick);
 			// 
 			// toolStripMenuItem1
 			// 
@@ -234,18 +255,14 @@ namespace TrabajoExamen
 			this.postresToolStripMenuItem1.Name = "postresToolStripMenuItem1";
 			this.postresToolStripMenuItem1.Size = new System.Drawing.Size(57, 20);
 			this.postresToolStripMenuItem1.Text = "Postres";
+			this.postresToolStripMenuItem1.Click += new System.EventHandler(this.PostresToolStripMenuItem1Click);
 			// 
 			// empleadosToolStripMenuItem
 			// 
 			this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
 			this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
 			this.empleadosToolStripMenuItem.Text = "Empleados";
-			// 
-			// masaToolStripMenuItem
-			// 
-			this.masaToolStripMenuItem.Name = "masaToolStripMenuItem";
-			this.masaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-			this.masaToolStripMenuItem.Text = "Masa";
+			this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.EmpleadosToolStripMenuItemClick);
 			// 
 			// Form1
 			// 
