@@ -48,6 +48,7 @@ namespace TrabajoExamen
 			// 
 			// label1
 			// 
+			this.label1.Font = new System.Drawing.Font("Stencil", 10F);
 			this.label1.Location = new System.Drawing.Point(27, 25);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(100, 23);
@@ -56,6 +57,7 @@ namespace TrabajoExamen
 			// 
 			// label2
 			// 
+			this.label2.Font = new System.Drawing.Font("Stencil", 10F);
 			this.label2.Location = new System.Drawing.Point(27, 69);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(100, 23);
@@ -64,39 +66,47 @@ namespace TrabajoExamen
 			// 
 			// txtUsuario
 			// 
+			this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtUsuario.Font = new System.Drawing.Font("Sitka Text", 8F);
 			this.txtUsuario.Location = new System.Drawing.Point(134, 28);
 			this.txtUsuario.Name = "txtUsuario";
-			this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+			this.txtUsuario.Size = new System.Drawing.Size(100, 21);
 			this.txtUsuario.TabIndex = 2;
 			this.txtUsuario.Enter += new System.EventHandler(this.TxtUsuarioEnter);
 			this.txtUsuario.Leave += new System.EventHandler(this.TxtUsuarioLeave);
 			// 
 			// txtContraseña
 			// 
+			this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtContraseña.Font = new System.Drawing.Font("Sitka Text", 8F);
 			this.txtContraseña.Location = new System.Drawing.Point(134, 69);
 			this.txtContraseña.Name = "txtContraseña";
-			this.txtContraseña.Size = new System.Drawing.Size(100, 20);
+			this.txtContraseña.Size = new System.Drawing.Size(100, 21);
 			this.txtContraseña.TabIndex = 3;
 			this.txtContraseña.Enter += new System.EventHandler(this.TxtContraseñaEnter);
 			this.txtContraseña.Leave += new System.EventHandler(this.TxtContraseñaLeave);
 			// 
 			// btnCerrar
 			// 
+			this.btnCerrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnCerrar.Font = new System.Drawing.Font("Stencil", 10F);
 			this.btnCerrar.Location = new System.Drawing.Point(36, 130);
 			this.btnCerrar.Name = "btnCerrar";
-			this.btnCerrar.Size = new System.Drawing.Size(75, 23);
+			this.btnCerrar.Size = new System.Drawing.Size(91, 23);
 			this.btnCerrar.TabIndex = 4;
 			this.btnCerrar.Text = "Cerrar";
-			this.btnCerrar.UseVisualStyleBackColor = true;
+			this.btnCerrar.UseVisualStyleBackColor = false;
 			// 
 			// btnAcceder
 			// 
-			this.btnAcceder.Location = new System.Drawing.Point(170, 130);
+			this.btnAcceder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnAcceder.Font = new System.Drawing.Font("Stencil", 10F);
+			this.btnAcceder.Location = new System.Drawing.Point(181, 130);
 			this.btnAcceder.Name = "btnAcceder";
-			this.btnAcceder.Size = new System.Drawing.Size(75, 23);
+			this.btnAcceder.Size = new System.Drawing.Size(81, 23);
 			this.btnAcceder.TabIndex = 5;
 			this.btnAcceder.Text = "Acceder";
-			this.btnAcceder.UseVisualStyleBackColor = true;
+			this.btnAcceder.UseVisualStyleBackColor = false;
 			this.btnAcceder.Click += new System.EventHandler(this.BtnAccederClick);
 			// 
 			// pictureBox1
@@ -113,7 +123,7 @@ namespace TrabajoExamen
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(391, 206);
+			this.ClientSize = new System.Drawing.Size(387, 196);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.btnAcceder);
 			this.Controls.Add(this.btnCerrar);
