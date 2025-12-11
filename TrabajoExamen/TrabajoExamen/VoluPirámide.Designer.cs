@@ -66,6 +66,7 @@ namespace TrabajoExamen
 			// 
 			// pictureBox1
 			// 
+			this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.pictureBox1.Location = new System.Drawing.Point(188, 121);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(100, 88);
@@ -136,6 +137,7 @@ namespace TrabajoExamen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(361, 312);
 			this.Controls.Add(this.lblVolumen);
 			this.Controls.Add(this.label3);

@@ -86,5 +86,10 @@ namespace TrabajoExamen
 				txtUsuario.ForeColor=Color.DimGray;
 			}
 		}
+		
+		void MainFormLoad(object sender, EventArgs e)
+		{
+			pictureBox1.Image=Resource1.login;
+		}
 	}
 }

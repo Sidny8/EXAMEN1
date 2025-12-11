@@ -170,6 +170,7 @@ namespace TrabajoExamen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(402, 320);
 			this.Controls.Add(this.txtLadoD);
 			this.Controls.Add(this.txtLadoC);
