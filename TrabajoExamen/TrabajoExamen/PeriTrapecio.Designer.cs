@@ -68,7 +68,7 @@ namespace TrabajoExamen
 			this.label3.Size = new System.Drawing.Size(208, 23);
 			this.label3.TabIndex = 18;
 			this.label3.Text = "El Perimetro del Trapecio es:";
-			this.label3.Click += new System.EventHandler(this.Label3Click);
+			
 			// 
 			// pictureBox1
 			// 
