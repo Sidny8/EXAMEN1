@@ -423,7 +423,7 @@ namespace TrabajoExamen
 		
 		void SalirToolStripMenuItemClick(object sender, EventArgs e)
 		{
-			 if(MessageBox.Show("Estas seguro de eliminar?", "Confirmar", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes) 
+			 if(MessageBox.Show("¿Estas seguro de querer salir de la aplicación?", "Confirmar", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes) 
                 { 
 			 	Application.Exit();
                 } 
