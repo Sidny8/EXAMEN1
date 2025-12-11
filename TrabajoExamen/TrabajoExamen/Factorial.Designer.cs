@@ -42,6 +42,7 @@ namespace TrabajoExamen
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.btnLimpiar = new System.Windows.Forms.Button();
+			this.label3 = new System.Windows.Forms.Label();
 			this.SuspendLayout();
 			// 
 			// txtNum
@@ -105,12 +106,22 @@ namespace TrabajoExamen
 			this.btnLimpiar.UseVisualStyleBackColor = false;
 			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
 			// 
+			// label3
+			// 
+			this.label3.Font = new System.Drawing.Font("Snap ITC", 14F);
+			this.label3.Location = new System.Drawing.Point(87, 9);
+			this.label3.Name = "label3";
+			this.label3.Size = new System.Drawing.Size(157, 23);
+			this.label3.TabIndex = 6;
+			this.label3.Text = "Factorial";
+			// 
 			// Factorial
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(322, 225);
+			this.Controls.Add(this.label3);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -122,6 +133,7 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Button btnLimpiar;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;

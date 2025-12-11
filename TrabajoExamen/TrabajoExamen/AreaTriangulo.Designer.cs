@@ -46,12 +46,13 @@ namespace TrabajoExamen
 			this.txtBase = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblArea
 			// 
-			this.lblArea.Location = new System.Drawing.Point(241, 282);
+			this.lblArea.Location = new System.Drawing.Point(238, 327);
 			this.lblArea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblArea.Name = "lblArea";
 			this.lblArea.Size = new System.Drawing.Size(133, 28);
@@ -60,7 +61,7 @@ namespace TrabajoExamen
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Sitka Banner", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(221, 254);
+			this.label3.Location = new System.Drawing.Point(218, 299);
 			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(225, 28);
@@ -69,8 +70,8 @@ namespace TrabajoExamen
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(241, 124);
-			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.pictureBox1.Location = new System.Drawing.Point(238, 169);
+			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(133, 108);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -80,8 +81,8 @@ namespace TrabajoExamen
 			// btnRegresar
 			// 
 			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			this.btnRegresar.Location = new System.Drawing.Point(16, 247);
-			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnRegresar.Location = new System.Drawing.Point(13, 292);
+			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(100, 28);
 			this.btnRegresar.TabIndex = 26;
@@ -91,8 +92,8 @@ namespace TrabajoExamen
 			// btnLimpiar
 			// 
 			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			this.btnLimpiar.Location = new System.Drawing.Point(16, 204);
-			this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnLimpiar.Location = new System.Drawing.Point(13, 249);
+			this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(100, 28);
 			this.btnLimpiar.TabIndex = 25;
@@ -104,8 +105,8 @@ namespace TrabajoExamen
 			// 
 			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCalcular.Location = new System.Drawing.Point(16, 155);
-			this.btnCalcular.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnCalcular.Location = new System.Drawing.Point(13, 200);
+			this.btnCalcular.Margin = new System.Windows.Forms.Padding(4);
 			this.btnCalcular.Name = "btnCalcular";
 			this.btnCalcular.Size = new System.Drawing.Size(100, 28);
 			this.btnCalcular.TabIndex = 24;
@@ -117,8 +118,8 @@ namespace TrabajoExamen
 			// 
 			this.txtAltura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txtAltura.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtAltura.Location = new System.Drawing.Point(184, 70);
-			this.txtAltura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtAltura.Location = new System.Drawing.Point(181, 115);
+			this.txtAltura.Margin = new System.Windows.Forms.Padding(4);
 			this.txtAltura.Name = "txtAltura";
 			this.txtAltura.Size = new System.Drawing.Size(132, 21);
 			this.txtAltura.TabIndex = 23;
@@ -127,8 +128,8 @@ namespace TrabajoExamen
 			// 
 			this.txtBase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txtBase.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtBase.Location = new System.Drawing.Point(184, 26);
-			this.txtBase.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtBase.Location = new System.Drawing.Point(181, 71);
+			this.txtBase.Margin = new System.Windows.Forms.Padding(4);
 			this.txtBase.Name = "txtBase";
 			this.txtBase.Size = new System.Drawing.Size(132, 21);
 			this.txtBase.TabIndex = 22;
@@ -136,7 +137,7 @@ namespace TrabajoExamen
 			// label2
 			// 
 			this.label2.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(43, 74);
+			this.label2.Location = new System.Drawing.Point(40, 119);
 			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(133, 28);
@@ -147,19 +148,29 @@ namespace TrabajoExamen
 			// 
 			this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.label1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(43, 26);
+			this.label1.Location = new System.Drawing.Point(40, 71);
 			this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(133, 28);
 			this.label1.TabIndex = 20;
 			this.label1.Text = "Base:";
 			// 
+			// label4
+			// 
+			this.label4.Font = new System.Drawing.Font("Snap ITC", 14F);
+			this.label4.Location = new System.Drawing.Point(70, 28);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(273, 23);
+			this.label4.TabIndex = 30;
+			this.label4.Text = "Área de un Triángulo";
+			// 
 			// AreaTriangulo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(441, 332);
+			this.ClientSize = new System.Drawing.Size(450, 369);
+			this.Controls.Add(this.label4);
 			this.Controls.Add(this.lblArea);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.pictureBox1);
@@ -171,7 +182,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "AreaTriangulo";
 			this.Text = "AreaTriangulo";
 			this.Load += new System.EventHandler(this.AreaTrianguloLoad);
@@ -179,6 +190,7 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txtBase;

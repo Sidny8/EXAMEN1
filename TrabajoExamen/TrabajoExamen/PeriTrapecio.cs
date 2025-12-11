@@ -56,5 +56,7 @@ namespace TrabajoExamen
 		{
 			pictureBox1.Image=Resource1.trapecio;
 		}
+		
+		
 	}
 }

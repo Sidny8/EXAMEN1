@@ -46,12 +46,13 @@ namespace TrabajoExamen
 			this.txtBase = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblArea
 			// 
-			this.lblArea.Location = new System.Drawing.Point(175, 234);
+			this.lblArea.Location = new System.Drawing.Point(185, 287);
 			this.lblArea.Name = "lblArea";
 			this.lblArea.Size = new System.Drawing.Size(100, 23);
 			this.lblArea.TabIndex = 19;
@@ -59,7 +60,7 @@ namespace TrabajoExamen
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Sitka Banner", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(161, 209);
+			this.label3.Location = new System.Drawing.Point(171, 262);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(169, 23);
 			this.label3.TabIndex = 18;
@@ -67,7 +68,7 @@ namespace TrabajoExamen
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(175, 109);
+			this.pictureBox1.Location = new System.Drawing.Point(185, 162);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(100, 88);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -78,7 +79,7 @@ namespace TrabajoExamen
 			// 
 			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnRegresar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnRegresar.Location = new System.Drawing.Point(18, 209);
+			this.btnRegresar.Location = new System.Drawing.Point(28, 262);
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(88, 23);
 			this.btnRegresar.TabIndex = 16;
@@ -89,7 +90,7 @@ namespace TrabajoExamen
 			// 
 			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnLimpiar.Location = new System.Drawing.Point(18, 174);
+			this.btnLimpiar.Location = new System.Drawing.Point(28, 227);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
 			this.btnLimpiar.TabIndex = 15;
@@ -101,7 +102,7 @@ namespace TrabajoExamen
 			// 
 			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCalcular.Location = new System.Drawing.Point(18, 136);
+			this.btnCalcular.Location = new System.Drawing.Point(28, 189);
 			this.btnCalcular.Name = "btnCalcular";
 			this.btnCalcular.Size = new System.Drawing.Size(88, 23);
 			this.btnCalcular.TabIndex = 14;
@@ -113,7 +114,7 @@ namespace TrabajoExamen
 			// 
 			this.txtAltura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txtAltura.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtAltura.Location = new System.Drawing.Point(125, 68);
+			this.txtAltura.Location = new System.Drawing.Point(135, 121);
 			this.txtAltura.Name = "txtAltura";
 			this.txtAltura.Size = new System.Drawing.Size(100, 21);
 			this.txtAltura.TabIndex = 13;
@@ -122,7 +123,7 @@ namespace TrabajoExamen
 			// 
 			this.txtBase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txtBase.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtBase.Location = new System.Drawing.Point(125, 29);
+			this.txtBase.Location = new System.Drawing.Point(135, 82);
 			this.txtBase.Name = "txtBase";
 			this.txtBase.Size = new System.Drawing.Size(100, 21);
 			this.txtBase.TabIndex = 12;
@@ -130,7 +131,7 @@ namespace TrabajoExamen
 			// label2
 			// 
 			this.label2.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(18, 68);
+			this.label2.Location = new System.Drawing.Point(28, 121);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(100, 23);
 			this.label2.TabIndex = 11;
@@ -139,18 +140,28 @@ namespace TrabajoExamen
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(19, 29);
+			this.label1.Location = new System.Drawing.Point(29, 82);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(100, 23);
 			this.label1.TabIndex = 10;
 			this.label1.Text = "Base:";
+			// 
+			// label4
+			// 
+			this.label4.Font = new System.Drawing.Font("Snap ITC", 14F);
+			this.label4.Location = new System.Drawing.Point(28, 21);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(285, 23);
+			this.label4.TabIndex = 20;
+			this.label4.Text = "Área de un Rectángulo";
 			// 
 			// AreaRectangulo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(334, 287);
+			this.ClientSize = new System.Drawing.Size(334, 332);
+			this.Controls.Add(this.label4);
 			this.Controls.Add(this.lblArea);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.pictureBox1);
@@ -168,6 +179,7 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.TextBox txtBase;
