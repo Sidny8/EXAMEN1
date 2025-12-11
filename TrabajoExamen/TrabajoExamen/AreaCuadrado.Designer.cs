@@ -46,71 +46,84 @@ namespace TrabajoExamen
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label3 = new System.Windows.Forms.Label();
 			this.lblArea = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(26, 24);
+			this.label1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(28, 78);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(100, 23);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "LadoA:";
+			this.label1.Text = "Lado A:";
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(26, 63);
+			this.label2.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(28, 117);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(100, 23);
 			this.label2.TabIndex = 1;
-			this.label2.Text = "LadoB:";
+			this.label2.Text = "Lado B:";
 			// 
 			// txtLadoA
 			// 
-			this.txtLadoA.Location = new System.Drawing.Point(133, 24);
+			this.txtLadoA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtLadoA.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtLadoA.Location = new System.Drawing.Point(135, 78);
 			this.txtLadoA.Name = "txtLadoA";
-			this.txtLadoA.Size = new System.Drawing.Size(100, 20);
+			this.txtLadoA.Size = new System.Drawing.Size(100, 21);
 			this.txtLadoA.TabIndex = 2;
 			// 
 			// txtLadoB
 			// 
-			this.txtLadoB.Location = new System.Drawing.Point(133, 63);
+			this.txtLadoB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtLadoB.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtLadoB.Location = new System.Drawing.Point(135, 117);
 			this.txtLadoB.Name = "txtLadoB";
-			this.txtLadoB.Size = new System.Drawing.Size(100, 20);
+			this.txtLadoB.Size = new System.Drawing.Size(100, 21);
 			this.txtLadoB.TabIndex = 3;
 			// 
 			// btnCalcular
 			// 
-			this.btnCalcular.Location = new System.Drawing.Point(12, 129);
+			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCalcular.Location = new System.Drawing.Point(14, 183);
 			this.btnCalcular.Name = "btnCalcular";
-			this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+			this.btnCalcular.Size = new System.Drawing.Size(87, 23);
 			this.btnCalcular.TabIndex = 4;
 			this.btnCalcular.Text = "Calcular";
-			this.btnCalcular.UseVisualStyleBackColor = true;
+			this.btnCalcular.UseVisualStyleBackColor = false;
 			this.btnCalcular.Click += new System.EventHandler(this.BtnCalcularClick);
 			// 
 			// btnLimpiar
 			// 
-			this.btnLimpiar.Location = new System.Drawing.Point(12, 169);
+			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnLimpiar.Location = new System.Drawing.Point(14, 223);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
 			this.btnLimpiar.TabIndex = 5;
 			this.btnLimpiar.Text = "Limpiar";
-			this.btnLimpiar.UseVisualStyleBackColor = true;
+			this.btnLimpiar.UseVisualStyleBackColor = false;
 			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
 			// 
 			// btnRegresar
 			// 
-			this.btnRegresar.Location = new System.Drawing.Point(12, 211);
+			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnRegresar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnRegresar.Location = new System.Drawing.Point(14, 265);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+			this.btnRegresar.Size = new System.Drawing.Size(87, 23);
 			this.btnRegresar.TabIndex = 6;
 			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = true;
+			this.btnRegresar.UseVisualStyleBackColor = false;
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(183, 104);
+			this.pictureBox1.Location = new System.Drawing.Point(185, 158);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(100, 88);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -119,7 +132,8 @@ namespace TrabajoExamen
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(169, 204);
+			this.label3.Font = new System.Drawing.Font("Sitka Banner", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(171, 258);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(169, 23);
 			this.label3.TabIndex = 8;
@@ -127,17 +141,27 @@ namespace TrabajoExamen
 			// 
 			// lblArea
 			// 
-			this.lblArea.Location = new System.Drawing.Point(183, 229);
+			this.lblArea.Location = new System.Drawing.Point(185, 283);
 			this.lblArea.Name = "lblArea";
 			this.lblArea.Size = new System.Drawing.Size(100, 23);
 			this.lblArea.TabIndex = 9;
+			// 
+			// label4
+			// 
+			this.label4.Font = new System.Drawing.Font("Snap ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.Location = new System.Drawing.Point(46, 18);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(277, 23);
+			this.label4.TabIndex = 10;
+			this.label4.Text = "Área de un Cuadrado";
 			// 
 			// AreaCuadrado
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(331, 261);
+			this.ClientSize = new System.Drawing.Size(353, 340);
+			this.Controls.Add(this.label4);
 			this.Controls.Add(this.lblArea);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.pictureBox1);
@@ -155,6 +179,7 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label lblArea;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.PictureBox pictureBox1;

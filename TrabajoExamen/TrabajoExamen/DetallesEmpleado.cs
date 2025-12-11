@@ -208,7 +208,7 @@ namespace TrabajoExamen
 			}
 			//Ver cual Estado escogio
 			if(radioButton1.Checked){
-				estado="Regular";
+				estado="Regulado";
 			}
 			if(radioButton2.Checked){
 				estado="Cotizado";

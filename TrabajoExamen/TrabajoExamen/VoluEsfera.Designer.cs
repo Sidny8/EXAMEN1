@@ -44,19 +44,22 @@ namespace TrabajoExamen
 			this.btnCalcular = new System.Windows.Forms.Button();
 			this.txtRadio = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblVolumen
 			// 
-			this.lblVolumen.Location = new System.Drawing.Point(213, 239);
+			this.lblVolumen.Location = new System.Drawing.Point(230, 276);
 			this.lblVolumen.Name = "lblVolumen";
 			this.lblVolumen.Size = new System.Drawing.Size(100, 23);
 			this.lblVolumen.TabIndex = 47;
+			
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(189, 216);
+			this.label3.Font = new System.Drawing.Font("Sitka Text", 10F);
+			this.label3.Location = new System.Drawing.Point(189, 229);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(186, 23);
 			this.label3.TabIndex = 46;
@@ -65,7 +68,7 @@ namespace TrabajoExamen
 			// pictureBox1
 			// 
 			this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.pictureBox1.Location = new System.Drawing.Point(204, 97);
+			this.pictureBox1.Location = new System.Drawing.Point(221, 124);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(109, 102);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -74,47 +77,65 @@ namespace TrabajoExamen
 			// 
 			// btnRegresar
 			// 
-			this.btnRegresar.Location = new System.Drawing.Point(28, 190);
+			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnRegresar.Font = new System.Drawing.Font("Stencil", 10F);
+			this.btnRegresar.Location = new System.Drawing.Point(28, 251);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+			this.btnRegresar.Size = new System.Drawing.Size(91, 23);
 			this.btnRegresar.TabIndex = 44;
 			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = true;
+			this.btnRegresar.UseVisualStyleBackColor = false;
 			// 
 			// btnLimpiar
 			// 
-			this.btnLimpiar.Location = new System.Drawing.Point(28, 150);
+			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 10F);
+			this.btnLimpiar.Location = new System.Drawing.Point(28, 216);
 			this.btnLimpiar.Name = "btnLimpiar";
-			this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+			this.btnLimpiar.Size = new System.Drawing.Size(91, 23);
 			this.btnLimpiar.TabIndex = 43;
 			this.btnLimpiar.Text = "Limpiar";
-			this.btnLimpiar.UseVisualStyleBackColor = true;
+			this.btnLimpiar.UseVisualStyleBackColor = false;
 			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
 			// 
 			// btnCalcular
 			// 
-			this.btnCalcular.Location = new System.Drawing.Point(28, 110);
+			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 10F);
+			this.btnCalcular.Location = new System.Drawing.Point(28, 176);
 			this.btnCalcular.Name = "btnCalcular";
-			this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+			this.btnCalcular.Size = new System.Drawing.Size(91, 23);
 			this.btnCalcular.TabIndex = 42;
 			this.btnCalcular.Text = "Calcular";
-			this.btnCalcular.UseVisualStyleBackColor = true;
+			this.btnCalcular.UseVisualStyleBackColor = false;
 			this.btnCalcular.Click += new System.EventHandler(this.BtnCalcularClick);
 			// 
 			// txtRadio
 			// 
-			this.txtRadio.Location = new System.Drawing.Point(134, 40);
+			this.txtRadio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtRadio.Font = new System.Drawing.Font("Sitka Text", 8F);
+			this.txtRadio.Location = new System.Drawing.Point(221, 68);
 			this.txtRadio.Name = "txtRadio";
-			this.txtRadio.Size = new System.Drawing.Size(100, 20);
+			this.txtRadio.Size = new System.Drawing.Size(100, 21);
 			this.txtRadio.TabIndex = 41;
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(28, 40);
+			this.label1.Font = new System.Drawing.Font("Stencil", 10F);
+			this.label1.Location = new System.Drawing.Point(12, 72);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(100, 23);
+			this.label1.Size = new System.Drawing.Size(150, 23);
 			this.label1.TabIndex = 40;
 			this.label1.Text = "Dame el Radio:";
+			// 
+			// label2
+			// 
+			this.label2.Font = new System.Drawing.Font("Stencil", 14F);
+			this.label2.Location = new System.Drawing.Point(74, 9);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(231, 23);
+			this.label2.TabIndex = 48;
+			this.label2.Text = "volumen de esfera";
 			// 
 			// VoluEsfera
 			// 
@@ -122,6 +143,7 @@ namespace TrabajoExamen
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(387, 317);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.lblVolumen);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.pictureBox1);
@@ -137,6 +159,7 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox txtRadio;
 		private System.Windows.Forms.Button btnCalcular;

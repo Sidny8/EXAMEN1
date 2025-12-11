@@ -44,28 +44,30 @@ namespace TrabajoExamen
 			this.btnCalcular = new System.Windows.Forms.Button();
 			this.txtDiametro = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblPerimetro
 			// 
-			this.lblPerimetro.Location = new System.Drawing.Point(205, 218);
+			this.lblPerimetro.Location = new System.Drawing.Point(196, 268);
 			this.lblPerimetro.Name = "lblPerimetro";
 			this.lblPerimetro.Size = new System.Drawing.Size(100, 23);
 			this.lblPerimetro.TabIndex = 39;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(165, 195);
+			this.label3.Font = new System.Drawing.Font("Sitka Text", 10F);
+			this.label3.Location = new System.Drawing.Point(95, 245);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(186, 23);
+			this.label3.Size = new System.Drawing.Size(268, 23);
 			this.label3.TabIndex = 38;
-			this.label3.Text = "El Perimetro de la Circungerencia es:";
+			this.label3.Text = "El Perimetro de la Circunferencia es:";
 			// 
 			// pictureBox1
 			// 
 			this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.pictureBox1.Location = new System.Drawing.Point(196, 76);
+			this.pictureBox1.Location = new System.Drawing.Point(187, 126);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(109, 102);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -74,54 +76,73 @@ namespace TrabajoExamen
 			// 
 			// btnRegresar
 			// 
-			this.btnRegresar.Location = new System.Drawing.Point(20, 169);
+			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnRegresar.Font = new System.Drawing.Font("Stencil", 10F);
+			this.btnRegresar.Location = new System.Drawing.Point(11, 220);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+			this.btnRegresar.Size = new System.Drawing.Size(94, 23);
 			this.btnRegresar.TabIndex = 36;
 			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = true;
+			this.btnRegresar.UseVisualStyleBackColor = false;
 			// 
 			// btnLimpiar
 			// 
-			this.btnLimpiar.Location = new System.Drawing.Point(20, 129);
+			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 10F);
+			this.btnLimpiar.Location = new System.Drawing.Point(11, 179);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
 			this.btnLimpiar.TabIndex = 35;
 			this.btnLimpiar.Text = "Limpiar";
-			this.btnLimpiar.UseVisualStyleBackColor = true;
+			this.btnLimpiar.UseVisualStyleBackColor = false;
 			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
 			// 
 			// btnCalcular
 			// 
-			this.btnCalcular.Location = new System.Drawing.Point(20, 89);
+			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 10F);
+			this.btnCalcular.Location = new System.Drawing.Point(11, 140);
 			this.btnCalcular.Name = "btnCalcular";
-			this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+			this.btnCalcular.Size = new System.Drawing.Size(84, 23);
 			this.btnCalcular.TabIndex = 34;
 			this.btnCalcular.Text = "Calcular";
-			this.btnCalcular.UseVisualStyleBackColor = true;
+			this.btnCalcular.UseVisualStyleBackColor = false;
 			this.btnCalcular.Click += new System.EventHandler(this.BtnCalcularClick);
 			// 
 			// txtDiametro
 			// 
-			this.txtDiametro.Location = new System.Drawing.Point(146, 34);
+			this.txtDiametro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtDiametro.Font = new System.Drawing.Font("Sitka Text", 8F);
+			this.txtDiametro.Location = new System.Drawing.Point(156, 84);
 			this.txtDiametro.Name = "txtDiametro";
-			this.txtDiametro.Size = new System.Drawing.Size(100, 20);
+			this.txtDiametro.Size = new System.Drawing.Size(100, 21);
 			this.txtDiametro.TabIndex = 32;
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(40, 34);
+			this.label1.Font = new System.Drawing.Font("Stencil", 10F);
+			this.label1.Location = new System.Drawing.Point(11, 84);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(100, 23);
+			this.label1.Size = new System.Drawing.Size(147, 23);
 			this.label1.TabIndex = 30;
 			this.label1.Text = "Dame el Diaetro:";
+			// 
+			// label2
+			// 
+			this.label2.Font = new System.Drawing.Font("Snap ITC", 14F);
+			this.label2.Location = new System.Drawing.Point(32, 19);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(319, 23);
+			this.label2.TabIndex = 40;
+			this.label2.Text = "Perímetro Circunferencia";
 			// 
 			// PeriCircunferencia
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(363, 270);
+			this.ClientSize = new System.Drawing.Size(363, 314);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.lblPerimetro);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.pictureBox1);
@@ -137,6 +158,7 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox txtDiametro;
 		private System.Windows.Forms.Button btnCalcular;

@@ -117,7 +117,7 @@ namespace TrabajoExamen
 			// txtnombre
 			// 
 			this.txtnombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.txtnombre.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtnombre.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtnombre.Location = new System.Drawing.Point(30, 42);
 			this.txtnombre.Name = "txtnombre";
 			this.txtnombre.Size = new System.Drawing.Size(100, 21);
@@ -126,7 +126,7 @@ namespace TrabajoExamen
 			// cboespecialidad
 			// 
 			this.cboespecialidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.cboespecialidad.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cboespecialidad.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cboespecialidad.FormattingEnabled = true;
 			this.cboespecialidad.Items.AddRange(new object[] {
 									"Programación",
@@ -138,13 +138,13 @@ namespace TrabajoExamen
 									"Mecánica "});
 			this.cboespecialidad.Location = new System.Drawing.Point(154, 43);
 			this.cboespecialidad.Name = "cboespecialidad";
-			this.cboespecialidad.Size = new System.Drawing.Size(121, 21);
+			this.cboespecialidad.Size = new System.Drawing.Size(121, 24);
 			this.cboespecialidad.TabIndex = 19;
 			// 
 			// txt1
 			// 
 			this.txt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.txt1.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txt1.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt1.Location = new System.Drawing.Point(315, 44);
 			this.txt1.Name = "txt1";
 			this.txt1.Size = new System.Drawing.Size(100, 21);
@@ -153,7 +153,7 @@ namespace TrabajoExamen
 			// txt2
 			// 
 			this.txt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.txt2.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txt2.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt2.Location = new System.Drawing.Point(435, 44);
 			this.txt2.Name = "txt2";
 			this.txt2.Size = new System.Drawing.Size(100, 21);
@@ -171,7 +171,7 @@ namespace TrabajoExamen
 			// cbosemestre
 			// 
 			this.cbosemestre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.cbosemestre.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cbosemestre.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbosemestre.FormattingEnabled = true;
 			this.cbosemestre.Items.AddRange(new object[] {
 									"Primer Semestre",
@@ -179,7 +179,7 @@ namespace TrabajoExamen
 									"Quinto Semestre"});
 			this.cbosemestre.Location = new System.Drawing.Point(15, 113);
 			this.cbosemestre.Name = "cbosemestre";
-			this.cbosemestre.Size = new System.Drawing.Size(121, 21);
+			this.cbosemestre.Size = new System.Drawing.Size(121, 24);
 			this.cbosemestre.TabIndex = 23;
 			// 
 			// label8
@@ -194,7 +194,7 @@ namespace TrabajoExamen
 			// cboasignatura
 			// 
 			this.cboasignatura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.cboasignatura.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cboasignatura.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cboasignatura.FormattingEnabled = true;
 			this.cboasignatura.Items.AddRange(new object[] {
 									"Pensamiento Matemático",
@@ -207,7 +207,7 @@ namespace TrabajoExamen
 									"Emplea frameworks para el desarrollo de software "});
 			this.cboasignatura.Location = new System.Drawing.Point(193, 113);
 			this.cboasignatura.Name = "cboasignatura";
-			this.cboasignatura.Size = new System.Drawing.Size(121, 21);
+			this.cboasignatura.Size = new System.Drawing.Size(121, 24);
 			this.cboasignatura.TabIndex = 25;
 			// 
 			// label5
@@ -222,7 +222,7 @@ namespace TrabajoExamen
 			// txt3
 			// 
 			this.txt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.txt3.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txt3.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt3.Location = new System.Drawing.Point(371, 112);
 			this.txt3.Name = "txt3";
 			this.txt3.Size = new System.Drawing.Size(100, 21);
@@ -360,7 +360,7 @@ namespace TrabajoExamen
 			// txtpromediogral
 			// 
 			this.txtpromediogral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.txtpromediogral.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtpromediogral.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtpromediogral.Location = new System.Drawing.Point(461, 483);
 			this.txtpromediogral.Name = "txtpromediogral";
 			this.txtpromediogral.Size = new System.Drawing.Size(133, 21);

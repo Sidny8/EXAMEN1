@@ -44,6 +44,7 @@ namespace TrabajoExamen
 			this.btnCalcular = new System.Windows.Forms.Button();
 			this.txtLado = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
+			this.label2 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -56,6 +57,7 @@ namespace TrabajoExamen
 			// 
 			// label3
 			// 
+			this.label3.Font = new System.Drawing.Font("Sitka Text", 10F);
 			this.label3.Location = new System.Drawing.Point(173, 215);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(186, 23);
@@ -73,47 +75,65 @@ namespace TrabajoExamen
 			// 
 			// btnRegresar
 			// 
+			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnRegresar.Font = new System.Drawing.Font("Stencil", 10F);
 			this.btnRegresar.Location = new System.Drawing.Point(22, 188);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+			this.btnRegresar.Size = new System.Drawing.Size(88, 23);
 			this.btnRegresar.TabIndex = 52;
 			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = true;
+			this.btnRegresar.UseVisualStyleBackColor = false;
 			// 
 			// btnLimpiar
 			// 
+			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 10F);
 			this.btnLimpiar.Location = new System.Drawing.Point(22, 149);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
 			this.btnLimpiar.TabIndex = 51;
 			this.btnLimpiar.Text = "Limpiar";
-			this.btnLimpiar.UseVisualStyleBackColor = true;
+			this.btnLimpiar.UseVisualStyleBackColor = false;
 			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
 			// 
 			// btnCalcular
 			// 
+			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 10F);
 			this.btnCalcular.Location = new System.Drawing.Point(22, 109);
 			this.btnCalcular.Name = "btnCalcular";
-			this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+			this.btnCalcular.Size = new System.Drawing.Size(88, 23);
 			this.btnCalcular.TabIndex = 50;
 			this.btnCalcular.Text = "Calcular";
-			this.btnCalcular.UseVisualStyleBackColor = true;
+			this.btnCalcular.UseVisualStyleBackColor = false;
 			this.btnCalcular.Click += new System.EventHandler(this.BtnCalcularClick);
 			// 
 			// txtLado
 			// 
-			this.txtLado.Location = new System.Drawing.Point(153, 39);
+			this.txtLado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtLado.Font = new System.Drawing.Font("Sitka Text", 8F);
+			this.txtLado.Location = new System.Drawing.Point(173, 58);
 			this.txtLado.Name = "txtLado";
-			this.txtLado.Size = new System.Drawing.Size(100, 20);
+			this.txtLado.Size = new System.Drawing.Size(100, 21);
 			this.txtLado.TabIndex = 49;
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(47, 39);
+			this.label1.Font = new System.Drawing.Font("Stencil", 10F);
+			this.label1.Location = new System.Drawing.Point(81, 62);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(100, 23);
 			this.label1.TabIndex = 48;
 			this.label1.Text = "Lado:";
+			// 
+			// label2
+			// 
+			this.label2.Font = new System.Drawing.Font("Snap ITC", 14F);
+			this.label2.Location = new System.Drawing.Point(81, 9);
+			this.label2.Name = "label2";
+			this.label2.Size = new System.Drawing.Size(210, 23);
+			this.label2.TabIndex = 56;
+			this.label2.Text = "Volúmen del Cubo";
 			// 
 			// VoluCubo
 			// 
@@ -121,6 +141,7 @@ namespace TrabajoExamen
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(359, 301);
+			this.Controls.Add(this.label2);
 			this.Controls.Add(this.lblVolumen);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.pictureBox1);
@@ -136,6 +157,7 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox txtLado;
 		private System.Windows.Forms.Button btnCalcular;

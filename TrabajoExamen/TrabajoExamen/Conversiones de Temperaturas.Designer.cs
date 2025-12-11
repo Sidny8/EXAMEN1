@@ -85,7 +85,7 @@ namespace TrabajoExamen
 			// txtDesde
 			// 
 			this.txtDesde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.txtDesde.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtDesde.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtDesde.Location = new System.Drawing.Point(12, 107);
 			this.txtDesde.Name = "txtDesde";
 			this.txtDesde.Size = new System.Drawing.Size(100, 21);
@@ -94,7 +94,7 @@ namespace TrabajoExamen
 			// txtHasta
 			// 
 			this.txtHasta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.txtHasta.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtHasta.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtHasta.Location = new System.Drawing.Point(134, 107);
 			this.txtHasta.Name = "txtHasta";
 			this.txtHasta.Size = new System.Drawing.Size(100, 21);
@@ -228,11 +228,13 @@ namespace TrabajoExamen
 			// lsbtemp
 			// 
 			this.lsbtemp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.lsbtemp.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lsbtemp.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lsbtemp.ForeColor = System.Drawing.Color.Black;
 			this.lsbtemp.FormattingEnabled = true;
+			this.lsbtemp.ItemHeight = 16;
 			this.lsbtemp.Location = new System.Drawing.Point(438, 95);
 			this.lsbtemp.Name = "lsbtemp";
-			this.lsbtemp.Size = new System.Drawing.Size(175, 173);
+			this.lsbtemp.Size = new System.Drawing.Size(175, 164);
 			this.lsbtemp.TabIndex = 16;
 			// 
 			// Conversiones_de_Temperaturas

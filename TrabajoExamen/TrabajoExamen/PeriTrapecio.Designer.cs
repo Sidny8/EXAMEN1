@@ -50,27 +50,29 @@ namespace TrabajoExamen
 			this.label5 = new System.Windows.Forms.Label();
 			this.txtLadoC = new System.Windows.Forms.TextBox();
 			this.txtLadoD = new System.Windows.Forms.TextBox();
+			this.label6 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblPerimetro
 			// 
-			this.lblPerimetro.Location = new System.Drawing.Point(244, 269);
+			this.lblPerimetro.Location = new System.Drawing.Point(240, 313);
 			this.lblPerimetro.Name = "lblPerimetro";
 			this.lblPerimetro.Size = new System.Drawing.Size(100, 23);
 			this.lblPerimetro.TabIndex = 19;
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(221, 246);
+			this.label3.Font = new System.Drawing.Font("Sitka Text", 10F);
+			this.label3.Location = new System.Drawing.Point(178, 290);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(169, 23);
+			this.label3.Size = new System.Drawing.Size(208, 23);
 			this.label3.TabIndex = 18;
 			this.label3.Text = "El Perimetro del Trapecio es:";
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(244, 136);
+			this.pictureBox1.Location = new System.Drawing.Point(240, 180);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(108, 97);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -79,99 +81,128 @@ namespace TrabajoExamen
 			// 
 			// btnRegresar
 			// 
-			this.btnRegresar.Location = new System.Drawing.Point(45, 246);
+			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnRegresar.Font = new System.Drawing.Font("Stencil", 10F);
+			this.btnRegresar.Location = new System.Drawing.Point(41, 290);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+			this.btnRegresar.Size = new System.Drawing.Size(98, 23);
 			this.btnRegresar.TabIndex = 16;
 			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = true;
+			this.btnRegresar.UseVisualStyleBackColor = false;
 			// 
 			// btnLimpiar
 			// 
-			this.btnLimpiar.Location = new System.Drawing.Point(45, 201);
+			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 10F);
+			this.btnLimpiar.Location = new System.Drawing.Point(41, 245);
 			this.btnLimpiar.Name = "btnLimpiar";
-			this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+			this.btnLimpiar.Size = new System.Drawing.Size(98, 23);
 			this.btnLimpiar.TabIndex = 15;
 			this.btnLimpiar.Text = "Limpiar";
-			this.btnLimpiar.UseVisualStyleBackColor = true;
+			this.btnLimpiar.UseVisualStyleBackColor = false;
 			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
 			// 
 			// btnCalcular
 			// 
-			this.btnCalcular.Location = new System.Drawing.Point(45, 160);
+			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 10F);
+			this.btnCalcular.Location = new System.Drawing.Point(41, 204);
 			this.btnCalcular.Name = "btnCalcular";
-			this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+			this.btnCalcular.Size = new System.Drawing.Size(98, 23);
 			this.btnCalcular.TabIndex = 14;
 			this.btnCalcular.Text = "Calcular";
-			this.btnCalcular.UseVisualStyleBackColor = true;
+			this.btnCalcular.UseVisualStyleBackColor = false;
 			this.btnCalcular.Click += new System.EventHandler(this.BtnCalcularClick);
 			// 
 			// txtLadoB
 			// 
-			this.txtLadoB.Location = new System.Drawing.Point(134, 57);
+			this.txtLadoB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtLadoB.Font = new System.Drawing.Font("Sitka Text", 8F);
+			this.txtLadoB.Location = new System.Drawing.Point(130, 101);
 			this.txtLadoB.Name = "txtLadoB";
-			this.txtLadoB.Size = new System.Drawing.Size(100, 20);
+			this.txtLadoB.Size = new System.Drawing.Size(100, 21);
 			this.txtLadoB.TabIndex = 13;
 			// 
 			// txtLadoA
 			// 
-			this.txtLadoA.Location = new System.Drawing.Point(134, 30);
+			this.txtLadoA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtLadoA.Font = new System.Drawing.Font("Sitka Text", 8F);
+			this.txtLadoA.Location = new System.Drawing.Point(130, 74);
 			this.txtLadoA.Name = "txtLadoA";
-			this.txtLadoA.Size = new System.Drawing.Size(100, 20);
+			this.txtLadoA.Size = new System.Drawing.Size(100, 21);
 			this.txtLadoA.TabIndex = 12;
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(55, 57);
+			this.label2.Font = new System.Drawing.Font("Stencil", 10F);
+			this.label2.Location = new System.Drawing.Point(51, 101);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(100, 23);
 			this.label2.TabIndex = 11;
-			this.label2.Text = "LadoB:";
+			this.label2.Text = "Lado B:";
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(55, 30);
+			this.label1.Font = new System.Drawing.Font("Stencil", 10F);
+			this.label1.Location = new System.Drawing.Point(51, 74);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(100, 23);
 			this.label1.TabIndex = 10;
-			this.label1.Text = "LadoA:";
+			this.label1.Text = "Lado A:";
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(55, 85);
+			this.label4.Font = new System.Drawing.Font("Stencil", 10F);
+			this.label4.Location = new System.Drawing.Point(51, 129);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(100, 23);
 			this.label4.TabIndex = 20;
-			this.label4.Text = "LadoC:";
+			this.label4.Text = "Lado C:";
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(55, 114);
+			this.label5.Font = new System.Drawing.Font("Stencil", 10F);
+			this.label5.Location = new System.Drawing.Point(51, 158);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(100, 23);
 			this.label5.TabIndex = 21;
-			this.label5.Text = "LadoD:";
+			this.label5.Text = "Lado D:";
 			// 
 			// txtLadoC
 			// 
-			this.txtLadoC.Location = new System.Drawing.Point(134, 83);
+			this.txtLadoC.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtLadoC.Font = new System.Drawing.Font("Sitka Text", 8F);
+			this.txtLadoC.Location = new System.Drawing.Point(130, 127);
 			this.txtLadoC.Name = "txtLadoC";
-			this.txtLadoC.Size = new System.Drawing.Size(100, 20);
+			this.txtLadoC.Size = new System.Drawing.Size(100, 21);
 			this.txtLadoC.TabIndex = 22;
 			// 
 			// txtLadoD
 			// 
-			this.txtLadoD.Location = new System.Drawing.Point(134, 111);
+			this.txtLadoD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtLadoD.Font = new System.Drawing.Font("Sitka Text", 8F);
+			this.txtLadoD.Location = new System.Drawing.Point(130, 155);
 			this.txtLadoD.Name = "txtLadoD";
-			this.txtLadoD.Size = new System.Drawing.Size(100, 20);
+			this.txtLadoD.Size = new System.Drawing.Size(100, 21);
 			this.txtLadoD.TabIndex = 23;
+			// 
+			// label6
+			// 
+			this.label6.Font = new System.Drawing.Font("Snap ITC", 14F);
+			this.label6.Location = new System.Drawing.Point(41, 25);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(328, 23);
+			this.label6.TabIndex = 24;
+			this.label6.Text = "Perímetro del Trapecio";
+			
 			// 
 			// PeriTrapecio
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(402, 320);
+			this.ClientSize = new System.Drawing.Size(402, 362);
+			this.Controls.Add(this.label6);
 			this.Controls.Add(this.txtLadoD);
 			this.Controls.Add(this.txtLadoC);
 			this.Controls.Add(this.label5);
@@ -193,6 +224,7 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.TextBox txtLadoD;
 		private System.Windows.Forms.TextBox txtLadoC;
 		private System.Windows.Forms.Label label5;
