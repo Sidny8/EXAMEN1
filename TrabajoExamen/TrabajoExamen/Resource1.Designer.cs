@@ -63,20 +63,19 @@ namespace TrabajoExamen {
 		/// <summary>
 		///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 		/// </summary>
-
-		internal static System.Drawing.Bitmap circulo {
+		internal static System.Drawing.Bitmap cindy {
 			get {
-				object obj = ResourceManager.GetObject("circulo", resourceCulture);
+				object obj = ResourceManager.GetObject("cindy", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
-
+		
 		/// <summary>
 		///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-		/// </summary
-		internal static System.Drawing.Bitmap pasteleria {
+		/// </summary>
+		internal static System.Drawing.Bitmap circulo {
 			get {
-				object obj = ResourceManager.GetObject("pasteleria", resourceCulture);
+				object obj = ResourceManager.GetObject("circulo", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -124,6 +123,16 @@ namespace TrabajoExamen {
 		/// <summary>
 		///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 		/// </summary>
+		internal static System.Drawing.Bitmap pasteleria {
+			get {
+				object obj = ResourceManager.GetObject("pasteleria", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
+			}
+		}
+		
+		/// <summary>
+		///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+		/// </summary>
 		internal static System.Drawing.Bitmap piramide {
 			get {
 				object obj = ResourceManager.GetObject("piramide", resourceCulture);
@@ -137,6 +146,26 @@ namespace TrabajoExamen {
 		internal static System.Drawing.Bitmap rectangulo {
 			get {
 				object obj = ResourceManager.GetObject("rectangulo", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
+			}
+		}
+		
+		/// <summary>
+		///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+		/// </summary>
+		internal static System.Drawing.Bitmap sam {
+			get {
+				object obj = ResourceManager.GetObject("sam", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
+			}
+		}
+		
+		/// <summary>
+		///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+		/// </summary>
+		internal static System.Drawing.Bitmap ticket {
+			get {
+				object obj = ResourceManager.GetObject("ticket", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -160,12 +189,13 @@ namespace TrabajoExamen {
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
+		
 		/// <summary>
 		///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-		/// </summary
-		internal static System.Drawing.Bitmap ticket {
+		/// </summary>
+		internal static System.Drawing.Bitmap untitled_0__1_ {
 			get {
-				object obj = ResourceManager.GetObject("ticket", resourceCulture);
+				object obj = ResourceManager.GetObject("untitled-0 (1)", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}

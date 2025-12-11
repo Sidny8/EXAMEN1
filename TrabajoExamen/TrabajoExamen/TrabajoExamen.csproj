@@ -53,6 +53,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AcercaDe...cs" />
+    <Compile Include="AcercaDe...Designer.cs">
+      <DependentUpon>AcercaDe...cs</DependentUpon>
+    </Compile>
     <Compile Include="AreaCuadrado.cs" />
     <Compile Include="AreaCuadrado.Designer.cs">
       <DependentUpon>AreaCuadrado.cs</DependentUpon>
@@ -65,7 +69,6 @@
     <Compile Include="AreaTriangulo.Designer.cs">
       <DependentUpon>AreaTriangulo.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Calificacion.cs" />
     <Compile Include="Calificacion.Designer.cs">
       <DependentUpon>Calificacion.cs</DependentUpon>
@@ -144,6 +147,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AcercaDe...resx">
+      <DependentUpon>AcercaDe...cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AreaCuadrado.resx">
       <DependentUpon>AreaCuadrado.cs</DependentUpon>
     </EmbeddedResource>

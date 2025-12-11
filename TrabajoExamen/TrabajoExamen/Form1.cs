@@ -420,5 +420,22 @@ namespace TrabajoExamen
 			this.Cali.Hide();
 			this.Pos.Hide();
 		}
+		
+		void SalirToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			 if(MessageBox.Show("Estas seguro de eliminar?", "Confirmar", MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes) 
+                { 
+			 	Application.Exit();
+                } 
+                 
+            
+		}
+		
+		void AcercaDeToolStripMenuItemClick(object sender, EventArgs e)
+		{
+			AcercaDe__ info = new AcercaDe__();
+			info.Show();
+			this.Hide();
+		}
 	}
 }
