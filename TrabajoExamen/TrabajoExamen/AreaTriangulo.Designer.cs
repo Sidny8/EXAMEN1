@@ -111,9 +111,11 @@ namespace TrabajoExamen
 			// 
 			// txtBase
 			// 
+			this.txtBase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtBase.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtBase.Location = new System.Drawing.Point(138, 21);
 			this.txtBase.Name = "txtBase";
-			this.txtBase.Size = new System.Drawing.Size(100, 20);
+			this.txtBase.Size = new System.Drawing.Size(100, 21);
 			this.txtBase.TabIndex = 22;
 			// 
 			// label2
@@ -126,6 +128,8 @@ namespace TrabajoExamen
 			// 
 			// label1
 			// 
+			this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.label1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.Location = new System.Drawing.Point(32, 21);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(100, 23);
