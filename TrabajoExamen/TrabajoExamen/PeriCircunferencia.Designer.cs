@@ -56,9 +56,10 @@ namespace TrabajoExamen
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(165, 195);
+			this.label3.Font = new System.Drawing.Font("Sitka Text", 10F);
+			this.label3.Location = new System.Drawing.Point(104, 195);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(186, 23);
+			this.label3.Size = new System.Drawing.Size(268, 23);
 			this.label3.TabIndex = 38;
 			this.label3.Text = "El Perimetro de la Circungerencia es:";
 			// 
@@ -74,45 +75,54 @@ namespace TrabajoExamen
 			// 
 			// btnRegresar
 			// 
-			this.btnRegresar.Location = new System.Drawing.Point(20, 169);
+			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnRegresar.Font = new System.Drawing.Font("Stencil", 10F);
+			this.btnRegresar.Location = new System.Drawing.Point(20, 170);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+			this.btnRegresar.Size = new System.Drawing.Size(94, 23);
 			this.btnRegresar.TabIndex = 36;
 			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = true;
+			this.btnRegresar.UseVisualStyleBackColor = false;
 			// 
 			// btnLimpiar
 			// 
+			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 10F);
 			this.btnLimpiar.Location = new System.Drawing.Point(20, 129);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
 			this.btnLimpiar.TabIndex = 35;
 			this.btnLimpiar.Text = "Limpiar";
-			this.btnLimpiar.UseVisualStyleBackColor = true;
+			this.btnLimpiar.UseVisualStyleBackColor = false;
 			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
 			// 
 			// btnCalcular
 			// 
-			this.btnCalcular.Location = new System.Drawing.Point(20, 89);
+			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 10F);
+			this.btnCalcular.Location = new System.Drawing.Point(20, 90);
 			this.btnCalcular.Name = "btnCalcular";
-			this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+			this.btnCalcular.Size = new System.Drawing.Size(84, 23);
 			this.btnCalcular.TabIndex = 34;
 			this.btnCalcular.Text = "Calcular";
-			this.btnCalcular.UseVisualStyleBackColor = true;
+			this.btnCalcular.UseVisualStyleBackColor = false;
 			this.btnCalcular.Click += new System.EventHandler(this.BtnCalcularClick);
 			// 
 			// txtDiametro
 			// 
-			this.txtDiametro.Location = new System.Drawing.Point(146, 34);
+			this.txtDiametro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtDiametro.Font = new System.Drawing.Font("Sitka Text", 8F);
+			this.txtDiametro.Location = new System.Drawing.Point(165, 34);
 			this.txtDiametro.Name = "txtDiametro";
-			this.txtDiametro.Size = new System.Drawing.Size(100, 20);
+			this.txtDiametro.Size = new System.Drawing.Size(100, 21);
 			this.txtDiametro.TabIndex = 32;
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(40, 34);
+			this.label1.Font = new System.Drawing.Font("Stencil", 10F);
+			this.label1.Location = new System.Drawing.Point(20, 34);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(100, 23);
+			this.label1.Size = new System.Drawing.Size(147, 23);
 			this.label1.TabIndex = 30;
 			this.label1.Text = "Dame el Diaetro:";
 			// 
