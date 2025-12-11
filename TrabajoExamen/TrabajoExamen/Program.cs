@@ -24,7 +24,7 @@ namespace TrabajoExamen
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Finnobacci());
+			Application.Run(new Postres());
 		}
 		
 	}

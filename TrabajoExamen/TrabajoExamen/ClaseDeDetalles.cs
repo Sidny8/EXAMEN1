@@ -20,7 +20,7 @@ namespace TrabajoExamen
 		public int Codigo{get; set;}
 		public string Nombre{get;set;}
 		public string Puesto{get;set;}
-		public int Fecha{get; set;}
+		public string Fecha{get; set;}
 		public string Sexo{get;set;}
 		public string Estado{get;set;}
 		
@@ -29,7 +29,7 @@ namespace TrabajoExamen
 		{
    			 MySqlConnection cn = new MySqlConnection();
     		/// CREAR LA CONEXIÓN, CONFIGURAR Y ABRIRLA
-   			cn.ConnectionString = cn.ConnectionString = "server=localhost; database=Examen; user=root; pwd=root";
+   			cn.ConnectionString = cn.ConnectionString = "server=localhost; database=Examen; user=root; pwd=";
     		cn.Open();
 
    			List<ClaseDeDetalles> adm = new List<ClaseDeDetalles>();
@@ -42,7 +42,7 @@ namespace TrabajoExamen
         		x.Codigo = dr.GetInt32("codigo");
         		x.Nombre = dr.GetString("nombre");
         		x.Puesto = dr.GetString("puesto");
-        		x.Fecha = dr.GetInt32("fecha");
+        		x.Fecha = dr.GetString("fecha");
         		x.Sexo = dr.GetString("sexo");
         		x.Estado = dr.GetString("estado");
         		adm.Add(x);

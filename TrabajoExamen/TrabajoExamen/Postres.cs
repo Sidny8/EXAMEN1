@@ -107,7 +107,7 @@ namespace TrabajoExamen
         {
             /// CREAR LA CONEXIÓN, CONFIGURAR Y ABRIRLA
             MySqlConnection cn = new MySqlConnection();
-            cn.ConnectionString = "server=localhost; database=Examen; user=root;pwd=root;";
+            cn.ConnectionString = "server=localhost; database=Examen; user=root;pwd=;";
             cn.Open();
             /// AGREGAR EL REGISTRO A LA BASE DE DATOS
             string strSQL = "insert into Productos (productos, precio, cantidad, total)" +
@@ -206,6 +206,7 @@ namespace TrabajoExamen
 		//No funciona :v
 		void PostresLoad(object sender, EventArgs e)
 		{
+			pictureBox1.Image = Resource1.pasteleria;
 			radioButton1.Checked=false;
 			radioButton2.Checked=false;
 		}
@@ -277,5 +278,6 @@ namespace TrabajoExamen
 		{
 			
 		}
-	}
+		
+}
 }

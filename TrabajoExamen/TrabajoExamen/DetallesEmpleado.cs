@@ -81,8 +81,7 @@ namespace TrabajoExamen
 		}
 		//Metodo de validacion la fecha
 		private bool ValidarFecha(){
-			int fecha;
-			if(!int.TryParse(dtpFecha.Text,out fecha) || dtpFecha.Text==""){
+			if(dtpFecha.Text==""){
 				erpError.SetError(txtCodigo,"Debe de poner una fecha");
                 dtpFecha.Text="";
                 dtpFecha.Focus();
@@ -122,7 +121,7 @@ namespace TrabajoExamen
 			return false;
 		}
 		//Metodo para la conexion
-		public bool AgregarProducto(int codigo, string nombre, string puesto, int fecha, string sexo, string estado)
+		public bool AgregarProducto(int codigo, string nombre, string puesto, string fecha, string sexo, string estado)
         {
             /// CREAR LA CONEXIÓN, CONFIGURAR Y ABRIRLA
             MySqlConnection cn = new MySqlConnection();
@@ -237,7 +236,7 @@ namespace TrabajoExamen
 			Empleado.Codigo = int.Parse(txtCodigo.Text);
 			Empleado.Nombre=txtNombre.Text;
             Empleado.Puesto =cboPuesto.SelectedItem.ToString();
-            Empleado.Fecha=int.Parse(dtpFecha.Text);
+            Empleado.Fecha=Convert.ToString(dtpFecha.Text);
             Empleado.Sexo=cboSex.SelectedItem.ToString();
           	Empleado.Estado=estado;
 			
@@ -247,7 +246,7 @@ namespace TrabajoExamen
             //dgvDatos.Rows.Add(milista);
             
            
-            AgregarProducto(int.Parse(txtCodigo.Text),txtCodigo.Text,cboPuesto.SelectedItem.ToString(),int.Parse(dtpFecha.Text),
+            AgregarProducto(int.Parse(txtCodigo.Text),txtCodigo.Text,cboPuesto.SelectedItem.ToString(),dtpFecha.Text,
                             cboSex.SelectedItem.ToString(), estado);
             dgvDatos.Rows.Clear();
             llenar();

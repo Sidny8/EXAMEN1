@@ -65,15 +65,22 @@ namespace TrabajoExamen
 			this.lblSub = new System.Windows.Forms.Label();
 			this.lblCambio = new System.Windows.Forms.Label();
 			this.txtDes = new System.Windows.Forms.TextBox();
+			this.label6 = new System.Windows.Forms.Label();
+			this.label7 = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.label9 = new System.Windows.Forms.Label();
+			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// groupBox1
 			// 
+			this.groupBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.groupBox1.Controls.Add(this.radioButton2);
 			this.groupBox1.Controls.Add(this.radioButton1);
-			this.groupBox1.Location = new System.Drawing.Point(43, 12);
+			this.groupBox1.Location = new System.Drawing.Point(112, 90);
 			this.groupBox1.Name = "groupBox1";
 			this.groupBox1.Size = new System.Drawing.Size(253, 42);
 			this.groupBox1.TabIndex = 0;
@@ -81,6 +88,7 @@ namespace TrabajoExamen
 			// 
 			// radioButton2
 			// 
+			this.radioButton2.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.radioButton2.Location = new System.Drawing.Point(116, 12);
 			this.radioButton2.Name = "radioButton2";
 			this.radioButton2.Size = new System.Drawing.Size(104, 24);
@@ -92,6 +100,7 @@ namespace TrabajoExamen
 			// 
 			// radioButton1
 			// 
+			this.radioButton1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.radioButton1.Location = new System.Drawing.Point(6, 12);
 			this.radioButton1.Name = "radioButton1";
 			this.radioButton1.Size = new System.Drawing.Size(104, 24);
@@ -103,25 +112,29 @@ namespace TrabajoExamen
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(13, 82);
+			this.label1.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.Location = new System.Drawing.Point(6, 135);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(128, 23);
+			this.label1.Size = new System.Drawing.Size(161, 23);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Seleccionar producto:";
 			// 
 			// cboProducto
 			// 
+			this.cboProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.cboProducto.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cboProducto.FormattingEnabled = true;
-			this.cboProducto.Location = new System.Drawing.Point(142, 82);
+			this.cboProducto.Location = new System.Drawing.Point(144, 129);
 			this.cboProducto.Name = "cboProducto";
-			this.cboProducto.Size = new System.Drawing.Size(154, 21);
+			this.cboProducto.Size = new System.Drawing.Size(154, 24);
 			this.cboProducto.TabIndex = 2;
 			this.cboProducto.SelectedIndexChanged += new System.EventHandler(this.CboProductoSelectedIndexChanged);
 			this.cboProducto.SelectionChangeCommitted += new System.EventHandler(this.CboProductoSelectionChangeCommitted);
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(13, 109);
+			this.label2.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label2.Location = new System.Drawing.Point(31, 158);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(100, 23);
 			this.label2.TabIndex = 3;
@@ -129,7 +142,8 @@ namespace TrabajoExamen
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(144, 109);
+			this.label3.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label3.Location = new System.Drawing.Point(128, 158);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(100, 23);
 			this.label3.TabIndex = 4;
@@ -137,36 +151,43 @@ namespace TrabajoExamen
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(225, 109);
+			this.label4.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.Location = new System.Drawing.Point(250, 158);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(100, 23);
 			this.label4.TabIndex = 5;
-			this.label4.Text = "total";
+			this.label4.Text = "Total";
 			// 
 			// txtPrecio
 			// 
-			this.txtPrecio.Location = new System.Drawing.Point(13, 136);
+			this.txtPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.txtPrecio.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtPrecio.Location = new System.Drawing.Point(6, 184);
 			this.txtPrecio.Name = "txtPrecio";
-			this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+			this.txtPrecio.Size = new System.Drawing.Size(100, 21);
 			this.txtPrecio.TabIndex = 6;
 			// 
 			// txtCant
 			// 
-			this.txtCant.Location = new System.Drawing.Point(119, 136);
+			this.txtCant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.txtCant.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtCant.Location = new System.Drawing.Point(112, 184);
 			this.txtCant.Name = "txtCant";
-			this.txtCant.Size = new System.Drawing.Size(100, 20);
+			this.txtCant.Size = new System.Drawing.Size(100, 21);
 			this.txtCant.TabIndex = 7;
 			this.txtCant.TextChanged += new System.EventHandler(this.TxtCantTextChanged);
 			// 
 			// lvProductos
 			// 
+			this.lvProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.lvProductos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
 									this.columnHeader1,
 									this.columnHeader2,
 									this.columnHeader3,
 									this.columnHeader4});
+			this.lvProductos.Font = new System.Drawing.Font("Script MT Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lvProductos.GridLines = true;
-			this.lvProductos.Location = new System.Drawing.Point(31, 172);
+			this.lvProductos.Location = new System.Drawing.Point(31, 228);
 			this.lvProductos.Name = "lvProductos";
 			this.lvProductos.Size = new System.Drawing.Size(400, 114);
 			this.lvProductos.TabIndex = 9;
@@ -195,68 +216,81 @@ namespace TrabajoExamen
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(13, 292);
+			this.label5.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label5.Location = new System.Drawing.Point(31, 364);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(100, 23);
 			this.label5.TabIndex = 10;
-			this.label5.Text = "label5";
+			this.label5.Text = "SubTotal:";
 			// 
 			// txtImpP
 			// 
-			this.txtImpP.Location = new System.Drawing.Point(383, 318);
+			this.txtImpP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.txtImpP.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtImpP.Location = new System.Drawing.Point(392, 391);
 			this.txtImpP.Name = "txtImpP";
-			this.txtImpP.Size = new System.Drawing.Size(60, 20);
+			this.txtImpP.Size = new System.Drawing.Size(60, 21);
 			this.txtImpP.TabIndex = 14;
 			this.txtImpP.TextChanged += new System.EventHandler(this.TxtImpPTextChanged);
 			// 
 			// button1
 			// 
-			this.button1.Location = new System.Drawing.Point(31, 336);
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.button1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.Location = new System.Drawing.Point(31, 427);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(75, 23);
 			this.button1.TabIndex = 16;
 			this.button1.Text = "Guardar";
-			this.button1.UseVisualStyleBackColor = true;
+			this.button1.UseVisualStyleBackColor = false;
 			this.button1.Click += new System.EventHandler(this.Button1Click);
 			// 
 			// button2
 			// 
-			this.button2.Location = new System.Drawing.Point(112, 336);
+			this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.button2.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button2.Location = new System.Drawing.Point(112, 427);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(75, 23);
 			this.button2.TabIndex = 17;
 			this.button2.Text = "Borrar";
-			this.button2.UseVisualStyleBackColor = true;
+			this.button2.UseVisualStyleBackColor = false;
 			this.button2.Click += new System.EventHandler(this.Button2Click);
 			// 
 			// button3
 			// 
-			this.button3.Location = new System.Drawing.Point(194, 336);
+			this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.button3.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button3.Location = new System.Drawing.Point(194, 427);
 			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(75, 23);
+			this.button3.Size = new System.Drawing.Size(87, 23);
 			this.button3.TabIndex = 18;
 			this.button3.Text = "Imprimir";
-			this.button3.UseVisualStyleBackColor = true;
+			this.button3.UseVisualStyleBackColor = false;
 			this.button3.Click += new System.EventHandler(this.Button3Click);
 			// 
 			// btnAgregar
 			// 
-			this.btnAgregar.Location = new System.Drawing.Point(345, 80);
+			this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.btnAgregar.Font = new System.Drawing.Font("Stencil", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnAgregar.Location = new System.Drawing.Point(324, 170);
 			this.btnAgregar.Name = "btnAgregar";
-			this.btnAgregar.Size = new System.Drawing.Size(107, 23);
+			this.btnAgregar.Size = new System.Drawing.Size(148, 23);
 			this.btnAgregar.TabIndex = 19;
 			this.btnAgregar.Text = "Agregar Producto";
-			this.btnAgregar.UseVisualStyleBackColor = true;
+			this.btnAgregar.UseVisualStyleBackColor = false;
 			this.btnAgregar.Click += new System.EventHandler(this.Button4Click);
 			// 
 			// btnEliminar
 			// 
-			this.btnEliminar.Location = new System.Drawing.Point(345, 118);
+			this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.btnEliminar.Font = new System.Drawing.Font("Stencil", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnEliminar.Location = new System.Drawing.Point(324, 199);
 			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(107, 23);
+			this.btnEliminar.Size = new System.Drawing.Size(141, 23);
 			this.btnEliminar.TabIndex = 20;
 			this.btnEliminar.Text = "Eliminar Producto";
-			this.btnEliminar.UseVisualStyleBackColor = true;
+			this.btnEliminar.UseVisualStyleBackColor = false;
 			this.btnEliminar.Click += new System.EventHandler(this.BtnEliminarClick);
 			// 
 			// erpError
@@ -265,49 +299,110 @@ namespace TrabajoExamen
 			// 
 			// lblTotal
 			// 
+			this.lblTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblTotal.Location = new System.Drawing.Point(225, 133);
+			this.lblTotal.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblTotal.Location = new System.Drawing.Point(218, 186);
 			this.lblTotal.Name = "lblTotal";
 			this.lblTotal.Size = new System.Drawing.Size(100, 23);
 			this.lblTotal.TabIndex = 21;
 			// 
 			// lblimpP
 			// 
+			this.lblimpP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.lblimpP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblimpP.Location = new System.Drawing.Point(383, 291);
+			this.lblimpP.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblimpP.Location = new System.Drawing.Point(392, 345);
 			this.lblimpP.Name = "lblimpP";
 			this.lblimpP.Size = new System.Drawing.Size(60, 24);
 			this.lblimpP.TabIndex = 22;
 			// 
 			// lblSub
 			// 
+			this.lblSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.lblSub.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblSub.Location = new System.Drawing.Point(65, 291);
+			this.lblSub.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblSub.Location = new System.Drawing.Point(12, 387);
 			this.lblSub.Name = "lblSub";
 			this.lblSub.Size = new System.Drawing.Size(100, 23);
 			this.lblSub.TabIndex = 23;
 			// 
 			// lblCambio
 			// 
+			this.lblCambio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.lblCambio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblCambio.Location = new System.Drawing.Point(383, 341);
+			this.lblCambio.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCambio.Location = new System.Drawing.Point(392, 423);
 			this.lblCambio.Name = "lblCambio";
 			this.lblCambio.Size = new System.Drawing.Size(60, 18);
 			this.lblCambio.TabIndex = 25;
 			// 
 			// txtDes
 			// 
-			this.txtDes.Location = new System.Drawing.Point(194, 295);
+			this.txtDes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.txtDes.Location = new System.Drawing.Point(144, 390);
 			this.txtDes.Name = "txtDes";
 			this.txtDes.Size = new System.Drawing.Size(100, 20);
 			this.txtDes.TabIndex = 26;
 			this.txtDes.TextChanged += new System.EventHandler(this.TxtDesTextChanged);
 			// 
+			// label6
+			// 
+			this.label6.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label6.Location = new System.Drawing.Point(298, 346);
+			this.label6.Name = "label6";
+			this.label6.Size = new System.Drawing.Size(88, 23);
+			this.label6.TabIndex = 27;
+			this.label6.Text = "Import.Neto:";
+			// 
+			// label7
+			// 
+			this.label7.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label7.Location = new System.Drawing.Point(287, 391);
+			this.label7.Name = "label7";
+			this.label7.Size = new System.Drawing.Size(101, 23);
+			this.label7.TabIndex = 28;
+			this.label7.Text = "Import.Pagado:";
+			// 
+			// label8
+			// 
+			this.label8.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label8.Location = new System.Drawing.Point(324, 427);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(51, 23);
+			this.label8.TabIndex = 29;
+			this.label8.Text = "Cambio:";
+			// 
+			// label9
+			// 
+			this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.label9.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label9.Location = new System.Drawing.Point(159, 364);
+			this.label9.Name = "label9";
+			this.label9.Size = new System.Drawing.Size(100, 23);
+			this.label9.TabIndex = 30;
+			this.label9.Text = "Descuento:";
+			// 
+			// pictureBox1
+			// 
+			this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
+			this.pictureBox1.Name = "pictureBox1";
+			this.pictureBox1.Size = new System.Drawing.Size(474, 85);
+			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.pictureBox1.TabIndex = 31;
+			this.pictureBox1.TabStop = false;
+			// 
 			// Postres
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(464, 371);
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.ClientSize = new System.Drawing.Size(474, 462);
+			this.Controls.Add(this.pictureBox1);
+			this.Controls.Add(this.label9);
+			this.Controls.Add(this.label8);
+			this.Controls.Add(this.label7);
+			this.Controls.Add(this.label6);
 			this.Controls.Add(this.txtDes);
 			this.Controls.Add(this.lblCambio);
 			this.Controls.Add(this.lblSub);
@@ -334,9 +429,15 @@ namespace TrabajoExamen
 			this.Load += new System.EventHandler(this.PostresLoad);
 			this.groupBox1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.PictureBox pictureBox1;
+		private System.Windows.Forms.Label label6;
+		private System.Windows.Forms.Label label7;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.TextBox txtDes;
 		private System.Windows.Forms.Label lblCambio;
 		private System.Windows.Forms.Label lblSub;

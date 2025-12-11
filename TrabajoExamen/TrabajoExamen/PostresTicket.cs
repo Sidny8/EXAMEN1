@@ -36,6 +36,7 @@ namespace TrabajoExamen
 		
 		void PostresTicketLoad(object sender, EventArgs e)
 		{
+			pictureBox1.Image = Resource1.ticket;
 			lblDescuento.Text= descPK.ToString();
 			lblSub.Text= subPK.ToString();
 			lblTotal.Text= totPK.ToString();
