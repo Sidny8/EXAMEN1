@@ -56,6 +56,7 @@ namespace TrabajoExamen
 			// 
 			// label3
 			// 
+			this.label3.Font = new System.Drawing.Font("Sitka Text", 10F);
 			this.label3.Location = new System.Drawing.Point(173, 215);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(186, 23);
@@ -73,42 +74,51 @@ namespace TrabajoExamen
 			// 
 			// btnRegresar
 			// 
+			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnRegresar.Font = new System.Drawing.Font("Stencil", 10F);
 			this.btnRegresar.Location = new System.Drawing.Point(22, 188);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+			this.btnRegresar.Size = new System.Drawing.Size(88, 23);
 			this.btnRegresar.TabIndex = 52;
 			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = true;
+			this.btnRegresar.UseVisualStyleBackColor = false;
 			// 
 			// btnLimpiar
 			// 
+			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 10F);
 			this.btnLimpiar.Location = new System.Drawing.Point(22, 149);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
 			this.btnLimpiar.TabIndex = 51;
 			this.btnLimpiar.Text = "Limpiar";
-			this.btnLimpiar.UseVisualStyleBackColor = true;
+			this.btnLimpiar.UseVisualStyleBackColor = false;
 			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
 			// 
 			// btnCalcular
 			// 
+			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 10F);
 			this.btnCalcular.Location = new System.Drawing.Point(22, 109);
 			this.btnCalcular.Name = "btnCalcular";
-			this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+			this.btnCalcular.Size = new System.Drawing.Size(88, 23);
 			this.btnCalcular.TabIndex = 50;
 			this.btnCalcular.Text = "Calcular";
-			this.btnCalcular.UseVisualStyleBackColor = true;
+			this.btnCalcular.UseVisualStyleBackColor = false;
 			this.btnCalcular.Click += new System.EventHandler(this.BtnCalcularClick);
 			// 
 			// txtLado
 			// 
+			this.txtLado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtLado.Font = new System.Drawing.Font("Sitka Text", 8F);
 			this.txtLado.Location = new System.Drawing.Point(153, 39);
 			this.txtLado.Name = "txtLado";
-			this.txtLado.Size = new System.Drawing.Size(100, 20);
+			this.txtLado.Size = new System.Drawing.Size(100, 21);
 			this.txtLado.TabIndex = 49;
 			// 
 			// label1
 			// 
+			this.label1.Font = new System.Drawing.Font("Stencil", 10F);
 			this.label1.Location = new System.Drawing.Point(47, 39);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(100, 23);
