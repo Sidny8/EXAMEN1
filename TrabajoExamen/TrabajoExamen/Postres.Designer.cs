@@ -89,7 +89,7 @@ namespace TrabajoExamen
 			// radioButton2
 			// 
 			this.radioButton2.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.radioButton2.Location = new System.Drawing.Point(116, 12);
+			this.radioButton2.Location = new System.Drawing.Point(149, 12);
 			this.radioButton2.Name = "radioButton2";
 			this.radioButton2.Size = new System.Drawing.Size(104, 24);
 			this.radioButton2.TabIndex = 2;
@@ -113,56 +113,60 @@ namespace TrabajoExamen
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(6, 135);
+			this.label1.Location = new System.Drawing.Point(6, 150);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(161, 23);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Seleccionar producto:";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// cboProducto
 			// 
 			this.cboProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.cboProducto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboProducto.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cboProducto.FormattingEnabled = true;
-			this.cboProducto.Location = new System.Drawing.Point(144, 129);
+			this.cboProducto.Location = new System.Drawing.Point(164, 149);
 			this.cboProducto.Name = "cboProducto";
 			this.cboProducto.Size = new System.Drawing.Size(154, 24);
 			this.cboProducto.TabIndex = 2;
-			this.cboProducto.SelectedIndexChanged += new System.EventHandler(this.CboProductoSelectedIndexChanged);
 			this.cboProducto.SelectionChangeCommitted += new System.EventHandler(this.CboProductoSelectionChangeCommitted);
 			// 
 			// label2
 			// 
 			this.label2.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(31, 158);
+			this.label2.Location = new System.Drawing.Point(12, 176);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(100, 23);
 			this.label2.TabIndex = 3;
 			this.label2.Text = "Precio";
+			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(128, 158);
+			this.label3.Location = new System.Drawing.Point(118, 176);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(100, 23);
 			this.label3.TabIndex = 4;
 			this.label3.Text = "Cantidad";
+			this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// label4
 			// 
 			this.label4.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label4.Location = new System.Drawing.Point(250, 158);
+			this.label4.Location = new System.Drawing.Point(218, 176);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(100, 23);
 			this.label4.TabIndex = 5;
 			this.label4.Text = "Total";
+			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// txtPrecio
 			// 
 			this.txtPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.txtPrecio.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtPrecio.Location = new System.Drawing.Point(6, 184);
+			this.txtPrecio.Location = new System.Drawing.Point(6, 202);
 			this.txtPrecio.Name = "txtPrecio";
 			this.txtPrecio.Size = new System.Drawing.Size(100, 21);
 			this.txtPrecio.TabIndex = 6;
@@ -171,7 +175,7 @@ namespace TrabajoExamen
 			// 
 			this.txtCant.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.txtCant.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtCant.Location = new System.Drawing.Point(112, 184);
+			this.txtCant.Location = new System.Drawing.Point(112, 202);
 			this.txtCant.Name = "txtCant";
 			this.txtCant.Size = new System.Drawing.Size(100, 21);
 			this.txtCant.TabIndex = 7;
@@ -187,9 +191,9 @@ namespace TrabajoExamen
 									this.columnHeader4});
 			this.lvProductos.Font = new System.Drawing.Font("Script MT Bold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lvProductos.GridLines = true;
-			this.lvProductos.Location = new System.Drawing.Point(31, 228);
+			this.lvProductos.Location = new System.Drawing.Point(31, 242);
 			this.lvProductos.Name = "lvProductos";
-			this.lvProductos.Size = new System.Drawing.Size(400, 114);
+			this.lvProductos.Size = new System.Drawing.Size(400, 115);
 			this.lvProductos.TabIndex = 9;
 			this.lvProductos.UseCompatibleStateImageBehavior = false;
 			this.lvProductos.View = System.Windows.Forms.View.Details;
@@ -227,7 +231,7 @@ namespace TrabajoExamen
 			// 
 			this.txtImpP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.txtImpP.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtImpP.Location = new System.Drawing.Point(392, 391);
+			this.txtImpP.Location = new System.Drawing.Point(392, 393);
 			this.txtImpP.Name = "txtImpP";
 			this.txtImpP.Size = new System.Drawing.Size(60, 21);
 			this.txtImpP.TabIndex = 14;
@@ -273,7 +277,7 @@ namespace TrabajoExamen
 			// 
 			this.btnAgregar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.btnAgregar.Font = new System.Drawing.Font("Stencil", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnAgregar.Location = new System.Drawing.Point(324, 170);
+			this.btnAgregar.Location = new System.Drawing.Point(324, 182);
 			this.btnAgregar.Name = "btnAgregar";
 			this.btnAgregar.Size = new System.Drawing.Size(148, 23);
 			this.btnAgregar.TabIndex = 19;
@@ -285,7 +289,7 @@ namespace TrabajoExamen
 			// 
 			this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.btnEliminar.Font = new System.Drawing.Font("Stencil", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnEliminar.Location = new System.Drawing.Point(324, 199);
+			this.btnEliminar.Location = new System.Drawing.Point(324, 213);
 			this.btnEliminar.Name = "btnEliminar";
 			this.btnEliminar.Size = new System.Drawing.Size(141, 23);
 			this.btnEliminar.TabIndex = 20;
@@ -302,7 +306,7 @@ namespace TrabajoExamen
 			this.lblTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.lblTotal.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblTotal.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblTotal.Location = new System.Drawing.Point(218, 186);
+			this.lblTotal.Location = new System.Drawing.Point(218, 200);
 			this.lblTotal.Name = "lblTotal";
 			this.lblTotal.Size = new System.Drawing.Size(100, 23);
 			this.lblTotal.TabIndex = 21;
@@ -312,7 +316,7 @@ namespace TrabajoExamen
 			this.lblimpP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.lblimpP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblimpP.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblimpP.Location = new System.Drawing.Point(392, 345);
+			this.lblimpP.Location = new System.Drawing.Point(392, 360);
 			this.lblimpP.Name = "lblimpP";
 			this.lblimpP.Size = new System.Drawing.Size(60, 24);
 			this.lblimpP.TabIndex = 22;
@@ -332,7 +336,7 @@ namespace TrabajoExamen
 			this.lblCambio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.lblCambio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblCambio.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCambio.Location = new System.Drawing.Point(392, 423);
+			this.lblCambio.Location = new System.Drawing.Point(392, 432);
 			this.lblCambio.Name = "lblCambio";
 			this.lblCambio.Size = new System.Drawing.Size(60, 18);
 			this.lblCambio.TabIndex = 25;
@@ -349,25 +353,27 @@ namespace TrabajoExamen
 			// label6
 			// 
 			this.label6.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(298, 346);
+			this.label6.Location = new System.Drawing.Point(298, 360);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(88, 23);
 			this.label6.TabIndex = 27;
 			this.label6.Text = "Import.Neto:";
+			this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// label7
 			// 
 			this.label7.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.Location = new System.Drawing.Point(287, 391);
+			this.label7.Location = new System.Drawing.Point(285, 394);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(101, 23);
 			this.label7.TabIndex = 28;
 			this.label7.Text = "Import.Pagado:";
+			this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// label8
 			// 
 			this.label8.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.Location = new System.Drawing.Point(324, 427);
+			this.label8.Location = new System.Drawing.Point(324, 432);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(51, 23);
 			this.label8.TabIndex = 29;
@@ -385,9 +391,9 @@ namespace TrabajoExamen
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(-2, -1);
+			this.pictureBox1.Location = new System.Drawing.Point(-3, -1);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(474, 85);
+			this.pictureBox1.Size = new System.Drawing.Size(491, 85);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.pictureBox1.TabIndex = 31;
 			this.pictureBox1.TabStop = false;

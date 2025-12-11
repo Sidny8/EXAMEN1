@@ -52,24 +52,29 @@ namespace TrabajoExamen
 			this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
 			this.label2 = new System.Windows.Forms.Label();
+			this.label4 = new System.Windows.Forms.Label();
+			this.lblPago = new System.Windows.Forms.Label();
+			this.label8 = new System.Windows.Forms.Label();
+			this.lblCambio = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(183, 63);
+			this.label1.Location = new System.Drawing.Point(270, 50);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(53, 24);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "Fecha:";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// lblFecha
 			// 
 			this.lblFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.lblFecha.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblFecha.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblFecha.Location = new System.Drawing.Point(242, 62);
+			this.lblFecha.Location = new System.Drawing.Point(233, 74);
 			this.lblFecha.Name = "lblFecha";
 			this.lblFecha.Size = new System.Drawing.Size(121, 23);
 			this.lblFecha.TabIndex = 1;
@@ -135,7 +140,7 @@ namespace TrabajoExamen
 			// 
 			this.btnRgresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.btnRgresar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnRgresar.Location = new System.Drawing.Point(274, 301);
+			this.btnRgresar.Location = new System.Drawing.Point(261, 321);
 			this.btnRgresar.Name = "btnRgresar";
 			this.btnRgresar.Size = new System.Drawing.Size(84, 33);
 			this.btnRgresar.TabIndex = 8;
@@ -155,7 +160,7 @@ namespace TrabajoExamen
 			this.listView1.GridLines = true;
 			this.listView1.Location = new System.Drawing.Point(12, 114);
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(324, 117);
+			this.listView1.Size = new System.Drawing.Size(354, 117);
 			this.listView1.TabIndex = 9;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
@@ -168,22 +173,23 @@ namespace TrabajoExamen
 			// columnHeader2
 			// 
 			this.columnHeader2.Text = "Precio";
+			this.columnHeader2.Width = 63;
 			// 
 			// columnHeader3
 			// 
 			this.columnHeader3.Text = "Cantidad";
-			this.columnHeader3.Width = 70;
+			this.columnHeader3.Width = 79;
 			// 
 			// columnHeader4
 			// 
 			this.columnHeader4.Text = "Total";
-			this.columnHeader4.Width = 44;
+			this.columnHeader4.Width = 61;
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(53, 39);
+			this.pictureBox1.Location = new System.Drawing.Point(39, 39);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(100, 68);
+			this.pictureBox1.Size = new System.Drawing.Size(159, 68);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 10;
 			this.pictureBox1.TabStop = false;
@@ -196,13 +202,56 @@ namespace TrabajoExamen
 			this.label2.Size = new System.Drawing.Size(306, 23);
 			this.label2.TabIndex = 11;
 			this.label2.Text = "TICKET DE LA COMPRA";
+			this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+			// 
+			// label4
+			// 
+			this.label4.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label4.Location = new System.Drawing.Point(223, 244);
+			this.label4.Name = "label4";
+			this.label4.Size = new System.Drawing.Size(100, 23);
+			this.label4.TabIndex = 12;
+			this.label4.Text = "Pago:";
+			// 
+			// lblPago
+			// 
+			this.lblPago.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.lblPago.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblPago.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPago.Location = new System.Drawing.Point(286, 243);
+			this.lblPago.Name = "lblPago";
+			this.lblPago.Size = new System.Drawing.Size(100, 23);
+			this.lblPago.TabIndex = 13;
+			// 
+			// label8
+			// 
+			this.label8.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label8.Location = new System.Drawing.Point(219, 282);
+			this.label8.Name = "label8";
+			this.label8.Size = new System.Drawing.Size(100, 23);
+			this.label8.TabIndex = 14;
+			this.label8.Text = "Cambio:";
+			// 
+			// lblCambio
+			// 
+			this.lblCambio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.lblCambio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblCambio.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblCambio.Location = new System.Drawing.Point(286, 283);
+			this.lblCambio.Name = "lblCambio";
+			this.lblCambio.Size = new System.Drawing.Size(100, 23);
+			this.lblCambio.TabIndex = 15;
 			// 
 			// PostresTicket
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(370, 346);
+			this.ClientSize = new System.Drawing.Size(407, 366);
+			this.Controls.Add(this.lblCambio);
+			this.Controls.Add(this.label8);
+			this.Controls.Add(this.lblPago);
+			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.listView1);
@@ -221,6 +270,10 @@ namespace TrabajoExamen
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
 			this.ResumeLayout(false);
 		}
+		private System.Windows.Forms.Label lblCambio;
+		private System.Windows.Forms.Label label8;
+		private System.Windows.Forms.Label lblPago;
+		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.ColumnHeader columnHeader4;

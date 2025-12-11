@@ -7,8 +7,11 @@
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
 using System;
+using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
+
 
 namespace TrabajoExamen
 {
@@ -21,7 +24,11 @@ namespace TrabajoExamen
 		public double descPK;
 		public double subPK;
 		public double totPK;
+		public double pagPK;
+		public double camPK;
 		public ListViewItem filaPK = new ListViewItem();
+		List<ClaseDePostres1> pko = new List<ClaseDePostres1>();
+		
 		public PostresTicket()
 		{
 			//
@@ -34,6 +41,20 @@ namespace TrabajoExamen
 			//
 		}
 		
+			public void ListPK(){
+			pko.Clear();
+			pko = new ClaseDePostres1().ObtenerPostres();
+   			 for (int i = 0; i < pko.Count; i++)
+    		{
+   			 	ListViewItem fila = new ListViewItem(pko[i].Producto.ToString());
+   			 	fila.SubItems.Add(pko[i].Precio.ToString());
+   			 	fila.SubItems.Add(pko[i].Cantidad.ToString());
+   			 	fila.SubItems.Add(pko[i].Total.ToString());
+   			 	listView1.Items.Add(fila);
+   			 } return ;
+		
+		}
+		
 		void PostresTicketLoad(object sender, EventArgs e)
 		{
 			pictureBox1.Image = Resource1.ticket;
@@ -41,7 +62,9 @@ namespace TrabajoExamen
 			lblSub.Text= subPK.ToString();
 			lblTotal.Text= totPK.ToString();
 			lblFecha.Text= DateTime.Now.ToString("dd/MM/yyyy");
-			listView1.Items.Add(filaPK);
+			lblPago.Text= pagPK.ToString();
+			lblCambio.Text= camPK.ToString();
+			ListPK();
 		}
 		
 		void BtnRgresarClick(object sender, EventArgs e)

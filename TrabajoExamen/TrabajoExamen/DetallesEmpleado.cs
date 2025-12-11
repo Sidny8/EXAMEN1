@@ -81,14 +81,17 @@ namespace TrabajoExamen
 		}
 		//Metodo de validacion la fecha
 		private bool ValidarFecha(){
-			if(dtpFecha.Text==""){
-				erpError.SetError(txtCodigo,"Debe de poner una fecha");
-                dtpFecha.Text="";
-                dtpFecha.Focus();
+			if(dtpFecha.Value>DateTime.Now){
+				erpError.SetError(txtCodigo,"Debe de poner una fecha que no sea futura");
                 return false;
 			}else{
+				if(dtpFecha.Value==DateTime.Today){
+					erpError.SetError(txtCodigo,"Debe de poner una fecha que no sea la de hoy");
+                	return false;
+				}else{
 				erpError.SetError(dtpFecha,"");
 				return true;
+				}
 			}
 		}
 		//Metodo para la validacion del Sexo del empleado
@@ -242,16 +245,12 @@ namespace TrabajoExamen
 			
           	//Hacer la union de las listas
             milista.Add(Empleado);
-            //dgvDatos.DataSource=null;
-            //dgvDatos.Rows.Add(milista);
-            
            
             AgregarProducto(int.Parse(txtCodigo.Text),txtCodigo.Text,cboPuesto.SelectedItem.ToString(),dtpFecha.Text,
                             cboSex.SelectedItem.ToString(), estado);
             dgvDatos.Rows.Clear();
             llenar();
             Limpiar();
-            //List<ClaseDeDetalles> milista = new ClaseDeDetalles().ObtenerEmpleados();
 
             txtCodigo.Focus();
 
@@ -270,7 +269,6 @@ namespace TrabajoExamen
 				erpError.SetError(txtCodigo,"Debe de escribir el codigo");
 				Limpiar();
 				txtNombre.Focus();
-				//tsbEliminar.Enabled=false;
 				return;
 			}else{
 				erpError.SetError(txtCodigo,"");
@@ -285,8 +283,6 @@ namespace TrabajoExamen
 					}
 					dgvDatos.Rows.Clear();
 					Limpiar();
-					//dgvDatos.DataSource=null;
-					//dgvDatos.Rows.Add(milista);
 					llenar();
 				}	
 			}
@@ -294,7 +290,6 @@ namespace TrabajoExamen
 		
 		void DetallesEmpleadoLoad(object sender, EventArgs e)
 		{
-			
 			dgvDatos.Rows.Clear();
     		llenar();
 		}

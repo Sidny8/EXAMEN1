@@ -30,6 +30,8 @@ namespace TrabajoExamen
 		int cont1 = 0;
 		int val = 0;
 	
+		List<ClaseDePostres1> fillas = new List<ClaseDePostres1>();
+		
 		public Postres()
 		{
 			//
@@ -102,12 +104,27 @@ namespace TrabajoExamen
             }
 		}
 		
+		//Metodo para el cambio
+		private bool Cambio(){
+			int cam;
+			if(!int.TryParse(txtImpP.Text, out cam) || txtImpP.Text == "" || int.Parse(txtImpP.Text) < int.Parse(lblimpP.Text)){
+                erpError.SetError(txtImpP,"Debe de poner una cantidad numerica entera y superior al pago");
+                txtCant.Clear();
+                txtCant.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtImpP,"");
+                return true;
+			}
+		}
+		
 		//Metodo de la conexion, para agregar
 		public bool AgregarProducto(string produc, double precio, int cantimy, double totalmy)
         {
             /// CREAR LA CONEXIÓN, CONFIGURAR Y ABRIRLA
             MySqlConnection cn = new MySqlConnection();
-            cn.ConnectionString = "server=localhost; database=Examen; user=root;pwd=;";
+            cn.ConnectionString = "server=localhost; database=Examen; user=root;pwd=root;";
             cn.Open();
             /// AGREGAR EL REGISTRO A LA BASE DE DATOS
             string strSQL = "insert into Productos (productos, precio, cantidad, total)" +
@@ -126,7 +143,39 @@ namespace TrabajoExamen
             cn.Dispose();
             return true;
         }
+		//Metodo para la eliminacion
+		public bool Eliminacion(int clave)
+        {
+            MySqlConnection cn = new MySqlConnection();
+            cn.ConnectionString = "server=localhost; database=Examen; user=root;pwd=root;";
+            cn.Open();
 
+            string strSQL = "delete from Productos where clave = " + clave;
+       		MySqlCommand comando = new MySqlCommand(strSQL, cn);
+            comando.ExecuteNonQuery();
+            MessageBox.Show("Empleado eliminado");
+
+            comando.Dispose();
+            cn.Close();
+            cn.Dispose();
+            return true;
+        }
+
+		//Metodo para rellenar datos
+		public void llenar()
+		{
+			lvProductos.Items.Clear();
+			fillas.Clear();
+			fillas = new ClaseDePostres1().ObtenerPostres();
+   			 for (int i = 0; i < fillas.Count; i++)
+    		{
+   			 	ListViewItem fila = new ListViewItem(fillas[i].Producto.ToString());
+   			 	fila.SubItems.Add(fillas[i].Precio.ToString());
+   			 	fila.SubItems.Add(fillas[i].Cantidad.ToString());
+   			 	fila.SubItems.Add(fillas[i].Total.ToString());
+   			 	lvProductos.Items.Add(fila);
+    		}
+		}
 		//Teletrasportador a ticket
 		void Button3Click(object sender, EventArgs e)
 		{
@@ -134,13 +183,32 @@ namespace TrabajoExamen
 			if(Des()==false){
 				return;
 			}
+			if(Cambio()==false){
+				return;
+			}
 			
 			PostresTicket pk = new PostresTicket();
-			pk.filaPK= new ListViewItem(produc);
-			pk.filaPK.SubItems.Add(precio.ToString());
-			pk.filaPK.SubItems.Add(cant.ToString());
-			pk.filaPK.SubItems.Add(tot.ToString());
 			
+//			for (int i = 0; i < fillas.Count; i++)
+//    		{
+//   			 	ListViewItem fila = new ListViewItem(fillas[i].Producto.ToString());
+//   			 	fila.SubItems.Add(fillas[i].Precio.ToString());
+//   			 	fila.SubItems.Add(fillas[i].Cantidad.ToString());
+//   			 	fila.SubItems.Add(fillas[i].Total.ToString());
+//   			 	lvProductos.Items.Add(fila);
+//    		}
+			//ListViewItem filaPK = new ListViewItem();
+			
+			foreach(ClaseDePostres1 fila in fillas){
+				pk.filaPK= new ListViewItem(produc);
+				pk.filaPK.SubItems.Add(precio.ToString());
+				pk.filaPK.SubItems.Add(cant.ToString());
+				pk.filaPK.SubItems.Add(tot.ToString());
+				
+			}
+			
+			pk.pagPK= Convert.ToDouble(txtImpP.Text);
+			pk.camPK= Convert.ToDouble(lblCambio.Text);
 			pk.descPK= Convert.ToDouble(txtDes.Text);
 			pk.totPK= Convert.ToDouble(lblimpP.Text);
 			pk.subPK= Convert.ToDouble(lblSub.Text);
@@ -164,7 +232,7 @@ namespace TrabajoExamen
 			sub = cant*precio;
 			
 			//Agregacion de elementos a la tabla
-			ListViewItem fila=new ListViewItem(produc);
+			ListViewItem fila= new ListViewItem(produc);
 			fila.SubItems.Add(precio.ToString());
 			fila.SubItems.Add(cant.ToString());
 			fila.SubItems.Add(sub.ToString());
@@ -175,9 +243,7 @@ namespace TrabajoExamen
 			preciot += sub;
 			lblSub.Text= preciot.ToString();
 			lblTotal.Text= sub.ToString();
-			
-			
-			
+		
 			Limpiar();
 			//
 		}
@@ -207,6 +273,8 @@ namespace TrabajoExamen
 		void PostresLoad(object sender, EventArgs e)
 		{
 			pictureBox1.Image = Resource1.pasteleria;
+			lvProductos.Items.Clear();
+			llenar();
 			radioButton1.Checked=false;
 			radioButton2.Checked=false;
 		}
@@ -264,20 +332,44 @@ namespace TrabajoExamen
 			txtImpP.Text="";
 		}
 		
-		void CboProductoSelectedIndexChanged(object sender, EventArgs e)
-		{
-			
-		}
-		
 		void Button1Click(object sender, EventArgs e)
 		{
+			ClaseDePostres1 fila= new ClaseDePostres1();
+			
+			fila.Producto= produc;
+			fila.Precio= precio;
+			fila.Cantidad= cant;
+			fila.Total= tot;
+			
+			fillas.Add(fila);
+			
 			AgregarProducto(produc,precio,cant,tot);
+			llenar();
 		}
 		
 		void BtnEliminarClick(object sender, EventArgs e)
 		{
-			
+			//fillas = new ClaseDePostres1().ObtenerPostres();
+			 if (lvProductos.SelectedItems.Count > 0){
+				ListViewItem Selec = lvProductos.SelectedItems[0];
+				//MessageBox.Show(fillas[1].Producto);
+				foreach(ClaseDePostres1 fila in fillas){
+					//MessageBox.Show(fila.Total.ToString());
+					if(fila.Producto.Equals(Selec.SubItems[0].Text)){
+						if(fila.Total==int.Parse(Selec.SubItems[3].Text)){
+							MessageBox.Show("Se ha eliminado");
+							Eliminacion(fila.clave);
+							fillas.Remove(fila);
+							break;
+						}
+					 }
+					   
+        		
+				}llenar();
 		}
+
 		
+		
+	}
 }
 }

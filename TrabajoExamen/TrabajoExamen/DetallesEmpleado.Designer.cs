@@ -120,6 +120,7 @@ namespace TrabajoExamen
 			// 
 			// cboPuesto
 			// 
+			this.cboPuesto.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboPuesto.FormattingEnabled = true;
 			this.cboPuesto.Items.AddRange(new object[] {
 									"Administrativo",
@@ -151,6 +152,7 @@ namespace TrabajoExamen
 			// 
 			// cboSex
 			// 
+			this.cboSex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboSex.FormattingEnabled = true;
 			this.cboSex.Items.AddRange(new object[] {
 									"Femenino",

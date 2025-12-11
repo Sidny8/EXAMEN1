@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClaseDeDetalles.cs" />
+    <Compile Include="ClaseDePostres1.cs" />
     <Compile Include="DetallesEmpleado.cs" />
     <Compile Include="DetallesEmpleado.Designer.cs">
       <DependentUpon>DetallesEmpleado.cs</DependentUpon>

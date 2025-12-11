@@ -53,12 +53,6 @@ namespace TrabajoExamen
    	 			cn.Dispose();
     			return adm;
 			}
-		//
-		public void carga(){
-			
-		}
-		
-		
 		public ClaseDeDetalles()
 		{
 		}
