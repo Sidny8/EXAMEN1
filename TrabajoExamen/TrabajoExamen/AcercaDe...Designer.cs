@@ -51,43 +51,49 @@ namespace TrabajoExamen
 			// 
 			// btnRegresar
 			// 
+			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnRegresar.Font = new System.Drawing.Font("Stencil", 10F);
 			this.btnRegresar.Location = new System.Drawing.Point(12, 226);
 			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
+			this.btnRegresar.Size = new System.Drawing.Size(96, 23);
 			this.btnRegresar.TabIndex = 0;
 			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = true;
+			this.btnRegresar.UseVisualStyleBackColor = false;
 			this.btnRegresar.Click += new System.EventHandler(this.BtnRegresarClick);
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(24, 13);
+			this.label1.Font = new System.Drawing.Font("Stencil", 9F);
+			this.label1.Location = new System.Drawing.Point(12, 13);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(100, 23);
+			this.label1.Size = new System.Drawing.Size(112, 23);
 			this.label1.TabIndex = 1;
 			this.label1.Text = "Integrantes";
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(54, 36);
+			this.label2.Font = new System.Drawing.Font("Stencil", 9F);
+			this.label2.Location = new System.Drawing.Point(24, 36);
 			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(162, 23);
+			this.label2.Size = new System.Drawing.Size(192, 23);
 			this.label2.TabIndex = 2;
 			this.label2.Text = "Samantha Guzman Contreras";
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(54, 71);
+			this.label3.Font = new System.Drawing.Font("Stencil", 9F);
+			this.label3.Location = new System.Drawing.Point(24, 71);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(172, 23);
+			this.label3.Size = new System.Drawing.Size(222, 23);
 			this.label3.TabIndex = 3;
 			this.label3.Text = "Fatima Wendolin Guzman Guzman";
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(54, 104);
+			this.label4.Font = new System.Drawing.Font("Stencil", 9F);
+			this.label4.Location = new System.Drawing.Point(24, 104);
 			this.label4.Name = "label4";
-			this.label4.Size = new System.Drawing.Size(145, 23);
+			this.label4.Size = new System.Drawing.Size(192, 23);
 			this.label4.TabIndex = 4;
 			this.label4.Text = "Cindy Mariana Tenorio Lopez";
 			// 
@@ -122,6 +128,7 @@ namespace TrabajoExamen
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(284, 261);
 			this.Controls.Add(this.pictureBox3);
 			this.Controls.Add(this.pictureBox2);
