@@ -63,9 +63,20 @@ namespace TrabajoExamen {
 		/// <summary>
 		///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 		/// </summary>
+
 		internal static System.Drawing.Bitmap circulo {
 			get {
 				object obj = ResourceManager.GetObject("circulo", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
+			}
+		}
+
+		/// <summary>
+		///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+		/// </summary
+		internal static System.Drawing.Bitmap pasteleria {
+			get {
+				object obj = ResourceManager.GetObject("pasteleria", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}
@@ -146,6 +157,15 @@ namespace TrabajoExamen {
 		internal static System.Drawing.Bitmap triangulo {
 			get {
 				object obj = ResourceManager.GetObject("triangulo", resourceCulture);
+				return ((System.Drawing.Bitmap)(obj));
+			}
+		}
+		/// <summary>
+		///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+		/// </summary
+		internal static System.Drawing.Bitmap ticket {
+			get {
+				object obj = ResourceManager.GetObject("ticket", resourceCulture);
 				return ((System.Drawing.Bitmap)(obj));
 			}
 		}

@@ -1,4 +1,4 @@
-﻿/*
+/*
  * Created by SharpDevelop.
  * User: CC2_PC40
  * Date: 04/12/2025
@@ -25,6 +25,7 @@ namespace TrabajoExamen
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new ConversionTiempo());
+
 		}
 		
 	}

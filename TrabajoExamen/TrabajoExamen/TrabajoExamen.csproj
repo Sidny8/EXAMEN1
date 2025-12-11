@@ -31,6 +31,12 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -47,7 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-
     <Compile Include="AreaCuadrado.cs" />
     <Compile Include="AreaCuadrado.Designer.cs">
       <DependentUpon>AreaCuadrado.cs</DependentUpon>
@@ -84,7 +89,20 @@
     <Compile Include="Longuitud.cs" />
     <Compile Include="Longuitud.Designer.cs">
       <DependentUpon>Longuitud.cs</DependentUpon>
-
+    </Compile>
+    <Compile Include="ClaseDeDetalles.cs" />
+    <Compile Include="ClaseDePostres1.cs" />
+    <Compile Include="DetallesEmpleado.cs" />
+    <Compile Include="DetallesEmpleado.Designer.cs">
+      <DependentUpon>DetallesEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factorial.cs" />
+    <Compile Include="Factorial.Designer.cs">
+      <DependentUpon>Factorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finnobacci.cs" />
+    <Compile Include="Finnobacci.Designer.cs">
+      <DependentUpon>Finnobacci.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs" />
     <Compile Include="MainForm.Designer.cs">
@@ -97,6 +115,14 @@
     <Compile Include="PeriTrapecio.cs" />
     <Compile Include="PeriTrapecio.Designer.cs">
       <DependentUpon>PeriTrapecio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Postres.cs" />
+    <Compile Include="Postres.Designer.cs">
+      <DependentUpon>Postres.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostresTicket.cs" />
+    <Compile Include="PostresTicket.Designer.cs">
+      <DependentUpon>PostresTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -135,6 +161,22 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PeriTrapecio.resx">
       <DependentUpon>PeriTrapecio.cs</DependentUpon>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DetallesEmpleado.resx">
+      <DependentUpon>DetallesEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factorial.resx">
+      <DependentUpon>Factorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finnobacci.resx">
+      <DependentUpon>Finnobacci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Postres.resx">
+      <DependentUpon>Postres.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostresTicket.resx">
+      <DependentUpon>PostresTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resource1.resx">
       <Generator>ResXFileCodeGenerator</Generator>
