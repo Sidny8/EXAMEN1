@@ -43,5 +43,11 @@ namespace TrabajoExamen
 			}
 			
 		}
+		
+		void BtnLimpiarClick(object sender, EventArgs e)
+		{
+			txtNum.Text="";
+			lblRes.Text="";
+		}
 	}
 }
