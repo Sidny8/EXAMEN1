@@ -79,7 +79,7 @@ namespace TrabajoExamen
 		//Metodo para validar los descuentos
 		private bool Des(){
             double dest;
-            if(!double.TryParse(txtDes.Text, out dest) || txtDes.Text == ""){
+            if(!double.TryParse(txtDes.Text, out dest) || txtDes.Text == "" || int.Parse(txtDes.Text) > int.Parse(lblSub.Text)){
                 erpError.SetError(txtDes,"Debe de poner un descuento aunque sea 0");
                 txtDes.Clear();
                 txtDes.Focus();
@@ -188,16 +188,6 @@ namespace TrabajoExamen
 			}
 			
 			PostresTicket pk = new PostresTicket();
-			
-//			for (int i = 0; i < fillas.Count; i++)
-//    		{
-//   			 	ListViewItem fila = new ListViewItem(fillas[i].Producto.ToString());
-//   			 	fila.SubItems.Add(fillas[i].Precio.ToString());
-//   			 	fila.SubItems.Add(fillas[i].Cantidad.ToString());
-//   			 	fila.SubItems.Add(fillas[i].Total.ToString());
-//   			 	lvProductos.Items.Add(fila);
-//    		}
-			//ListViewItem filaPK = new ListViewItem();
 			
 			foreach(ClaseDePostres1 fila in fillas){
 				pk.filaPK= new ListViewItem(produc);
