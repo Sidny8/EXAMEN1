@@ -52,7 +52,7 @@ namespace TrabajoExamen
 			// txtvalor
 			// 
 			this.txtvalor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.txtvalor.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtvalor.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtvalor.Location = new System.Drawing.Point(12, 170);
 			this.txtvalor.Name = "txtvalor";
 			this.txtvalor.Size = new System.Drawing.Size(121, 21);
@@ -106,7 +106,7 @@ namespace TrabajoExamen
 			// cmbde
 			// 
 			this.cmbde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.cmbde.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cmbde.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmbde.FormattingEnabled = true;
 			this.cmbde.Items.AddRange(new object[] {
 									"",
@@ -116,13 +116,13 @@ namespace TrabajoExamen
 									"Toneladas"});
 			this.cmbde.Location = new System.Drawing.Point(12, 84);
 			this.cmbde.Name = "cmbde";
-			this.cmbde.Size = new System.Drawing.Size(121, 21);
+			this.cmbde.Size = new System.Drawing.Size(121, 24);
 			this.cmbde.TabIndex = 11;
 			// 
 			// cmba
 			// 
 			this.cmba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.cmba.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.cmba.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmba.FormattingEnabled = true;
 			this.cmba.Items.AddRange(new object[] {
 									"",
@@ -132,13 +132,13 @@ namespace TrabajoExamen
 									"Toneladas"});
 			this.cmba.Location = new System.Drawing.Point(161, 84);
 			this.cmba.Name = "cmba";
-			this.cmba.Size = new System.Drawing.Size(121, 21);
+			this.cmba.Size = new System.Drawing.Size(121, 24);
 			this.cmba.TabIndex = 12;
 			// 
 			// txtresultado
 			// 
 			this.txtresultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.txtresultado.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtresultado.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtresultado.Location = new System.Drawing.Point(161, 170);
 			this.txtresultado.Name = "txtresultado";
 			this.txtresultado.ReadOnly = true;
