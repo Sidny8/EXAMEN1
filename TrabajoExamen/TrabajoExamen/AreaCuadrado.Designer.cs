@@ -51,62 +51,74 @@ namespace TrabajoExamen
 			// 
 			// label1
 			// 
+			this.label1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label1.Location = new System.Drawing.Point(26, 24);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(100, 23);
 			this.label1.TabIndex = 0;
-			this.label1.Text = "LadoA:";
+			this.label1.Text = "Lado A:";
 			// 
 			// label2
 			// 
+			this.label2.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.Location = new System.Drawing.Point(26, 63);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(100, 23);
 			this.label2.TabIndex = 1;
-			this.label2.Text = "LadoB:";
+			this.label2.Text = "Lado B:";
 			// 
 			// txtLadoA
 			// 
+			this.txtLadoA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtLadoA.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtLadoA.Location = new System.Drawing.Point(133, 24);
 			this.txtLadoA.Name = "txtLadoA";
-			this.txtLadoA.Size = new System.Drawing.Size(100, 20);
+			this.txtLadoA.Size = new System.Drawing.Size(100, 21);
 			this.txtLadoA.TabIndex = 2;
 			// 
 			// txtLadoB
 			// 
+			this.txtLadoB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.txtLadoB.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtLadoB.Location = new System.Drawing.Point(133, 63);
 			this.txtLadoB.Name = "txtLadoB";
-			this.txtLadoB.Size = new System.Drawing.Size(100, 20);
+			this.txtLadoB.Size = new System.Drawing.Size(100, 21);
 			this.txtLadoB.TabIndex = 3;
 			// 
 			// btnCalcular
 			// 
+			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnCalcular.Location = new System.Drawing.Point(12, 129);
 			this.btnCalcular.Name = "btnCalcular";
-			this.btnCalcular.Size = new System.Drawing.Size(75, 23);
+			this.btnCalcular.Size = new System.Drawing.Size(87, 23);
 			this.btnCalcular.TabIndex = 4;
 			this.btnCalcular.Text = "Calcular";
-			this.btnCalcular.UseVisualStyleBackColor = true;
+			this.btnCalcular.UseVisualStyleBackColor = false;
 			this.btnCalcular.Click += new System.EventHandler(this.BtnCalcularClick);
 			// 
 			// btnLimpiar
 			// 
+			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnLimpiar.Location = new System.Drawing.Point(12, 169);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
 			this.btnLimpiar.TabIndex = 5;
 			this.btnLimpiar.Text = "Limpiar";
-			this.btnLimpiar.UseVisualStyleBackColor = true;
+			this.btnLimpiar.UseVisualStyleBackColor = false;
 			this.btnLimpiar.Click += new System.EventHandler(this.BtnLimpiarClick);
 			// 
 			// btnRegresar
 			// 
+			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnRegresar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnRegresar.Location = new System.Drawing.Point(12, 211);
 			this.btnRegresar.Name = "btnRegresar";
 			this.btnRegresar.Size = new System.Drawing.Size(75, 23);
 			this.btnRegresar.TabIndex = 6;
 			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = true;
+			this.btnRegresar.UseVisualStyleBackColor = false;
 			// 
 			// pictureBox1
 			// 
@@ -119,6 +131,7 @@ namespace TrabajoExamen
 			// 
 			// label3
 			// 
+			this.label3.Font = new System.Drawing.Font("Sitka Banner", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.Location = new System.Drawing.Point(169, 204);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(169, 23);
