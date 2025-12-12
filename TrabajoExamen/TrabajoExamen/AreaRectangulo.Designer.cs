@@ -160,6 +160,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "AreaRectangulo";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "AreaRectangulo";
 			this.Load += new System.EventHandler(this.AreaRectanguloLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

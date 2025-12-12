@@ -97,6 +97,7 @@ namespace TrabajoExamen
 			this.btnCerrar.TabIndex = 4;
 			this.btnCerrar.Text = "Cerrar";
 			this.btnCerrar.UseVisualStyleBackColor = false;
+			this.btnCerrar.Click += new System.EventHandler(this.BtnCerrarClick);
 			// 
 			// btnAcceder
 			// 
