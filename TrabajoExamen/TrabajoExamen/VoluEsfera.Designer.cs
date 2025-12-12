@@ -139,6 +139,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.txtRadio);
 			this.Controls.Add(this.label1);
 			this.Name = "VoluEsfera";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "VoluEsfera";
 			this.Load += new System.EventHandler(this.VoluEsferaLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -139,6 +139,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.txtDiametro);
 			this.Controls.Add(this.label1);
 			this.Name = "PeriCircunferencia";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "PeriCircunferencia";
 			this.Load += new System.EventHandler(this.PeriCircunferenciaLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

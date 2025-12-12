@@ -204,6 +204,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "PeriTrapecio";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "PeriTrapecio";
 			this.Load += new System.EventHandler(this.PeriTrapecioLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -34,6 +34,7 @@ namespace TrabajoExamen
 		Calificacion Cali = new Calificacion();
 		Postres Pos = new Postres();
 		DetallesEmpleado Empleado = new DetallesEmpleado();
+		
 		public Form1()
 		{
 			//

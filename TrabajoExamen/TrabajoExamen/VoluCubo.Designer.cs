@@ -138,6 +138,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.txtLado);
 			this.Controls.Add(this.label1);
 			this.Name = "VoluCubo";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "VoluCubo";
 			this.Load += new System.EventHandler(this.VoluCuboLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

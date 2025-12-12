@@ -161,6 +161,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "VoluPirámide";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "VoluPirámide";
 			this.Load += new System.EventHandler(this.VoluPirámideLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
