@@ -36,6 +36,7 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.cmbde = new System.Windows.Forms.ComboBox();
 			this.cmba = new System.Windows.Forms.ComboBox();
@@ -46,7 +47,9 @@ namespace TrabajoExamen
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.btnconvertir = new System.Windows.Forms.Button();
-			this.btnsalir = new System.Windows.Forms.Button();
+			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
+			this.btnSalir = new System.Windows.Forms.Button();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -61,6 +64,7 @@ namespace TrabajoExamen
 			// cmbde
 			// 
 			this.cmbde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.cmbde.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbde.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmbde.FormattingEnabled = true;
 			this.cmbde.Items.AddRange(new object[] {
@@ -76,6 +80,7 @@ namespace TrabajoExamen
 			// cmba
 			// 
 			this.cmba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.cmba.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmba.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmba.FormattingEnabled = true;
 			this.cmba.Items.AddRange(new object[] {
@@ -96,6 +101,7 @@ namespace TrabajoExamen
 			this.txtvalor.Name = "txtvalor";
 			this.txtvalor.Size = new System.Drawing.Size(121, 21);
 			this.txtvalor.TabIndex = 14;
+			this.txtvalor.TextChanged += new System.EventHandler(this.TxtvalorTextChanged);
 			// 
 			// txtresultado
 			// 
@@ -155,17 +161,21 @@ namespace TrabajoExamen
 			this.btnconvertir.UseVisualStyleBackColor = false;
 			this.btnconvertir.Click += new System.EventHandler(this.BtnconvertirClick);
 			// 
-			// btnsalir
+			// erpError
 			// 
-			this.btnsalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.btnsalir.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnsalir.Location = new System.Drawing.Point(185, 214);
-			this.btnsalir.Name = "btnsalir";
-			this.btnsalir.Size = new System.Drawing.Size(96, 26);
-			this.btnsalir.TabIndex = 21;
-			this.btnsalir.Text = "SALIR";
-			this.btnsalir.UseVisualStyleBackColor = false;
-			this.btnsalir.Click += new System.EventHandler(this.BtnsalirClick);
+			this.erpError.ContainerControl = this;
+			// 
+			// btnSalir
+			// 
+			this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.btnSalir.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSalir.Location = new System.Drawing.Point(164, 214);
+			this.btnSalir.Name = "btnSalir";
+			this.btnSalir.Size = new System.Drawing.Size(96, 26);
+			this.btnSalir.TabIndex = 21;
+			this.btnSalir.Text = "QUITAR";
+			this.btnSalir.UseVisualStyleBackColor = false;
+			this.btnSalir.Click += new System.EventHandler(this.BtnSalirClick);
 			// 
 			// ConversionTiempo
 			// 
@@ -173,7 +183,7 @@ namespace TrabajoExamen
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(297, 261);
-			this.Controls.Add(this.btnsalir);
+			this.Controls.Add(this.btnSalir);
 			this.Controls.Add(this.btnconvertir);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label6);
@@ -187,10 +197,12 @@ namespace TrabajoExamen
 			this.Name = "ConversionTiempo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "ConversionTiempo";
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
-		private System.Windows.Forms.Button btnsalir;
+		private System.Windows.Forms.Button btnSalir;
+		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.Button btnconvertir;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;

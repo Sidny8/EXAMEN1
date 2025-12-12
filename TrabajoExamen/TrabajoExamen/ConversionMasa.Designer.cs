@@ -36,6 +36,7 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.txtvalor = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
@@ -47,6 +48,8 @@ namespace TrabajoExamen
 			this.txtresultado = new System.Windows.Forms.TextBox();
 			this.btnconvertir = new System.Windows.Forms.Button();
 			this.btnsalir = new System.Windows.Forms.Button();
+			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// txtvalor
@@ -57,6 +60,7 @@ namespace TrabajoExamen
 			this.txtvalor.Name = "txtvalor";
 			this.txtvalor.Size = new System.Drawing.Size(121, 21);
 			this.txtvalor.TabIndex = 1;
+			this.txtvalor.TextChanged += new System.EventHandler(this.TxtvalorTextChanged);
 			// 
 			// label1
 			// 
@@ -106,6 +110,7 @@ namespace TrabajoExamen
 			// cmbde
 			// 
 			this.cmbde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.cmbde.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbde.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmbde.FormattingEnabled = true;
 			this.cmbde.Items.AddRange(new object[] {
@@ -122,6 +127,7 @@ namespace TrabajoExamen
 			// cmba
 			// 
 			this.cmba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.cmba.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmba.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmba.FormattingEnabled = true;
 			this.cmba.Items.AddRange(new object[] {
@@ -165,9 +171,13 @@ namespace TrabajoExamen
 			this.btnsalir.Name = "btnsalir";
 			this.btnsalir.Size = new System.Drawing.Size(96, 26);
 			this.btnsalir.TabIndex = 15;
-			this.btnsalir.Text = "SALIR";
+			this.btnsalir.Text = "QUITAR";
 			this.btnsalir.UseVisualStyleBackColor = false;
 			this.btnsalir.Click += new System.EventHandler(this.BtnsalirClick);
+			// 
+			// erpError
+			// 
+			this.erpError.ContainerControl = this;
 			// 
 			// ConversionMasa
 			// 
@@ -189,9 +199,11 @@ namespace TrabajoExamen
 			this.Name = "ConversionMasa";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "ConversionMasa";
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.Button btnsalir;
 		private System.Windows.Forms.Button btnconvertir;
 		private System.Windows.Forms.TextBox txtresultado;

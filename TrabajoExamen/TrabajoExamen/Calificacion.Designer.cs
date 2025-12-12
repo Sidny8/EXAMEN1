@@ -56,7 +56,6 @@ namespace TrabajoExamen
 			this.groupBox1 = new System.Windows.Forms.GroupBox();
 			this.btnregistrar = new System.Windows.Forms.Button();
 			this.btncancelar = new System.Windows.Forms.Button();
-			this.btnsalir = new System.Windows.Forms.Button();
 			this.listView1 = new System.Windows.Forms.ListView();
 			this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
 			this.columnHeader2 = new System.Windows.Forms.ColumnHeader();
@@ -273,7 +272,7 @@ namespace TrabajoExamen
 			// btnregistrar
 			// 
 			this.btnregistrar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnregistrar.Location = new System.Drawing.Point(280, 289);
+			this.btnregistrar.Location = new System.Drawing.Point(397, 278);
 			this.btnregistrar.Name = "btnregistrar";
 			this.btnregistrar.Size = new System.Drawing.Size(90, 23);
 			this.btnregistrar.TabIndex = 31;
@@ -284,24 +283,13 @@ namespace TrabajoExamen
 			// btncancelar
 			// 
 			this.btncancelar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btncancelar.Location = new System.Drawing.Point(398, 289);
+			this.btncancelar.Location = new System.Drawing.Point(511, 278);
 			this.btncancelar.Name = "btncancelar";
 			this.btncancelar.Size = new System.Drawing.Size(89, 23);
 			this.btncancelar.TabIndex = 32;
 			this.btncancelar.Text = "CANCELAR";
 			this.btncancelar.UseVisualStyleBackColor = true;
 			this.btncancelar.Click += new System.EventHandler(this.BtncancelarClick);
-			// 
-			// btnsalir
-			// 
-			this.btnsalir.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnsalir.Location = new System.Drawing.Point(525, 289);
-			this.btnsalir.Name = "btnsalir";
-			this.btnsalir.Size = new System.Drawing.Size(75, 23);
-			this.btnsalir.TabIndex = 33;
-			this.btnsalir.Text = "SALIR";
-			this.btnsalir.UseVisualStyleBackColor = true;
-			this.btnsalir.Click += new System.EventHandler(this.BtnsalirClick);
 			// 
 			// listView1
 			// 
@@ -375,7 +363,6 @@ namespace TrabajoExamen
 			this.Controls.Add(this.txtpromediogral);
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.listView1);
-			this.Controls.Add(this.btnsalir);
 			this.Controls.Add(this.btncancelar);
 			this.Controls.Add(this.btnregistrar);
 			this.Controls.Add(this.groupBox1);
@@ -398,7 +385,6 @@ namespace TrabajoExamen
 		private System.Windows.Forms.ColumnHeader columnHeader2;
 		private System.Windows.Forms.ColumnHeader columnHeader1;
 		private System.Windows.Forms.ListView listView1;
-		private System.Windows.Forms.Button btnsalir;
 		private System.Windows.Forms.Button btncancelar;
 		private System.Windows.Forms.Button btnregistrar;
 		private System.Windows.Forms.GroupBox groupBox1;

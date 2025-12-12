@@ -35,10 +35,6 @@ namespace TrabajoExamen
 			txtfecha.Text = DateTime.Today.Date.ToString("d");				
 		}
 		
-		void BtnsalirClick(object sender, EventArgs e)
-		{
-			Close();			
-		}
 		
 		void BtncancelarClick(object sender, EventArgs e)
 		{

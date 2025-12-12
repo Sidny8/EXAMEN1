@@ -30,12 +30,25 @@ namespace TrabajoExamen
 			//
 		}
 		
-		
+		private bool NumeroA(){
+			int num;
+			if(!int.TryParse(txtvalor.Text, out num)){
+                erpError.SetError(txtvalor,"Debe de poner un numerico");
+                txtvalor.Clear();
+                txtvalor.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtvalor,"");
+                return true;
+            }
+		}
 		
 		void BtnconvertirClick(object sender, EventArgs e)
 		{
-			if (cmbde.SelectedItem.ToString() == "Kilos" && cmba.SelectedItem.ToString() == "Kilos")
-   			 {
+			if(txtvalor.Text!="" && cmba.Text!= "" && cmbde.Text!=""){
+				if (cmbde.SelectedItem.ToString() == "Kilos" && cmba.SelectedItem.ToString() == "Kilos")
+   			 	{
       			  conversion = int.Parse(txtvalor.Text) * 1;
       			  txtresultado.Text = conversion.ToString();
    			 }
@@ -114,11 +127,22 @@ namespace TrabajoExamen
         	conversion = int.Parse(txtvalor.Text) * 1000000;
         	txtresultado.Text = conversion.ToString();
     		}
+    		}
+			else{
+    			MessageBox.Show("Escriba la cantidad y escoja las opciones");
+			}
 		}
 		
 		void BtnsalirClick(object sender, EventArgs e)
 		{
-			this.Close();
+			this.Hide();
+		}
+		
+		void TxtvalorTextChanged(object sender, EventArgs e)
+		{
+			if(NumeroA()==false){
+				return;
+			}
 		}
 	}
 }

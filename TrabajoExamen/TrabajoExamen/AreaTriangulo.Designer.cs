@@ -36,6 +36,7 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.lblArea = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,7 +47,9 @@ namespace TrabajoExamen
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
+			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblArea
@@ -111,6 +114,7 @@ namespace TrabajoExamen
 			this.txtAltura.Name = "txtAltura";
 			this.txtAltura.Size = new System.Drawing.Size(132, 21);
 			this.txtAltura.TabIndex = 23;
+			this.txtAltura.TextChanged += new System.EventHandler(this.TxtAlturaTextChanged);
 			// 
 			// txtBase
 			// 
@@ -121,6 +125,7 @@ namespace TrabajoExamen
 			this.txtBase.Name = "txtBase";
 			this.txtBase.Size = new System.Drawing.Size(132, 21);
 			this.txtBase.TabIndex = 22;
+			this.txtBase.TextChanged += new System.EventHandler(this.TxtBaseTextChanged);
 			// 
 			// label2
 			// 
@@ -152,6 +157,10 @@ namespace TrabajoExamen
 			this.label4.TabIndex = 30;
 			this.label4.Text = "Área de un Triángulo";
 			// 
+			// erpError
+			// 
+			this.erpError.ContainerControl = this;
+			// 
 			// AreaTriangulo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -175,9 +184,11 @@ namespace TrabajoExamen
 			this.Text = "AreaTriangulo";
 			this.Load += new System.EventHandler(this.AreaTrianguloLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;
