@@ -187,7 +187,7 @@ namespace TrabajoExamen
 		
 		void Button1Click(object sender, EventArgs e)
 		{
-			pictureBox1.Visible=true;
+			
 			OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Image Files|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
             
@@ -195,6 +195,7 @@ namespace TrabajoExamen
                 string imagePath = openFileDialog.FileName;
                pictureBox1.Image = Image.FromFile(imagePath);
             }
+            pictureBox1.Visible=true;
 		}
 		
 		void BtnGuardarClick(object sender, EventArgs e)

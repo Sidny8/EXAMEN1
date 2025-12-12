@@ -118,6 +118,30 @@ namespace TrabajoExamen
                 return true;
 			}
 		}
+		private bool MetPago(){
+			if(lblimpP.Text == ""){
+				erpError.SetError(txtImpP,"Debe de poner primero un descuento");
+				txtImpP.Clear();
+				
+				return false;
+			}else{
+				erpError.SetError(txtImpP,"");
+				 return true;
+			}
+		}
+		
+		private bool MetDes(){
+			double des;
+			if(lblSub.Text == "" || !double.TryParse(txtDes.Text, out des) ){
+				erpError.SetError(txtDes,"Debe de guardar primero y ser un valor numerico");
+				txtDes.Clear();
+				
+				return false;
+			}else{
+				erpError.SetError(txtDes,"");
+				 return true;
+			}
+		}
 		
 		//Metodo de la conexion, para agregar
 		public bool AgregarProducto(string produc, double precio, int cantimy, double totalmy)
@@ -294,6 +318,9 @@ namespace TrabajoExamen
 		//El descuento
 		void TxtDesTextChanged(object sender, EventArgs e)
 		{
+			if(MetDes()==false){
+				return;
+			}
 			if(txtDes.Text != "" && Des()!=false){
 				des = Convert.ToDouble(txtDes.Text);
 				tot = preciot - des;
@@ -304,6 +331,10 @@ namespace TrabajoExamen
 		//Para pagar
 		void TxtImpPTextChanged(object sender, EventArgs e)
 		{
+			if(MetPago()==false){
+			return;
+			}
+		
 			if(txtImpP.Text!="" && Pago()!=false){
 				impP = Convert.ToDouble(txtImpP.Text);
 				lblCambio.Text= Convert.ToString(impP - tot);
@@ -324,6 +355,10 @@ namespace TrabajoExamen
 		
 		void Button1Click(object sender, EventArgs e)
 		{
+			
+			if(Cambio()==false){
+				return;
+			};
 			ClaseDePostres1 fila= new ClaseDePostres1();
 			
 			fila.Producto= produc;

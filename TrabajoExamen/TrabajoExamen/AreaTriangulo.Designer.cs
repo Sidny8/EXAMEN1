@@ -39,7 +39,6 @@ namespace TrabajoExamen
 			this.lblArea = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.btnRegresar = new System.Windows.Forms.Button();
 			this.btnLimpiar = new System.Windows.Forms.Button();
 			this.btnCalcular = new System.Windows.Forms.Button();
 			this.txtAltura = new System.Windows.Forms.TextBox();
@@ -77,17 +76,6 @@ namespace TrabajoExamen
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 27;
 			this.pictureBox1.TabStop = false;
-			// 
-			// btnRegresar
-			// 
-			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			this.btnRegresar.Location = new System.Drawing.Point(13, 292);
-			this.btnRegresar.Margin = new System.Windows.Forms.Padding(4);
-			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(100, 28);
-			this.btnRegresar.TabIndex = 26;
-			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = false;
 			// 
 			// btnLimpiar
 			// 
@@ -174,7 +162,6 @@ namespace TrabajoExamen
 			this.Controls.Add(this.lblArea);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.pictureBox1);
-			this.Controls.Add(this.btnRegresar);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.btnCalcular);
 			this.Controls.Add(this.txtAltura);
@@ -197,7 +184,6 @@ namespace TrabajoExamen
 		private System.Windows.Forms.TextBox txtAltura;
 		private System.Windows.Forms.Button btnCalcular;
 		private System.Windows.Forms.Button btnLimpiar;
-		private System.Windows.Forms.Button btnRegresar;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label lblArea;

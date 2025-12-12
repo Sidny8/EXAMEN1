@@ -431,6 +431,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.groupBox1);
 			this.Name = "Postres";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "POSTRES (PASTELERIA)";
 			this.Load += new System.EventHandler(this.PostresLoad);
 			this.groupBox1.ResumeLayout(false);
