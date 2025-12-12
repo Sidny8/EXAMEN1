@@ -49,7 +49,7 @@ namespace TrabajoExamen
 			// 
 			this.txtNum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txtNum.Font = new System.Drawing.Font("Sitka Text", 8F);
-			this.txtNum.Location = new System.Drawing.Point(117, 105);
+			this.txtNum.Location = new System.Drawing.Point(223, 117);
 			this.txtNum.Name = "txtNum";
 			this.txtNum.Size = new System.Drawing.Size(40, 21);
 			this.txtNum.TabIndex = 0;
@@ -59,16 +59,16 @@ namespace TrabajoExamen
 			this.lblRes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.lblRes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblRes.Font = new System.Drawing.Font("Sitka Text", 8F);
-			this.lblRes.Location = new System.Drawing.Point(63, 205);
+			this.lblRes.Location = new System.Drawing.Point(49, 205);
 			this.lblRes.Name = "lblRes";
-			this.lblRes.Size = new System.Drawing.Size(174, 23);
+			this.lblRes.Size = new System.Drawing.Size(440, 23);
 			this.lblRes.TabIndex = 1;
 			// 
 			// btnCalcular
 			// 
 			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 10F);
-			this.btnCalcular.Location = new System.Drawing.Point(163, 284);
+			this.btnCalcular.Location = new System.Drawing.Point(420, 284);
 			this.btnCalcular.Name = "btnCalcular";
 			this.btnCalcular.Size = new System.Drawing.Size(100, 23);
 			this.btnCalcular.TabIndex = 2;
@@ -91,7 +91,7 @@ namespace TrabajoExamen
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Stencil", 10F);
-			this.label1.Location = new System.Drawing.Point(23, 67);
+			this.label1.Location = new System.Drawing.Point(120, 76);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(240, 23);
 			this.label1.TabIndex = 4;
@@ -100,7 +100,7 @@ namespace TrabajoExamen
 			// label2
 			// 
 			this.label2.Font = new System.Drawing.Font("Stencil", 10F);
-			this.label2.Location = new System.Drawing.Point(84, 166);
+			this.label2.Location = new System.Drawing.Point(206, 169);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(154, 23);
 			this.label2.TabIndex = 5;
@@ -109,7 +109,7 @@ namespace TrabajoExamen
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Snap ITC", 14F);
-			this.label3.Location = new System.Drawing.Point(84, 9);
+			this.label3.Location = new System.Drawing.Point(183, 20);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(139, 23);
 			this.label3.TabIndex = 6;
@@ -120,7 +120,7 @@ namespace TrabajoExamen
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(311, 338);
+			this.ClientSize = new System.Drawing.Size(566, 445);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
@@ -129,6 +129,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.lblRes);
 			this.Controls.Add(this.txtNum);
 			this.Name = "Finnobacci";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Finnobacci";
 			this.ResumeLayout(false);
 			this.PerformLayout();

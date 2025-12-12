@@ -39,7 +39,6 @@ namespace TrabajoExamen
 			this.lblPerimetro = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.btnRegresar = new System.Windows.Forms.Button();
 			this.btnLimpiar = new System.Windows.Forms.Button();
 			this.btnCalcular = new System.Windows.Forms.Button();
 			this.txtLadoB = new System.Windows.Forms.TextBox();
@@ -78,17 +77,6 @@ namespace TrabajoExamen
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 17;
 			this.pictureBox1.TabStop = false;
-			// 
-			// btnRegresar
-			// 
-			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			this.btnRegresar.Font = new System.Drawing.Font("Stencil", 10F);
-			this.btnRegresar.Location = new System.Drawing.Point(41, 290);
-			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(98, 23);
-			this.btnRegresar.TabIndex = 16;
-			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = false;
 			// 
 			// btnLimpiar
 			// 
@@ -194,7 +182,6 @@ namespace TrabajoExamen
 			this.label6.Size = new System.Drawing.Size(328, 23);
 			this.label6.TabIndex = 24;
 			this.label6.Text = "Perímetro del Trapecio";
-			
 			// 
 			// PeriTrapecio
 			// 
@@ -210,7 +197,6 @@ namespace TrabajoExamen
 			this.Controls.Add(this.lblPerimetro);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.pictureBox1);
-			this.Controls.Add(this.btnRegresar);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.btnCalcular);
 			this.Controls.Add(this.txtLadoB);
@@ -218,6 +204,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "PeriTrapecio";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "PeriTrapecio";
 			this.Load += new System.EventHandler(this.PeriTrapecioLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -235,7 +222,6 @@ namespace TrabajoExamen
 		private System.Windows.Forms.TextBox txtLadoB;
 		private System.Windows.Forms.Button btnCalcular;
 		private System.Windows.Forms.Button btnLimpiar;
-		private System.Windows.Forms.Button btnRegresar;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label lblPerimetro;

@@ -39,7 +39,6 @@ namespace TrabajoExamen
 			this.lblVolumen = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.btnRegresar = new System.Windows.Forms.Button();
 			this.btnLimpiar = new System.Windows.Forms.Button();
 			this.btnCalcular = new System.Windows.Forms.Button();
 			this.txtRadio = new System.Windows.Forms.TextBox();
@@ -54,7 +53,6 @@ namespace TrabajoExamen
 			this.lblVolumen.Name = "lblVolumen";
 			this.lblVolumen.Size = new System.Drawing.Size(100, 23);
 			this.lblVolumen.TabIndex = 47;
-			
 			// 
 			// label3
 			// 
@@ -74,17 +72,6 @@ namespace TrabajoExamen
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 45;
 			this.pictureBox1.TabStop = false;
-			// 
-			// btnRegresar
-			// 
-			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			this.btnRegresar.Font = new System.Drawing.Font("Stencil", 10F);
-			this.btnRegresar.Location = new System.Drawing.Point(28, 251);
-			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(91, 23);
-			this.btnRegresar.TabIndex = 44;
-			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = false;
 			// 
 			// btnLimpiar
 			// 
@@ -147,12 +134,12 @@ namespace TrabajoExamen
 			this.Controls.Add(this.lblVolumen);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.pictureBox1);
-			this.Controls.Add(this.btnRegresar);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.btnCalcular);
 			this.Controls.Add(this.txtRadio);
 			this.Controls.Add(this.label1);
 			this.Name = "VoluEsfera";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "VoluEsfera";
 			this.Load += new System.EventHandler(this.VoluEsferaLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -164,7 +151,6 @@ namespace TrabajoExamen
 		private System.Windows.Forms.TextBox txtRadio;
 		private System.Windows.Forms.Button btnCalcular;
 		private System.Windows.Forms.Button btnLimpiar;
-		private System.Windows.Forms.Button btnRegresar;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label lblVolumen;

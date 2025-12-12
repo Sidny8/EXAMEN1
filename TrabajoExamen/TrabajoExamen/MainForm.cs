@@ -93,5 +93,10 @@ namespace TrabajoExamen
 		{
 			pictureBox1.Image=Resource1.login;
 		}
+		
+		void BtnCerrarClick(object sender, EventArgs e)
+		{
+			Application.Exit();
+		}
 	}
 }

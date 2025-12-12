@@ -39,7 +39,6 @@ namespace TrabajoExamen
 			this.lblArea = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.btnRegresar = new System.Windows.Forms.Button();
 			this.btnLimpiar = new System.Windows.Forms.Button();
 			this.btnCalcular = new System.Windows.Forms.Button();
 			this.txtAltura = new System.Windows.Forms.TextBox();
@@ -74,17 +73,6 @@ namespace TrabajoExamen
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 17;
 			this.pictureBox1.TabStop = false;
-			// 
-			// btnRegresar
-			// 
-			this.btnRegresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			this.btnRegresar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnRegresar.Location = new System.Drawing.Point(28, 262);
-			this.btnRegresar.Name = "btnRegresar";
-			this.btnRegresar.Size = new System.Drawing.Size(88, 23);
-			this.btnRegresar.TabIndex = 16;
-			this.btnRegresar.Text = "Regresar";
-			this.btnRegresar.UseVisualStyleBackColor = false;
 			// 
 			// btnLimpiar
 			// 
@@ -165,7 +153,6 @@ namespace TrabajoExamen
 			this.Controls.Add(this.lblArea);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.pictureBox1);
-			this.Controls.Add(this.btnRegresar);
 			this.Controls.Add(this.btnLimpiar);
 			this.Controls.Add(this.btnCalcular);
 			this.Controls.Add(this.txtAltura);
@@ -173,6 +160,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
 			this.Name = "AreaRectangulo";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "AreaRectangulo";
 			this.Load += new System.EventHandler(this.AreaRectanguloLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -186,7 +174,6 @@ namespace TrabajoExamen
 		private System.Windows.Forms.TextBox txtAltura;
 		private System.Windows.Forms.Button btnCalcular;
 		private System.Windows.Forms.Button btnLimpiar;
-		private System.Windows.Forms.Button btnRegresar;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label lblArea;

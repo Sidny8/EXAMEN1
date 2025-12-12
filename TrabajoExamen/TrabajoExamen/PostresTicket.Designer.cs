@@ -265,6 +265,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.lblFecha);
 			this.Controls.Add(this.label1);
 			this.Name = "PostresTicket";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "PostresTicket";
 			this.Load += new System.EventHandler(this.PostresTicketLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

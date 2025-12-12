@@ -129,6 +129,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.lblRes);
 			this.Controls.Add(this.txtNum);
 			this.Name = "Factorial";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Factorial";
 			this.ResumeLayout(false);
 			this.PerformLayout();
