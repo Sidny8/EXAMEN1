@@ -197,7 +197,7 @@ namespace TrabajoExamen
 			this.btnQuitar.Name = "btnQuitar";
 			this.btnQuitar.Size = new System.Drawing.Size(75, 23);
 			this.btnQuitar.TabIndex = 12;
-			this.btnQuitar.Text = "Quitar";
+			this.btnQuitar.Text = "Remover";
 			this.btnQuitar.UseVisualStyleBackColor = false;
 			this.btnQuitar.Click += new System.EventHandler(this.Button2Click);
 			// 

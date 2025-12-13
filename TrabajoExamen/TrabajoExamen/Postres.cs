@@ -29,6 +29,7 @@ namespace TrabajoExamen
 		int[] example1 = { 56, 111, 221, 441, 881 };
 		int cont1 = 0;
 		int val = 0;
+		int contaprimir=0;
 	
 		List<ClaseDePostres1> fillas = new List<ClaseDePostres1>();
 		
@@ -47,7 +48,7 @@ namespace TrabajoExamen
 		private void Limpiar(){
 			txtCant.Text="";
 			cboProducto.Text="";
-			txtPrecio.Clear();
+			lblPrecio.Clear();
 		}
 		 
 		//Metodos de Validaciones
@@ -80,7 +81,7 @@ namespace TrabajoExamen
 		private bool Des(){
             double dest;
             if(!double.TryParse(txtDes.Text, out dest) || txtDes.Text == "" || int.Parse(txtDes.Text) > int.Parse(lblSub.Text)){
-                erpError.SetError(txtDes,"Debe de poner un descuento aunque sea 0");
+                erpError.SetError(txtDes,"Debe de poner un descuento aunque sea 0 pero no mayor al subtotal");
                 txtDes.Clear();
                 txtDes.Focus();
                 return false;
@@ -93,7 +94,7 @@ namespace TrabajoExamen
 		private bool Pago(){
 			double pagst;
             if(!double.TryParse(txtImpP.Text, out pagst) || txtImpP.Text == ""){
-                erpError.SetError(txtImpP,"Debe de poner un descuento aunque sea 0");
+                erpError.SetError(txtImpP,"Debe de poner un pago numerico");
                 txtImpP.Clear();
                 txtImpP.Focus();
                 return false;
@@ -204,30 +205,31 @@ namespace TrabajoExamen
 		void Button3Click(object sender, EventArgs e)
 		{
 			//Validacion de cosas:
-			if(Des()==false){
-				return;
+//			if(Des()==false){
+//			return;
+//			}
+//			if(Cambio()==false){
+//				return;
+//			}
+			if(contaprimir == 1){
+				PostresTicket pk = new PostresTicket();
+				foreach(ClaseDePostres1 fila in fillas){
+					pk.filaPK= new ListViewItem(produc);
+					pk.filaPK.SubItems.Add(precio.ToString());
+					pk.filaPK.SubItems.Add(cant.ToString());
+					pk.filaPK.SubItems.Add(tot.ToString());
+				}
+				pk.pagPK= Convert.ToDouble(txtImpP.Text);
+				pk.camPK= Convert.ToDouble(lblCambio.Text);
+				pk.descPK= Convert.ToDouble(txtDes.Text);
+				pk.totPK= Convert.ToDouble(lblimpP.Text);
+				pk.subPK= Convert.ToDouble(lblSub.Text);
+				pk.Show();
+				this.Hide();
+				contaprimir =0;
+			}else{
+				MessageBox.Show("Primero debe de guardar");
 			}
-			if(Cambio()==false){
-				return;
-			}
-			
-			PostresTicket pk = new PostresTicket();
-			
-			foreach(ClaseDePostres1 fila in fillas){
-				pk.filaPK= new ListViewItem(produc);
-				pk.filaPK.SubItems.Add(precio.ToString());
-				pk.filaPK.SubItems.Add(cant.ToString());
-				pk.filaPK.SubItems.Add(tot.ToString());
-				
-			}
-			
-			pk.pagPK= Convert.ToDouble(txtImpP.Text);
-			pk.camPK= Convert.ToDouble(lblCambio.Text);
-			pk.descPK= Convert.ToDouble(txtDes.Text);
-			pk.totPK= Convert.ToDouble(lblimpP.Text);
-			pk.subPK= Convert.ToDouble(lblSub.Text);
-			pk.Show();
-			this.Hide();
 		}
 		
 		//Boton para agregar producto
@@ -241,7 +243,7 @@ namespace TrabajoExamen
 				return;
 			}
 			produc=cboProducto.Text;
-			precio= Convert.ToDouble(txtPrecio.Text);
+			precio= Convert.ToDouble(lblPrecio.Text);
 			cant= Convert.ToInt32(txtCant.Text);
 			sub = cant*precio;
 			
@@ -256,9 +258,11 @@ namespace TrabajoExamen
 			
 			preciot += sub;
 			lblSub.Text= preciot.ToString();
-			lblTotal.Text= sub.ToString();
+			//lblTotal.Text= sub.ToString();
 		
 			Limpiar();
+			//btnAgregar.Enabled=false;
+			//txtCant.Enabled=false;
 			//
 		}
 		
@@ -298,10 +302,10 @@ namespace TrabajoExamen
 		{
 			val = cboProducto.SelectedIndex;
 			if(cont1 == 1){
-				txtPrecio.Text = example[val].ToString();
+				lblPrecio.Text = example[val].ToString();
 			}
 			if(cont1 == 2){
-				txtPrecio.Text = example1[val].ToString();
+				lblPrecio.Text = example1[val].ToString();
 			}
 		}
 		
@@ -309,7 +313,7 @@ namespace TrabajoExamen
 		void TxtCantTextChanged(object sender, EventArgs e)
 		{
 			if(txtCant.Text != "" && Cant()!= false){
-				precio= Convert.ToDouble(txtPrecio.Text);
+				precio= Convert.ToDouble(lblPrecio.Text);
 				cant= Convert.ToInt32(txtCant.Text);
 				lblTotal.Text= Convert.ToString(precio*cant);
 			}
@@ -355,7 +359,9 @@ namespace TrabajoExamen
 		
 		void Button1Click(object sender, EventArgs e)
 		{
-			
+			if(Des()==false){
+				return;
+			}
 			if(Cambio()==false){
 				return;
 			};
@@ -364,22 +370,23 @@ namespace TrabajoExamen
 			fila.Producto= produc;
 			fila.Precio= precio;
 			fila.Cantidad= cant;
-			fila.Total= tot;
+			fila.Total= int.Parse(lblTotal.Text);
 			
 			fillas.Add(fila);
 			
-			AgregarProducto(produc,precio,cant,tot);
+			foreach(ClaseDePostres1 linea in fillas){
+				AgregarProducto(produc,precio,cant,int.Parse(lblTotal.Text));
+				llenar();
+			}
 			llenar();
+			contaprimir = 1;
 		}
 		
 		void BtnEliminarClick(object sender, EventArgs e)
 		{
-			//fillas = new ClaseDePostres1().ObtenerPostres();
 			 if (lvProductos.SelectedItems.Count > 0){
 				ListViewItem Selec = lvProductos.SelectedItems[0];
-				//MessageBox.Show(fillas[1].Producto);
 				foreach(ClaseDePostres1 fila in fillas){
-					//MessageBox.Show(fila.Total.ToString());
 					if(fila.Producto.Equals(Selec.SubItems[0].Text)){
 						if(fila.Total==int.Parse(Selec.SubItems[3].Text)){
 							MessageBox.Show("Se ha eliminado");
@@ -387,14 +394,9 @@ namespace TrabajoExamen
 							fillas.Remove(fila);
 							break;
 						}
-					 }
-					   
-        		
+					}
 				}llenar();
+			}
 		}
-
-		
-		
 	}
-}
 }

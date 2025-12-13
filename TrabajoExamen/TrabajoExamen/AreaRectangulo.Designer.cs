@@ -48,13 +48,16 @@ namespace TrabajoExamen
 			this.label1 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
+			this.button1 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblArea
 			// 
-			this.lblArea.Location = new System.Drawing.Point(185, 287);
+			this.lblArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.lblArea.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblArea.Location = new System.Drawing.Point(171, 300);
 			this.lblArea.Name = "lblArea";
 			this.lblArea.Size = new System.Drawing.Size(100, 23);
 			this.lblArea.TabIndex = 19;
@@ -62,7 +65,7 @@ namespace TrabajoExamen
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Sitka Banner", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(171, 262);
+			this.label3.Location = new System.Drawing.Point(144, 264);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(169, 23);
 			this.label3.TabIndex = 18;
@@ -70,9 +73,9 @@ namespace TrabajoExamen
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(185, 162);
+			this.pictureBox1.Location = new System.Drawing.Point(154, 165);
 			this.pictureBox1.Name = "pictureBox1";
-			this.pictureBox1.Size = new System.Drawing.Size(100, 88);
+			this.pictureBox1.Size = new System.Drawing.Size(117, 96);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
 			this.pictureBox1.TabIndex = 17;
 			this.pictureBox1.TabStop = false;
@@ -81,9 +84,9 @@ namespace TrabajoExamen
 			// 
 			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnLimpiar.Location = new System.Drawing.Point(28, 227);
+			this.btnLimpiar.Location = new System.Drawing.Point(28, 208);
 			this.btnLimpiar.Name = "btnLimpiar";
-			this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+			this.btnLimpiar.Size = new System.Drawing.Size(100, 32);
 			this.btnLimpiar.TabIndex = 15;
 			this.btnLimpiar.Text = "Limpiar";
 			this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -93,9 +96,9 @@ namespace TrabajoExamen
 			// 
 			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCalcular.Location = new System.Drawing.Point(28, 189);
+			this.btnCalcular.Location = new System.Drawing.Point(28, 171);
 			this.btnCalcular.Name = "btnCalcular";
-			this.btnCalcular.Size = new System.Drawing.Size(88, 23);
+			this.btnCalcular.Size = new System.Drawing.Size(100, 31);
 			this.btnCalcular.TabIndex = 14;
 			this.btnCalcular.Text = "Calcular";
 			this.btnCalcular.UseVisualStyleBackColor = false;
@@ -124,7 +127,7 @@ namespace TrabajoExamen
 			// label2
 			// 
 			this.label2.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(28, 121);
+			this.label2.Location = new System.Drawing.Point(28, 125);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(100, 23);
 			this.label2.TabIndex = 11;
@@ -133,7 +136,7 @@ namespace TrabajoExamen
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(29, 82);
+			this.label1.Location = new System.Drawing.Point(28, 82);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(100, 23);
 			this.label1.TabIndex = 10;
@@ -152,12 +155,25 @@ namespace TrabajoExamen
 			// 
 			this.erpError.ContainerControl = this;
 			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.button1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.Location = new System.Drawing.Point(28, 246);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(100, 32);
+			this.button1.TabIndex = 21;
+			this.button1.Text = "Quitar";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
+			// 
 			// AreaRectangulo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(334, 332);
+			this.ClientSize = new System.Drawing.Size(318, 332);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.lblArea);
 			this.Controls.Add(this.label3);
@@ -177,6 +193,7 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label1;

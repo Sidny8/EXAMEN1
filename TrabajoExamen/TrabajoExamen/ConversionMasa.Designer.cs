@@ -45,7 +45,7 @@ namespace TrabajoExamen
 			this.label5 = new System.Windows.Forms.Label();
 			this.cmbde = new System.Windows.Forms.ComboBox();
 			this.cmba = new System.Windows.Forms.ComboBox();
-			this.txtresultado = new System.Windows.Forms.TextBox();
+			this.lblresultado = new System.Windows.Forms.TextBox();
 			this.btnconvertir = new System.Windows.Forms.Button();
 			this.btnsalir = new System.Windows.Forms.Button();
 			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
@@ -54,7 +54,7 @@ namespace TrabajoExamen
 			// 
 			// txtvalor
 			// 
-			this.txtvalor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.txtvalor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txtvalor.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtvalor.Location = new System.Drawing.Point(12, 170);
 			this.txtvalor.Name = "txtvalor";
@@ -141,23 +141,23 @@ namespace TrabajoExamen
 			this.cmba.Size = new System.Drawing.Size(121, 24);
 			this.cmba.TabIndex = 12;
 			// 
-			// txtresultado
+			// lblresultado
 			// 
-			this.txtresultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.txtresultado.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtresultado.Location = new System.Drawing.Point(161, 170);
-			this.txtresultado.Name = "txtresultado";
-			this.txtresultado.ReadOnly = true;
-			this.txtresultado.Size = new System.Drawing.Size(121, 21);
-			this.txtresultado.TabIndex = 13;
+			this.lblresultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.lblresultado.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblresultado.Location = new System.Drawing.Point(161, 170);
+			this.lblresultado.Name = "lblresultado";
+			this.lblresultado.ReadOnly = true;
+			this.lblresultado.Size = new System.Drawing.Size(121, 21);
+			this.lblresultado.TabIndex = 13;
 			// 
 			// btnconvertir
 			// 
-			this.btnconvertir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.btnconvertir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnconvertir.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnconvertir.Location = new System.Drawing.Point(23, 227);
+			this.btnconvertir.Location = new System.Drawing.Point(23, 216);
 			this.btnconvertir.Name = "btnconvertir";
-			this.btnconvertir.Size = new System.Drawing.Size(96, 26);
+			this.btnconvertir.Size = new System.Drawing.Size(100, 37);
 			this.btnconvertir.TabIndex = 14;
 			this.btnconvertir.Text = "CONVERTIR";
 			this.btnconvertir.UseVisualStyleBackColor = false;
@@ -165,11 +165,11 @@ namespace TrabajoExamen
 			// 
 			// btnsalir
 			// 
-			this.btnsalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.btnsalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnsalir.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnsalir.Location = new System.Drawing.Point(177, 227);
+			this.btnsalir.Location = new System.Drawing.Point(177, 216);
 			this.btnsalir.Name = "btnsalir";
-			this.btnsalir.Size = new System.Drawing.Size(96, 26);
+			this.btnsalir.Size = new System.Drawing.Size(105, 37);
 			this.btnsalir.TabIndex = 15;
 			this.btnsalir.Text = "QUITAR";
 			this.btnsalir.UseVisualStyleBackColor = false;
@@ -187,7 +187,7 @@ namespace TrabajoExamen
 			this.ClientSize = new System.Drawing.Size(319, 279);
 			this.Controls.Add(this.btnsalir);
 			this.Controls.Add(this.btnconvertir);
-			this.Controls.Add(this.txtresultado);
+			this.Controls.Add(this.lblresultado);
 			this.Controls.Add(this.cmba);
 			this.Controls.Add(this.cmbde);
 			this.Controls.Add(this.label5);
@@ -206,7 +206,7 @@ namespace TrabajoExamen
 		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.Button btnsalir;
 		private System.Windows.Forms.Button btnconvertir;
-		private System.Windows.Forms.TextBox txtresultado;
+		private System.Windows.Forms.TextBox lblresultado;
 		private System.Windows.Forms.ComboBox cmba;
 		private System.Windows.Forms.ComboBox cmbde;
 		private System.Windows.Forms.Label label5;

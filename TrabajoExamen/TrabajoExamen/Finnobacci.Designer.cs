@@ -74,9 +74,9 @@ namespace TrabajoExamen
 			// 
 			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 10F);
-			this.btnCalcular.Location = new System.Drawing.Point(420, 284);
+			this.btnCalcular.Location = new System.Drawing.Point(49, 260);
 			this.btnCalcular.Name = "btnCalcular";
-			this.btnCalcular.Size = new System.Drawing.Size(100, 23);
+			this.btnCalcular.Size = new System.Drawing.Size(134, 37);
 			this.btnCalcular.TabIndex = 2;
 			this.btnCalcular.Text = "Calcular";
 			this.btnCalcular.UseVisualStyleBackColor = false;
@@ -86,9 +86,9 @@ namespace TrabajoExamen
 			// 
 			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 10F);
-			this.btnLimpiar.Location = new System.Drawing.Point(49, 284);
+			this.btnLimpiar.Location = new System.Drawing.Point(386, 260);
 			this.btnLimpiar.Name = "btnLimpiar";
-			this.btnLimpiar.Size = new System.Drawing.Size(89, 23);
+			this.btnLimpiar.Size = new System.Drawing.Size(134, 37);
 			this.btnLimpiar.TabIndex = 3;
 			this.btnLimpiar.Text = "QUITAR";
 			this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -97,7 +97,7 @@ namespace TrabajoExamen
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Stencil", 10F);
-			this.label1.Location = new System.Drawing.Point(148, 81);
+			this.label1.Location = new System.Drawing.Point(153, 82);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(240, 23);
 			this.label1.TabIndex = 4;
@@ -115,7 +115,7 @@ namespace TrabajoExamen
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Snap ITC", 20F);
-			this.label3.Location = new System.Drawing.Point(158, 24);
+			this.label3.Location = new System.Drawing.Point(173, 23);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(187, 40);
 			this.label3.TabIndex = 6;

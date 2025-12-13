@@ -36,6 +36,7 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label7 = new System.Windows.Forms.Label();
@@ -65,7 +66,10 @@ namespace TrabajoExamen
 			this.columnHeader6 = new System.Windows.Forms.ColumnHeader();
 			this.label10 = new System.Windows.Forms.Label();
 			this.txtpromediogral = new System.Windows.Forms.TextBox();
+			this.button1 = new System.Windows.Forms.Button();
+			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
 			this.groupBox1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -115,7 +119,7 @@ namespace TrabajoExamen
 			// 
 			// txtnombre
 			// 
-			this.txtnombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.txtnombre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txtnombre.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtnombre.Location = new System.Drawing.Point(30, 42);
 			this.txtnombre.Name = "txtnombre";
@@ -124,7 +128,7 @@ namespace TrabajoExamen
 			// 
 			// cboespecialidad
 			// 
-			this.cboespecialidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.cboespecialidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.cboespecialidad.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cboespecialidad.FormattingEnabled = true;
 			this.cboespecialidad.Items.AddRange(new object[] {
@@ -142,21 +146,23 @@ namespace TrabajoExamen
 			// 
 			// txt1
 			// 
-			this.txt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.txt1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txt1.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt1.Location = new System.Drawing.Point(315, 44);
 			this.txt1.Name = "txt1";
 			this.txt1.Size = new System.Drawing.Size(100, 21);
 			this.txt1.TabIndex = 20;
+			this.txt1.TextChanged += new System.EventHandler(this.Txt1TextChanged);
 			// 
 			// txt2
 			// 
-			this.txt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.txt2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txt2.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt2.Location = new System.Drawing.Point(435, 44);
 			this.txt2.Name = "txt2";
 			this.txt2.Size = new System.Drawing.Size(100, 21);
 			this.txt2.TabIndex = 21;
+			this.txt2.TextChanged += new System.EventHandler(this.Txt2TextChanged);
 			// 
 			// label6
 			// 
@@ -169,7 +175,7 @@ namespace TrabajoExamen
 			// 
 			// cbosemestre
 			// 
-			this.cbosemestre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.cbosemestre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.cbosemestre.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cbosemestre.FormattingEnabled = true;
 			this.cbosemestre.Items.AddRange(new object[] {
@@ -192,7 +198,7 @@ namespace TrabajoExamen
 			// 
 			// cboasignatura
 			// 
-			this.cboasignatura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.cboasignatura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.cboasignatura.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cboasignatura.FormattingEnabled = true;
 			this.cboasignatura.Items.AddRange(new object[] {
@@ -220,17 +226,18 @@ namespace TrabajoExamen
 			// 
 			// txt3
 			// 
-			this.txt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.txt3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txt3.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt3.Location = new System.Drawing.Point(371, 112);
 			this.txt3.Name = "txt3";
 			this.txt3.Size = new System.Drawing.Size(100, 21);
 			this.txt3.TabIndex = 27;
+			this.txt3.TextChanged += new System.EventHandler(this.Txt3TextChanged);
 			// 
 			// label9
 			// 
 			this.label9.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(96, 154);
+			this.label9.Location = new System.Drawing.Point(96, 163);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(112, 23);
 			this.label9.TabIndex = 28;
@@ -238,9 +245,9 @@ namespace TrabajoExamen
 			// 
 			// txtfecha
 			// 
-			this.txtfecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+			this.txtfecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txtfecha.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtfecha.Location = new System.Drawing.Point(227, 151);
+			this.txtfecha.Location = new System.Drawing.Point(227, 160);
 			this.txtfecha.Name = "txtfecha";
 			this.txtfecha.Size = new System.Drawing.Size(100, 23);
 			this.txtfecha.TabIndex = 29;
@@ -265,30 +272,32 @@ namespace TrabajoExamen
 			this.groupBox1.Controls.Add(this.label6);
 			this.groupBox1.Location = new System.Drawing.Point(43, 52);
 			this.groupBox1.Name = "groupBox1";
-			this.groupBox1.Size = new System.Drawing.Size(557, 220);
+			this.groupBox1.Size = new System.Drawing.Size(557, 199);
 			this.groupBox1.TabIndex = 30;
 			this.groupBox1.TabStop = false;
 			// 
 			// btnregistrar
 			// 
+			this.btnregistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnregistrar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnregistrar.Location = new System.Drawing.Point(397, 278);
+			this.btnregistrar.Location = new System.Drawing.Point(381, 257);
 			this.btnregistrar.Name = "btnregistrar";
-			this.btnregistrar.Size = new System.Drawing.Size(90, 23);
+			this.btnregistrar.Size = new System.Drawing.Size(106, 33);
 			this.btnregistrar.TabIndex = 31;
 			this.btnregistrar.Text = "REGISTRAR";
-			this.btnregistrar.UseVisualStyleBackColor = true;
+			this.btnregistrar.UseVisualStyleBackColor = false;
 			this.btnregistrar.Click += new System.EventHandler(this.BtnregistrarClick);
 			// 
 			// btncancelar
 			// 
+			this.btncancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btncancelar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btncancelar.Location = new System.Drawing.Point(511, 278);
+			this.btncancelar.Location = new System.Drawing.Point(505, 257);
 			this.btncancelar.Name = "btncancelar";
-			this.btncancelar.Size = new System.Drawing.Size(89, 23);
+			this.btncancelar.Size = new System.Drawing.Size(95, 33);
 			this.btncancelar.TabIndex = 32;
 			this.btncancelar.Text = "CANCELAR";
-			this.btncancelar.UseVisualStyleBackColor = true;
+			this.btncancelar.UseVisualStyleBackColor = false;
 			this.btncancelar.Click += new System.EventHandler(this.BtncancelarClick);
 			// 
 			// listView1
@@ -302,9 +311,9 @@ namespace TrabajoExamen
 									this.columnHeader5,
 									this.columnHeader6});
 			this.listView1.Font = new System.Drawing.Font("Script MT Bold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.listView1.Location = new System.Drawing.Point(28, 318);
+			this.listView1.Location = new System.Drawing.Point(28, 296);
 			this.listView1.Name = "listView1";
-			this.listView1.Size = new System.Drawing.Size(572, 143);
+			this.listView1.Size = new System.Drawing.Size(572, 165);
 			this.listView1.TabIndex = 34;
 			this.listView1.UseCompatibleStateImageBehavior = false;
 			this.listView1.View = System.Windows.Forms.View.Details;
@@ -354,12 +363,29 @@ namespace TrabajoExamen
 			this.txtpromediogral.Size = new System.Drawing.Size(133, 21);
 			this.txtpromediogral.TabIndex = 36;
 			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.button1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.Location = new System.Drawing.Point(28, 467);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(131, 41);
+			this.button1.TabIndex = 37;
+			this.button1.Text = "QUITAR";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
+			// 
+			// erpError
+			// 
+			this.erpError.ContainerControl = this;
+			// 
 			// Calificacion
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(645, 517);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.txtpromediogral);
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.listView1);
@@ -373,9 +399,12 @@ namespace TrabajoExamen
 			this.Load += new System.EventHandler(this.CalificacionLoad);
 			this.groupBox1.ResumeLayout(false);
 			this.groupBox1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ErrorProvider erpError;
+		private System.Windows.Forms.Button button1;
 		private System.Windows.Forms.TextBox txtpromediogral;
 		private System.Windows.Forms.Label label10;
 		private System.Windows.Forms.ColumnHeader columnHeader6;

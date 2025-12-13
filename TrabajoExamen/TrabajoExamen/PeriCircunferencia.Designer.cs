@@ -36,6 +36,7 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.lblPerimetro = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,20 +45,25 @@ namespace TrabajoExamen
 			this.txtDiametro = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
+			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
+			this.button1 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblPerimetro
 			// 
-			this.lblPerimetro.Location = new System.Drawing.Point(196, 268);
+			this.lblPerimetro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.lblPerimetro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblPerimetro.Location = new System.Drawing.Point(95, 268);
 			this.lblPerimetro.Name = "lblPerimetro";
-			this.lblPerimetro.Size = new System.Drawing.Size(100, 23);
+			this.lblPerimetro.Size = new System.Drawing.Size(128, 23);
 			this.lblPerimetro.TabIndex = 39;
 			// 
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Sitka Text", 10F);
-			this.label3.Location = new System.Drawing.Point(95, 245);
+			this.label3.Location = new System.Drawing.Point(44, 231);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(268, 23);
 			this.label3.TabIndex = 38;
@@ -66,7 +72,7 @@ namespace TrabajoExamen
 			// pictureBox1
 			// 
 			this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.pictureBox1.Location = new System.Drawing.Point(187, 126);
+			this.pictureBox1.Location = new System.Drawing.Point(178, 117);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(109, 102);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -77,9 +83,9 @@ namespace TrabajoExamen
 			// 
 			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 10F);
-			this.btnLimpiar.Location = new System.Drawing.Point(11, 179);
+			this.btnLimpiar.Location = new System.Drawing.Point(12, 169);
 			this.btnLimpiar.Name = "btnLimpiar";
-			this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+			this.btnLimpiar.Size = new System.Drawing.Size(84, 24);
 			this.btnLimpiar.TabIndex = 35;
 			this.btnLimpiar.Text = "Limpiar";
 			this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -101,17 +107,18 @@ namespace TrabajoExamen
 			// 
 			this.txtDiametro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txtDiametro.Font = new System.Drawing.Font("Sitka Text", 8F);
-			this.txtDiametro.Location = new System.Drawing.Point(156, 84);
+			this.txtDiametro.Location = new System.Drawing.Point(178, 80);
 			this.txtDiametro.Name = "txtDiametro";
 			this.txtDiametro.Size = new System.Drawing.Size(100, 21);
 			this.txtDiametro.TabIndex = 32;
+			this.txtDiametro.TextChanged += new System.EventHandler(this.TxtDiametroTextChanged);
 			// 
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Stencil", 10F);
-			this.label1.Location = new System.Drawing.Point(11, 84);
+			this.label1.Location = new System.Drawing.Point(12, 84);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(147, 23);
+			this.label1.Size = new System.Drawing.Size(138, 23);
 			this.label1.TabIndex = 30;
 			this.label1.Text = "Dame el Diaetro:";
 			// 
@@ -124,12 +131,29 @@ namespace TrabajoExamen
 			this.label2.TabIndex = 40;
 			this.label2.Text = "Perímetro Circunferencia";
 			// 
+			// erpError
+			// 
+			this.erpError.ContainerControl = this;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.button1.Font = new System.Drawing.Font("Stencil", 10F);
+			this.button1.Location = new System.Drawing.Point(11, 199);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(84, 24);
+			this.button1.TabIndex = 41;
+			this.button1.Text = "Quitar";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
+			// 
 			// PeriCircunferencia
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(363, 314);
+			this.ClientSize = new System.Drawing.Size(345, 312);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.lblPerimetro);
 			this.Controls.Add(this.label3);
@@ -143,9 +167,12 @@ namespace TrabajoExamen
 			this.Text = "PeriCircunferencia";
 			this.Load += new System.EventHandler(this.PeriCircunferenciaLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox txtDiametro;

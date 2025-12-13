@@ -50,47 +50,47 @@ namespace TrabajoExamen
 			 if (cmbde.SelectedItem.ToString() == "Segundos" && cmba.SelectedItem.ToString() == "Segundos")
    			 {
       			  conversion = int.Parse(txtvalor.Text) * 1;
-      			  txtresultado.Text = conversion.ToString();
+      			  lblresultado.Text = conversion.ToString();
    			 }
 	   		 else if (cmbde.SelectedItem.ToString() == "Segundos" && cmba.SelectedItem.ToString() == "Minutos")
 		    {
  	  		    conversion = int.Parse(txtvalor.Text) * 0.0166667;
-	   			txtresultado.Text = conversion.ToString();
+	   			lblresultado.Text = conversion.ToString();
 	   		}
 		  	else if (cmbde.SelectedItem.ToString() == "Segundos" && cmba.SelectedItem.ToString() == "Horas")
 	  		{
 	      	  conversion = int.Parse(txtvalor.Text) * 0.00027777833333;
-        	  txtresultado.Text = conversion.ToString();
+        	  lblresultado.Text = conversion.ToString();
    	 		}
     		else if (cmbde.SelectedItem.ToString() == "Minutos" && cmba.SelectedItem.ToString() == "Minutos")
     		{
         		conversion = int.Parse(txtvalor.Text) * 1;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
   			 }
     		else if (cmbde.SelectedItem.ToString() == "Minutos" && cmba.SelectedItem.ToString() == "Segundos")
     		{
         		conversion = int.Parse(txtvalor.Text) * 60;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
     		}	
 			else if (cmbde.SelectedItem.ToString() == "Minutos" && cmba.SelectedItem.ToString() == "Horas")
     		{
         		conversion = int.Parse(txtvalor.Text) * 0.0166667;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
     		}
     		else if (cmbde.SelectedItem.ToString() == "Horas" && cmba.SelectedItem.ToString() == "Horas")
    			{
         		conversion = int.Parse(txtvalor.Text) * 1;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
     		}
     		else if (cmbde.SelectedItem.ToString() == "Horas" && cmba.SelectedItem.ToString() == "Segundos")
     		{
         		conversion = int.Parse(txtvalor.Text) * 3600;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
     		}
   			else if (cmbde.SelectedItem.ToString() == "Horas" && cmba.SelectedItem.ToString() == "Minutos")
    			{
       		   conversion = int.Parse(txtvalor.Text) * 60;
-       		   txtresultado.Text = conversion.ToString();
+       		   lblresultado.Text = conversion.ToString();
    			 }
   			}
 			else{

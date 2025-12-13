@@ -36,6 +36,7 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.lblVolumen = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,14 +45,19 @@ namespace TrabajoExamen
 			this.txtRadio = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
+			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
+			this.button1 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblVolumen
 			// 
-			this.lblVolumen.Location = new System.Drawing.Point(230, 276);
+			this.lblVolumen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.lblVolumen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblVolumen.Location = new System.Drawing.Point(221, 262);
 			this.lblVolumen.Name = "lblVolumen";
-			this.lblVolumen.Size = new System.Drawing.Size(100, 23);
+			this.lblVolumen.Size = new System.Drawing.Size(122, 23);
 			this.lblVolumen.TabIndex = 47;
 			// 
 			// label3
@@ -77,7 +83,7 @@ namespace TrabajoExamen
 			// 
 			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 10F);
-			this.btnLimpiar.Location = new System.Drawing.Point(28, 216);
+			this.btnLimpiar.Location = new System.Drawing.Point(53, 203);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(91, 23);
 			this.btnLimpiar.TabIndex = 43;
@@ -89,7 +95,7 @@ namespace TrabajoExamen
 			// 
 			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 10F);
-			this.btnCalcular.Location = new System.Drawing.Point(28, 176);
+			this.btnCalcular.Location = new System.Drawing.Point(53, 134);
 			this.btnCalcular.Name = "btnCalcular";
 			this.btnCalcular.Size = new System.Drawing.Size(91, 23);
 			this.btnCalcular.TabIndex = 42;
@@ -105,11 +111,12 @@ namespace TrabajoExamen
 			this.txtRadio.Name = "txtRadio";
 			this.txtRadio.Size = new System.Drawing.Size(100, 21);
 			this.txtRadio.TabIndex = 41;
+			this.txtRadio.TextChanged += new System.EventHandler(this.TxtRadioTextChanged);
 			// 
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Stencil", 10F);
-			this.label1.Location = new System.Drawing.Point(12, 72);
+			this.label1.Location = new System.Drawing.Point(28, 72);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(150, 23);
 			this.label1.TabIndex = 40;
@@ -124,12 +131,29 @@ namespace TrabajoExamen
 			this.label2.TabIndex = 48;
 			this.label2.Text = "volumen de esfera";
 			// 
+			// erpError
+			// 
+			this.erpError.ContainerControl = this;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.button1.Font = new System.Drawing.Font("Stencil", 10F);
+			this.button1.Location = new System.Drawing.Point(53, 174);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(91, 23);
+			this.button1.TabIndex = 49;
+			this.button1.Text = "Quitar";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
+			// 
 			// VoluEsfera
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(387, 317);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.lblVolumen);
 			this.Controls.Add(this.label3);
@@ -143,9 +167,12 @@ namespace TrabajoExamen
 			this.Text = "VoluEsfera";
 			this.Load += new System.EventHandler(this.VoluEsferaLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox txtRadio;

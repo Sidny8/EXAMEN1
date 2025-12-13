@@ -99,5 +99,10 @@ namespace TrabajoExamen
 				}
 			}
 		}
+		
+		void Button1Click(object sender, EventArgs e)
+		{
+			this.Hide();
+		}
 	}
 }

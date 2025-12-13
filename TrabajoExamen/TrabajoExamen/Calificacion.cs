@@ -30,6 +30,48 @@ namespace TrabajoExamen
 			//
 		}
 		
+		private bool NumeroA(){
+			int num;
+			if(!int.TryParse(txt1.Text, out num)){
+                erpError.SetError(txt1,"Debe de poner un numerico");
+                txt1.Clear();
+                txt1.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txt1,"");
+                return true;
+            }
+		}
+		
+		private bool NumeroB(){
+			int num;
+			if(!int.TryParse(txt2.Text, out num)){
+                erpError.SetError(txt2,"Debe de poner un numerico");
+                txt2.Clear();
+                txt2.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txt2,"");
+                return true;
+            }
+		}
+		
+		private bool NumeroC(){
+			int num;
+			if(!int.TryParse(txt3.Text, out num)){
+                erpError.SetError(txt3,"Debe de poner un numerico");
+                txt3.Clear();
+                txt3.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txt3,"");
+                return true;
+            }
+		}
+		
 		void CalificacionLoad(object sender, EventArgs e)
 		{
 			txtfecha.Text = DateTime.Today.Date.ToString("d");				
@@ -94,6 +136,38 @@ namespace TrabajoExamen
 				C += 3;
 			}
 					
+		}
+		
+		void Txt1TextChanged(object sender, EventArgs e)
+		{
+			if(txt1.Text!=""){
+				if(NumeroA()==false){
+					return;
+				}
+			}
+		}
+		
+		void Txt2TextChanged(object sender, EventArgs e)
+		{
+			if(txt2.Text!=""){
+				if(NumeroB()==false){
+					return;
+				}
+			}
+		}
+		
+		void Txt3TextChanged(object sender, EventArgs e)
+		{
+			if(txt3.Text!=""){
+				if(NumeroC()==false){
+					return;
+				}
+			}
+		}
+		
+		void Button1Click(object sender, EventArgs e)
+		{
+			this.Hide();
 		}
 	}
 }

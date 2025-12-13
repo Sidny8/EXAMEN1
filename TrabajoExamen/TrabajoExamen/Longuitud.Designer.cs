@@ -36,9 +36,10 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.txtvalor = new System.Windows.Forms.TextBox();
-			this.txtresultado = new System.Windows.Forms.TextBox();
+			this.lblresultado = new System.Windows.Forms.TextBox();
 			this.btnconvertir = new System.Windows.Forms.Button();
 			this.cmbde = new System.Windows.Forms.ComboBox();
 			this.cmba = new System.Windows.Forms.ComboBox();
@@ -47,14 +48,16 @@ namespace TrabajoExamen
 			this.label5 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
 			this.btnsalir = new System.Windows.Forms.Button();
+			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Snap ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.Location = new System.Drawing.Point(29, 9);
+			this.label1.Location = new System.Drawing.Point(29, 26);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(326, 23);
+			this.label1.Size = new System.Drawing.Size(309, 23);
 			this.label1.TabIndex = 0;
 			this.label1.Text = "UNIDADES DE LONGITUD";
 			// 
@@ -66,16 +69,17 @@ namespace TrabajoExamen
 			this.txtvalor.Name = "txtvalor";
 			this.txtvalor.Size = new System.Drawing.Size(120, 21);
 			this.txtvalor.TabIndex = 1;
+			this.txtvalor.TextChanged += new System.EventHandler(this.TxtvalorTextChanged);
 			// 
-			// txtresultado
+			// lblresultado
 			// 
-			this.txtresultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.txtresultado.Font = new System.Drawing.Font("Sitka Text", 8F);
-			this.txtresultado.Location = new System.Drawing.Point(189, 221);
-			this.txtresultado.Name = "txtresultado";
-			this.txtresultado.ReadOnly = true;
-			this.txtresultado.Size = new System.Drawing.Size(121, 21);
-			this.txtresultado.TabIndex = 2;
+			this.lblresultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.lblresultado.Font = new System.Drawing.Font("Sitka Text", 8F);
+			this.lblresultado.Location = new System.Drawing.Point(189, 221);
+			this.lblresultado.Name = "lblresultado";
+			this.lblresultado.ReadOnly = true;
+			this.lblresultado.Size = new System.Drawing.Size(121, 21);
+			this.lblresultado.TabIndex = 2;
 			// 
 			// btnconvertir
 			// 
@@ -92,6 +96,7 @@ namespace TrabajoExamen
 			// cmbde
 			// 
 			this.cmbde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.cmbde.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbde.Font = new System.Drawing.Font("Sitka Text", 8F);
 			this.cmbde.FormattingEnabled = true;
 			this.cmbde.Items.AddRange(new object[] {
@@ -108,6 +113,7 @@ namespace TrabajoExamen
 			// cmba
 			// 
 			this.cmba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.cmba.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmba.Font = new System.Drawing.Font("Sitka Text", 8F);
 			this.cmba.FormattingEnabled = true;
 			this.cmba.Items.AddRange(new object[] {
@@ -165,9 +171,13 @@ namespace TrabajoExamen
 			this.btnsalir.Name = "btnsalir";
 			this.btnsalir.Size = new System.Drawing.Size(96, 26);
 			this.btnsalir.TabIndex = 11;
-			this.btnsalir.Text = "SALIR";
+			this.btnsalir.Text = "Quitar";
 			this.btnsalir.UseVisualStyleBackColor = false;
 			this.btnsalir.Click += new System.EventHandler(this.BtnsalirClick);
+			// 
+			// erpError
+			// 
+			this.erpError.ContainerControl = this;
 			// 
 			// Longuitud
 			// 
@@ -183,15 +193,17 @@ namespace TrabajoExamen
 			this.Controls.Add(this.cmba);
 			this.Controls.Add(this.cmbde);
 			this.Controls.Add(this.btnconvertir);
-			this.Controls.Add(this.txtresultado);
+			this.Controls.Add(this.lblresultado);
 			this.Controls.Add(this.txtvalor);
 			this.Controls.Add(this.label1);
 			this.Name = "Longuitud";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Longuitud";
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.Button btnsalir;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label5;
@@ -200,7 +212,7 @@ namespace TrabajoExamen
 		private System.Windows.Forms.ComboBox cmba;
 		private System.Windows.Forms.ComboBox cmbde;
 		private System.Windows.Forms.Button btnconvertir;
-		private System.Windows.Forms.TextBox txtresultado;
+		private System.Windows.Forms.TextBox lblresultado;
 		private System.Windows.Forms.TextBox txtvalor;
 		private System.Windows.Forms.Label label1;
 	}

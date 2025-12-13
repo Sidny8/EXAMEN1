@@ -45,7 +45,7 @@ namespace TrabajoExamen
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
-			this.txtPrecio = new System.Windows.Forms.TextBox();
+			this.lblPrecio = new System.Windows.Forms.TextBox();
 			this.txtCant = new System.Windows.Forms.TextBox();
 			this.lvProductos = new System.Windows.Forms.ListView();
 			this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
@@ -54,7 +54,7 @@ namespace TrabajoExamen
 			this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
 			this.label5 = new System.Windows.Forms.Label();
 			this.txtImpP = new System.Windows.Forms.TextBox();
-			this.button1 = new System.Windows.Forms.Button();
+			this.btnGuardar = new System.Windows.Forms.Button();
 			this.button2 = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
 			this.btnAgregar = new System.Windows.Forms.Button();
@@ -162,14 +162,14 @@ namespace TrabajoExamen
 			this.label4.Text = "Total";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// txtPrecio
+			// lblPrecio
 			// 
-			this.txtPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.txtPrecio.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtPrecio.Location = new System.Drawing.Point(6, 202);
-			this.txtPrecio.Name = "txtPrecio";
-			this.txtPrecio.Size = new System.Drawing.Size(100, 21);
-			this.txtPrecio.TabIndex = 6;
+			this.lblPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.lblPrecio.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPrecio.Location = new System.Drawing.Point(6, 202);
+			this.lblPrecio.Name = "lblPrecio";
+			this.lblPrecio.Size = new System.Drawing.Size(100, 21);
+			this.lblPrecio.TabIndex = 6;
 			// 
 			// txtCant
 			// 
@@ -237,17 +237,17 @@ namespace TrabajoExamen
 			this.txtImpP.TabIndex = 14;
 			this.txtImpP.TextChanged += new System.EventHandler(this.TxtImpPTextChanged);
 			// 
-			// button1
+			// btnGuardar
 			// 
-			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.button1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(31, 427);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 16;
-			this.button1.Text = "Guardar";
-			this.button1.UseVisualStyleBackColor = false;
-			this.button1.Click += new System.EventHandler(this.Button1Click);
+			this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.btnGuardar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnGuardar.Location = new System.Drawing.Point(31, 427);
+			this.btnGuardar.Name = "btnGuardar";
+			this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+			this.btnGuardar.TabIndex = 16;
+			this.btnGuardar.Text = "Guardar";
+			this.btnGuardar.UseVisualStyleBackColor = false;
+			this.btnGuardar.Click += new System.EventHandler(this.Button1Click);
 			// 
 			// button2
 			// 
@@ -265,7 +265,7 @@ namespace TrabajoExamen
 			// 
 			this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.button3.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.Location = new System.Drawing.Point(194, 427);
+			this.button3.Location = new System.Drawing.Point(203, 427);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(87, 23);
 			this.button3.TabIndex = 18;
@@ -418,12 +418,12 @@ namespace TrabajoExamen
 			this.Controls.Add(this.btnAgregar);
 			this.Controls.Add(this.button3);
 			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.btnGuardar);
 			this.Controls.Add(this.txtImpP);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.lvProductos);
 			this.Controls.Add(this.txtCant);
-			this.Controls.Add(this.txtPrecio);
+			this.Controls.Add(this.lblPrecio);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
@@ -455,7 +455,7 @@ namespace TrabajoExamen
 		private System.Windows.Forms.Button btnAgregar;
 		private System.Windows.Forms.Button button3;
 		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btnGuardar;
 		private System.Windows.Forms.TextBox txtImpP;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.ColumnHeader columnHeader4;
@@ -464,7 +464,7 @@ namespace TrabajoExamen
 		private System.Windows.Forms.ColumnHeader columnHeader1;
 		private System.Windows.Forms.ListView lvProductos;
 		private System.Windows.Forms.TextBox txtCant;
-		private System.Windows.Forms.TextBox txtPrecio;
+		private System.Windows.Forms.TextBox lblPrecio;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
