@@ -109,7 +109,7 @@ namespace TrabajoExamen
 			// 
 			this.txtAltura.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txtAltura.Font = new System.Drawing.Font("Sitka Text", 8F);
-			this.txtAltura.Location = new System.Drawing.Point(188, 108);
+			this.txtAltura.Location = new System.Drawing.Point(235, 108);
 			this.txtAltura.Name = "txtAltura";
 			this.txtAltura.Size = new System.Drawing.Size(100, 21);
 			this.txtAltura.TabIndex = 33;
@@ -119,7 +119,7 @@ namespace TrabajoExamen
 			// 
 			this.txtAreaBase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txtAreaBase.Font = new System.Drawing.Font("Sitka Text", 8F);
-			this.txtAreaBase.Location = new System.Drawing.Point(188, 66);
+			this.txtAreaBase.Location = new System.Drawing.Point(235, 66);
 			this.txtAreaBase.Name = "txtAreaBase";
 			this.txtAreaBase.Size = new System.Drawing.Size(100, 21);
 			this.txtAreaBase.TabIndex = 32;
@@ -137,9 +137,9 @@ namespace TrabajoExamen
 			// label1
 			// 
 			this.label1.Font = new System.Drawing.Font("Stencil", 10F);
-			this.label1.Location = new System.Drawing.Point(33, 70);
+			this.label1.Location = new System.Drawing.Point(7, 66);
 			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(127, 23);
+			this.label1.Size = new System.Drawing.Size(222, 23);
 			this.label1.TabIndex = 30;
 			this.label1.Text = "Dame el Area de la Base:";
 			// 
