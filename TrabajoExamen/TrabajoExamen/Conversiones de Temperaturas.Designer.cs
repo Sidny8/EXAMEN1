@@ -36,6 +36,7 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
@@ -52,7 +53,9 @@ namespace TrabajoExamen
 			this.btnsalir = new System.Windows.Forms.Button();
 			this.btnlimpiar = new System.Windows.Forms.Button();
 			this.lsbtemp = new System.Windows.Forms.ListBox();
+			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
 			this.groupBox1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -90,6 +93,7 @@ namespace TrabajoExamen
 			this.txtDesde.Name = "txtDesde";
 			this.txtDesde.Size = new System.Drawing.Size(100, 21);
 			this.txtDesde.TabIndex = 3;
+			this.txtDesde.TextChanged += new System.EventHandler(this.TxtDesdeTextChanged);
 			// 
 			// txtHasta
 			// 
@@ -99,6 +103,7 @@ namespace TrabajoExamen
 			this.txtHasta.Name = "txtHasta";
 			this.txtHasta.Size = new System.Drawing.Size(100, 21);
 			this.txtHasta.TabIndex = 4;
+			this.txtHasta.TextChanged += new System.EventHandler(this.TxtHastaTextChanged);
 			// 
 			// rdbCaK
 			// 
@@ -209,7 +214,7 @@ namespace TrabajoExamen
 			this.btnsalir.Name = "btnsalir";
 			this.btnsalir.Size = new System.Drawing.Size(75, 39);
 			this.btnsalir.TabIndex = 14;
-			this.btnsalir.Text = "SALIR";
+			this.btnsalir.Text = "QUITAR";
 			this.btnsalir.UseVisualStyleBackColor = false;
 			this.btnsalir.Click += new System.EventHandler(this.BtnsalirClick);
 			// 
@@ -237,6 +242,10 @@ namespace TrabajoExamen
 			this.lsbtemp.Size = new System.Drawing.Size(175, 164);
 			this.lsbtemp.TabIndex = 16;
 			// 
+			// erpError
+			// 
+			this.erpError.ContainerControl = this;
+			// 
 			// Conversiones_de_Temperaturas
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -257,9 +266,11 @@ namespace TrabajoExamen
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Conversiones_de_Temperaturas";
 			this.groupBox1.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.ListBox lsbtemp;
 		private System.Windows.Forms.Button btnlimpiar;
 		private System.Windows.Forms.Button btnsalir;

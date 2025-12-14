@@ -29,14 +29,28 @@ namespace TrabajoExamen
 			//
 		}
 		
+		private bool NumeroA(){
+			int num;
+			if(!int.TryParse(txtDiametro.Text, out num)){
+                erpError.SetError(txtDiametro,"Debe de poner un numerico");
+                txtDiametro.Clear();
+                txtDiametro.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtDiametro,"");
+                return true;
+            }
+		}
+		
 		void BtnCalcularClick(object sender, EventArgs e)
 		{
-			double Diametro, perimetro;
-			Diametro=Convert.ToDouble(txtDiametro.Text);
-			
-			perimetro= 3.1416*Diametro;
-			
-			lblPerimetro.Text=perimetro.ToString();
+			if(txtDiametro.Text != ""){
+				double Diametro, perimetro;
+				Diametro=Convert.ToDouble(txtDiametro.Text);
+				perimetro= 3.1416*Diametro;
+				lblPerimetro.Text=perimetro.ToString();
+			}
 		}
 		
 		void BtnLimpiarClick(object sender, EventArgs e)
@@ -49,6 +63,20 @@ namespace TrabajoExamen
 		void PeriCircunferenciaLoad(object sender, EventArgs e)
 		{
 			pictureBox1.Image=Resource1.circulo;
+		}
+		
+		void TxtDiametroTextChanged(object sender, EventArgs e)
+		{
+			if(txtDiametro.Text!=""){
+				if(NumeroA()==false){
+					return;
+				}
+			}
+		}
+		
+		void Button1Click(object sender, EventArgs e)
+		{
+			this.Hide();
 		}
 	}
 }

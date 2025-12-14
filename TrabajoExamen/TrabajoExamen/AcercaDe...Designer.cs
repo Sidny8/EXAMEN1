@@ -150,6 +150,7 @@ namespace TrabajoExamen
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.btnRegresar);
 			this.Name = "AcercaDe__";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "AcercaDe__";
 			this.Load += new System.EventHandler(this.AcercaDe__Load);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

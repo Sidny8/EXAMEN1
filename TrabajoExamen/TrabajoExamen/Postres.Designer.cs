@@ -45,7 +45,7 @@ namespace TrabajoExamen
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
-			this.txtPrecio = new System.Windows.Forms.TextBox();
+			this.lblPrecio = new System.Windows.Forms.TextBox();
 			this.txtCant = new System.Windows.Forms.TextBox();
 			this.lvProductos = new System.Windows.Forms.ListView();
 			this.columnHeader1 = new System.Windows.Forms.ColumnHeader();
@@ -54,8 +54,8 @@ namespace TrabajoExamen
 			this.columnHeader4 = new System.Windows.Forms.ColumnHeader();
 			this.label5 = new System.Windows.Forms.Label();
 			this.txtImpP = new System.Windows.Forms.TextBox();
-			this.button1 = new System.Windows.Forms.Button();
-			this.button2 = new System.Windows.Forms.Button();
+			this.btnGuardar = new System.Windows.Forms.Button();
+			this.btnBorrar = new System.Windows.Forms.Button();
 			this.button3 = new System.Windows.Forms.Button();
 			this.btnAgregar = new System.Windows.Forms.Button();
 			this.btnEliminar = new System.Windows.Forms.Button();
@@ -70,6 +70,7 @@ namespace TrabajoExamen
 			this.label8 = new System.Windows.Forms.Label();
 			this.label9 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
+			this.btnQuitar = new System.Windows.Forms.Button();
 			this.groupBox1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -162,14 +163,14 @@ namespace TrabajoExamen
 			this.label4.Text = "Total";
 			this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// txtPrecio
+			// lblPrecio
 			// 
-			this.txtPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.txtPrecio.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtPrecio.Location = new System.Drawing.Point(6, 202);
-			this.txtPrecio.Name = "txtPrecio";
-			this.txtPrecio.Size = new System.Drawing.Size(100, 21);
-			this.txtPrecio.TabIndex = 6;
+			this.lblPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.lblPrecio.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPrecio.Location = new System.Drawing.Point(6, 202);
+			this.lblPrecio.Name = "lblPrecio";
+			this.lblPrecio.Size = new System.Drawing.Size(100, 21);
+			this.lblPrecio.TabIndex = 6;
 			// 
 			// txtCant
 			// 
@@ -221,7 +222,7 @@ namespace TrabajoExamen
 			// label5
 			// 
 			this.label5.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label5.Location = new System.Drawing.Point(31, 364);
+			this.label5.Location = new System.Drawing.Point(31, 367);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(100, 23);
 			this.label5.TabIndex = 10;
@@ -231,41 +232,41 @@ namespace TrabajoExamen
 			// 
 			this.txtImpP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.txtImpP.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtImpP.Location = new System.Drawing.Point(392, 393);
+			this.txtImpP.Location = new System.Drawing.Point(412, 396);
 			this.txtImpP.Name = "txtImpP";
 			this.txtImpP.Size = new System.Drawing.Size(60, 21);
 			this.txtImpP.TabIndex = 14;
 			this.txtImpP.TextChanged += new System.EventHandler(this.TxtImpPTextChanged);
 			// 
-			// button1
+			// btnGuardar
 			// 
-			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.button1.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button1.Location = new System.Drawing.Point(31, 427);
-			this.button1.Name = "button1";
-			this.button1.Size = new System.Drawing.Size(75, 23);
-			this.button1.TabIndex = 16;
-			this.button1.Text = "Guardar";
-			this.button1.UseVisualStyleBackColor = false;
-			this.button1.Click += new System.EventHandler(this.Button1Click);
+			this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.btnGuardar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnGuardar.Location = new System.Drawing.Point(99, 427);
+			this.btnGuardar.Name = "btnGuardar";
+			this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+			this.btnGuardar.TabIndex = 16;
+			this.btnGuardar.Text = "Guardar";
+			this.btnGuardar.UseVisualStyleBackColor = false;
+			this.btnGuardar.Click += new System.EventHandler(this.Button1Click);
 			// 
-			// button2
+			// btnBorrar
 			// 
-			this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.button2.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.Location = new System.Drawing.Point(112, 427);
-			this.button2.Name = "button2";
-			this.button2.Size = new System.Drawing.Size(75, 23);
-			this.button2.TabIndex = 17;
-			this.button2.Text = "Borrar";
-			this.button2.UseVisualStyleBackColor = false;
-			this.button2.Click += new System.EventHandler(this.Button2Click);
+			this.btnBorrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.btnBorrar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnBorrar.Location = new System.Drawing.Point(180, 427);
+			this.btnBorrar.Name = "btnBorrar";
+			this.btnBorrar.Size = new System.Drawing.Size(75, 23);
+			this.btnBorrar.TabIndex = 17;
+			this.btnBorrar.Text = "Borrar";
+			this.btnBorrar.UseVisualStyleBackColor = false;
+			this.btnBorrar.Click += new System.EventHandler(this.Button2Click);
 			// 
 			// button3
 			// 
 			this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.button3.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button3.Location = new System.Drawing.Point(194, 427);
+			this.button3.Location = new System.Drawing.Point(261, 427);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(87, 23);
 			this.button3.TabIndex = 18;
@@ -291,7 +292,7 @@ namespace TrabajoExamen
 			this.btnEliminar.Font = new System.Drawing.Font("Stencil", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btnEliminar.Location = new System.Drawing.Point(324, 213);
 			this.btnEliminar.Name = "btnEliminar";
-			this.btnEliminar.Size = new System.Drawing.Size(141, 23);
+			this.btnEliminar.Size = new System.Drawing.Size(148, 23);
 			this.btnEliminar.TabIndex = 20;
 			this.btnEliminar.Text = "Eliminar Producto";
 			this.btnEliminar.UseVisualStyleBackColor = false;
@@ -316,7 +317,7 @@ namespace TrabajoExamen
 			this.lblimpP.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.lblimpP.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblimpP.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblimpP.Location = new System.Drawing.Point(392, 360);
+			this.lblimpP.Location = new System.Drawing.Point(412, 363);
 			this.lblimpP.Name = "lblimpP";
 			this.lblimpP.Size = new System.Drawing.Size(60, 24);
 			this.lblimpP.TabIndex = 22;
@@ -326,7 +327,7 @@ namespace TrabajoExamen
 			this.lblSub.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.lblSub.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblSub.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblSub.Location = new System.Drawing.Point(12, 387);
+			this.lblSub.Location = new System.Drawing.Point(31, 390);
 			this.lblSub.Name = "lblSub";
 			this.lblSub.Size = new System.Drawing.Size(100, 23);
 			this.lblSub.TabIndex = 23;
@@ -336,7 +337,7 @@ namespace TrabajoExamen
 			this.lblCambio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.lblCambio.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblCambio.Font = new System.Drawing.Font("Sitka Small", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCambio.Location = new System.Drawing.Point(392, 432);
+			this.lblCambio.Location = new System.Drawing.Point(412, 427);
 			this.lblCambio.Name = "lblCambio";
 			this.lblCambio.Size = new System.Drawing.Size(60, 18);
 			this.lblCambio.TabIndex = 25;
@@ -344,7 +345,7 @@ namespace TrabajoExamen
 			// txtDes
 			// 
 			this.txtDes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-			this.txtDes.Location = new System.Drawing.Point(144, 390);
+			this.txtDes.Location = new System.Drawing.Point(169, 390);
 			this.txtDes.Name = "txtDes";
 			this.txtDes.Size = new System.Drawing.Size(100, 20);
 			this.txtDes.TabIndex = 26;
@@ -353,7 +354,7 @@ namespace TrabajoExamen
 			// label6
 			// 
 			this.label6.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label6.Location = new System.Drawing.Point(298, 360);
+			this.label6.Location = new System.Drawing.Point(318, 364);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(88, 23);
 			this.label6.TabIndex = 27;
@@ -363,7 +364,7 @@ namespace TrabajoExamen
 			// label7
 			// 
 			this.label7.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label7.Location = new System.Drawing.Point(285, 394);
+			this.label7.Location = new System.Drawing.Point(305, 396);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(101, 23);
 			this.label7.TabIndex = 28;
@@ -373,7 +374,7 @@ namespace TrabajoExamen
 			// label8
 			// 
 			this.label8.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label8.Location = new System.Drawing.Point(324, 432);
+			this.label8.Location = new System.Drawing.Point(355, 432);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(51, 23);
 			this.label8.TabIndex = 29;
@@ -383,7 +384,7 @@ namespace TrabajoExamen
 			// 
 			this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.label9.Font = new System.Drawing.Font("Stencil", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label9.Location = new System.Drawing.Point(159, 364);
+			this.label9.Location = new System.Drawing.Point(169, 367);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(100, 23);
 			this.label9.TabIndex = 30;
@@ -398,12 +399,25 @@ namespace TrabajoExamen
 			this.pictureBox1.TabIndex = 31;
 			this.pictureBox1.TabStop = false;
 			// 
+			// btnQuitar
+			// 
+			this.btnQuitar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+			this.btnQuitar.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnQuitar.Location = new System.Drawing.Point(18, 426);
+			this.btnQuitar.Name = "btnQuitar";
+			this.btnQuitar.Size = new System.Drawing.Size(75, 23);
+			this.btnQuitar.TabIndex = 32;
+			this.btnQuitar.Text = "Quitar";
+			this.btnQuitar.UseVisualStyleBackColor = false;
+			this.btnQuitar.Click += new System.EventHandler(this.BtnQuitarClick);
+			// 
 			// Postres
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(474, 462);
+			this.ClientSize = new System.Drawing.Size(476, 462);
+			this.Controls.Add(this.btnQuitar);
 			this.Controls.Add(this.pictureBox1);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.label8);
@@ -417,13 +431,13 @@ namespace TrabajoExamen
 			this.Controls.Add(this.btnEliminar);
 			this.Controls.Add(this.btnAgregar);
 			this.Controls.Add(this.button3);
-			this.Controls.Add(this.button2);
-			this.Controls.Add(this.button1);
+			this.Controls.Add(this.btnBorrar);
+			this.Controls.Add(this.btnGuardar);
 			this.Controls.Add(this.txtImpP);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.lvProductos);
 			this.Controls.Add(this.txtCant);
-			this.Controls.Add(this.txtPrecio);
+			this.Controls.Add(this.lblPrecio);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
@@ -440,6 +454,7 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button btnQuitar;
 		private System.Windows.Forms.PictureBox pictureBox1;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label7;
@@ -454,8 +469,8 @@ namespace TrabajoExamen
 		private System.Windows.Forms.Button btnEliminar;
 		private System.Windows.Forms.Button btnAgregar;
 		private System.Windows.Forms.Button button3;
-		private System.Windows.Forms.Button button2;
-		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Button btnBorrar;
+		private System.Windows.Forms.Button btnGuardar;
 		private System.Windows.Forms.TextBox txtImpP;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.ColumnHeader columnHeader4;
@@ -464,7 +479,7 @@ namespace TrabajoExamen
 		private System.Windows.Forms.ColumnHeader columnHeader1;
 		private System.Windows.Forms.ListView lvProductos;
 		private System.Windows.Forms.TextBox txtCant;
-		private System.Windows.Forms.TextBox txtPrecio;
+		private System.Windows.Forms.TextBox lblPrecio;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;

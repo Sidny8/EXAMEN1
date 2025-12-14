@@ -30,95 +30,121 @@ namespace TrabajoExamen
 			//
 		}
 		
-		
+		private bool NumeroA(){
+			int num;
+			if(!int.TryParse(txtvalor.Text, out num)){
+                erpError.SetError(txtvalor,"Debe de poner un numerico");
+                txtvalor.Clear();
+                txtvalor.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtvalor,"");
+                return true;
+            }
+		}
 		
 		void BtnconvertirClick(object sender, EventArgs e)
 		{
-			if (cmbde.SelectedItem.ToString() == "Kilos" && cmba.SelectedItem.ToString() == "Kilos")
-   			 {
+			if(txtvalor.Text!="" && cmba.Text!= "" && cmbde.Text!=""){
+				if (cmbde.SelectedItem.ToString() == "Kilos" && cmba.SelectedItem.ToString() == "Kilos")
+   			 	{
       			  conversion = int.Parse(txtvalor.Text) * 1;
-      			  txtresultado.Text = conversion.ToString();
+      			  lblresultado.Text = conversion.ToString();
    			 }
 	   		 else if (cmbde.SelectedItem.ToString() == "Kilos" && cmba.SelectedItem.ToString() == "Libras")
 		    {
  	  		    conversion = int.Parse(txtvalor.Text) * 2.20462;
-	   			txtresultado.Text = conversion.ToString();
+	   			lblresultado.Text = conversion.ToString();
 	   		}
 		  	else if (cmbde.SelectedItem.ToString() == "Kilos" && cmba.SelectedItem.ToString() == "Gramos")
 	  		{
 	      	  conversion = int.Parse(txtvalor.Text) * 1000;
-        	  txtresultado.Text = conversion.ToString();
+        	  lblresultado.Text = conversion.ToString();
    	 		}
     		else if (cmbde.SelectedItem.ToString() == "Kilos" && cmba.SelectedItem.ToString() == "Toneladas")
     		{
         		conversion = int.Parse(txtvalor.Text) * 0.001;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
   			 }	
 			else if (cmbde.SelectedItem.ToString() == "Libras" && cmba.SelectedItem.ToString() == "Libras")
     		{
         		conversion = int.Parse(txtvalor.Text) * 1;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
     		}
     		else if (cmbde.SelectedItem.ToString() == "Libras" && cmba.SelectedItem.ToString() == "Kilos")
    			{
         		conversion = int.Parse(txtvalor.Text) * 0.453592;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
     		}
     		else if (cmbde.SelectedItem.ToString() == "Libras" && cmba.SelectedItem.ToString() == "Gramos")
     		{
         		conversion = int.Parse(txtvalor.Text) * 453.592;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
     		}
   			else if (cmbde.SelectedItem.ToString() == "Libras" && cmba.SelectedItem.ToString() == "Toneladas")
    			{
       		   conversion = int.Parse(txtvalor.Text) * 0.000453592;
-       		   txtresultado.Text = conversion.ToString();
+       		   lblresultado.Text = conversion.ToString();
    			 }  
 					else if (cmbde.SelectedItem.ToString() == "Gramos" && cmba.SelectedItem.ToString() == "Gramos")
     		{
        		  conversion = int.Parse(txtvalor.Text) * 1;
-       		  txtresultado.Text = conversion.ToString();
+       		  lblresultado.Text = conversion.ToString();
   			}
     		else if (cmbde.SelectedItem.ToString() == "Gramos" && cmba.SelectedItem.ToString() == "Kilos")
     		{
        		  conversion = int.Parse(txtvalor.Text) * 0.001;
-       		  txtresultado.Text = conversion.ToString();
+       		  lblresultado.Text = conversion.ToString();
    		 	}
     		else if (cmbde.SelectedItem.ToString() == "Gramos" && cmba.SelectedItem.ToString() == "Libras")
    			{
-        	conversion = int.Parse(txtvalor.Text) * 0.00220462;
-        	txtresultado.Text = conversion.ToString();
+        		conversion = int.Parse(txtvalor.Text) * 0.00220462;
+        		lblresultado.Text = conversion.ToString();
     		}
     		else if (cmbde.SelectedItem.ToString() == "Gramos" && cmba.SelectedItem.ToString() == "Toneladas")
     		{
-        	conversion = int.Parse(txtvalor.Text) * 0.000001;
-        	txtresultado.Text = conversion.ToString();
+        		conversion = int.Parse(txtvalor.Text) * 0.000001;
+        		lblresultado.Text = conversion.ToString();
     		}  
 		    else if (cmbde.SelectedItem.ToString() == "Toneladas" && cmba.SelectedItem.ToString() == "Toneladas")
    			 {
-        	conversion = int.Parse(txtvalor.Text) * 1;
-        	txtresultado.Text = conversion.ToString();
+        		conversion = int.Parse(txtvalor.Text) * 1;
+        		lblresultado.Text = conversion.ToString();
    			}
     		else if (cmbde.SelectedItem.ToString() == "Toneladas" && cmba.SelectedItem.ToString() == "Kilos")
     		{
-        	conversion = int.Parse(txtvalor.Text) * 1000;
-        	txtresultado.Text = conversion.ToString();
+        		conversion = int.Parse(txtvalor.Text) * 1000;
+        		lblresultado.Text = conversion.ToString();
     		}
     		else if (cmbde.SelectedItem.ToString() == "Toneladas" && cmba.SelectedItem.ToString() == "Libras")
     		{
-        	conversion = int.Parse(txtvalor.Text) * 2204.62;
-        	txtresultado.Text = conversion.ToString();
+        		conversion = int.Parse(txtvalor.Text) * 2204.62;
+        		lblresultado.Text = conversion.ToString();
     		}
     		else if (cmbde.SelectedItem.ToString() == "Toneladas" && cmba.SelectedItem.ToString() == "Gramos")
     		{
-        	conversion = int.Parse(txtvalor.Text) * 1000000;
-        	txtresultado.Text = conversion.ToString();
+        		conversion = int.Parse(txtvalor.Text) * 1000000;
+        		lblresultado.Text = conversion.ToString();
     		}
+    		}
+			else{
+    			MessageBox.Show("Escriba la cantidad y escoja las opciones");
+			}
 		}
 		
 		void BtnsalirClick(object sender, EventArgs e)
 		{
-			this.Close();
+			this.Hide();
+		}
+		
+		void TxtvalorTextChanged(object sender, EventArgs e)
+		{
+			if(txtvalor.Text!=""){
+				if(NumeroA()==false){
+					return;
+				}
+			}
 		}
 	}
 }

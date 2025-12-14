@@ -29,15 +29,29 @@ namespace TrabajoExamen
 			//
 		}
 	
+		private bool NumeroA(){
+			int num;
+			if(!int.TryParse(txtNum.Text, out num)){
+                erpError.SetError(txtNum,"Debe de poner un numerico");
+                txtNum.Clear();
+                txtNum.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtNum,"");
+                return true;
+            }
+		}
 		
 		void BtnCalcularClick(object sender, EventArgs e)
-		{
+		{	mul = 1;
 			if(txtNum.Text!="" && txtNum.Text!="0"){
 				num = int.Parse(txtNum.Text);
 				for(int a = 1; a <= num; a++){
 						mul *= a; 
 				}
 				lblRes.Text = mul.ToString();
+				
 			}else{
 				MessageBox.Show("Diga un numero antes");
 			}
@@ -46,8 +60,16 @@ namespace TrabajoExamen
 		
 		void BtnLimpiarClick(object sender, EventArgs e)
 		{
-			txtNum.Text="";
-			lblRes.Text="";
+			this.Hide();
+		}
+		
+		void TxtNumTextChanged(object sender, EventArgs e)
+		{
+			if(txtNum.Text!=""){
+				if(NumeroA()==false){
+					return;
+				}
+			}
 		}
 	}
 }

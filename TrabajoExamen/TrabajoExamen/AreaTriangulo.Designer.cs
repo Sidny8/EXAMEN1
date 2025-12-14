@@ -36,6 +36,7 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.lblArea = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -46,12 +47,16 @@ namespace TrabajoExamen
 			this.label2 = new System.Windows.Forms.Label();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label4 = new System.Windows.Forms.Label();
+			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
+			this.button1 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblArea
 			// 
-			this.lblArea.Location = new System.Drawing.Point(238, 327);
+			this.lblArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.lblArea.Location = new System.Drawing.Point(181, 327);
 			this.lblArea.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblArea.Name = "lblArea";
 			this.lblArea.Size = new System.Drawing.Size(133, 28);
@@ -60,16 +65,16 @@ namespace TrabajoExamen
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Sitka Banner", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.Location = new System.Drawing.Point(218, 299);
+			this.label3.Location = new System.Drawing.Point(181, 299);
 			this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(225, 28);
+			this.label3.Size = new System.Drawing.Size(148, 28);
 			this.label3.TabIndex = 28;
 			this.label3.Text = "La Área del Triangulo es:";
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(238, 169);
+			this.pictureBox1.Location = new System.Drawing.Point(181, 169);
 			this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(133, 108);
@@ -80,10 +85,10 @@ namespace TrabajoExamen
 			// btnLimpiar
 			// 
 			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-			this.btnLimpiar.Location = new System.Drawing.Point(13, 249);
+			this.btnLimpiar.Location = new System.Drawing.Point(40, 214);
 			this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4);
 			this.btnLimpiar.Name = "btnLimpiar";
-			this.btnLimpiar.Size = new System.Drawing.Size(100, 28);
+			this.btnLimpiar.Size = new System.Drawing.Size(107, 37);
 			this.btnLimpiar.TabIndex = 25;
 			this.btnLimpiar.Text = "Limpiar";
 			this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -93,10 +98,10 @@ namespace TrabajoExamen
 			// 
 			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnCalcular.Location = new System.Drawing.Point(13, 200);
+			this.btnCalcular.Location = new System.Drawing.Point(40, 169);
 			this.btnCalcular.Margin = new System.Windows.Forms.Padding(4);
 			this.btnCalcular.Name = "btnCalcular";
-			this.btnCalcular.Size = new System.Drawing.Size(100, 28);
+			this.btnCalcular.Size = new System.Drawing.Size(107, 37);
 			this.btnCalcular.TabIndex = 24;
 			this.btnCalcular.Text = "Calcular";
 			this.btnCalcular.UseVisualStyleBackColor = false;
@@ -111,6 +116,7 @@ namespace TrabajoExamen
 			this.txtAltura.Name = "txtAltura";
 			this.txtAltura.Size = new System.Drawing.Size(132, 21);
 			this.txtAltura.TabIndex = 23;
+			this.txtAltura.TextChanged += new System.EventHandler(this.TxtAlturaTextChanged);
 			// 
 			// txtBase
 			// 
@@ -121,6 +127,7 @@ namespace TrabajoExamen
 			this.txtBase.Name = "txtBase";
 			this.txtBase.Size = new System.Drawing.Size(132, 21);
 			this.txtBase.TabIndex = 22;
+			this.txtBase.TextChanged += new System.EventHandler(this.TxtBaseTextChanged);
 			// 
 			// label2
 			// 
@@ -152,12 +159,29 @@ namespace TrabajoExamen
 			this.label4.TabIndex = 30;
 			this.label4.Text = "Área de un Triángulo";
 			// 
+			// erpError
+			// 
+			this.erpError.ContainerControl = this;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.button1.Location = new System.Drawing.Point(40, 259);
+			this.button1.Margin = new System.Windows.Forms.Padding(4);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(114, 37);
+			this.button1.TabIndex = 31;
+			this.button1.Text = "quitar";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
+			// 
 			// AreaTriangulo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(450, 369);
+			this.ClientSize = new System.Drawing.Size(383, 369);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label4);
 			this.Controls.Add(this.lblArea);
 			this.Controls.Add(this.label3);
@@ -175,9 +199,12 @@ namespace TrabajoExamen
 			this.Text = "AreaTriangulo";
 			this.Load += new System.EventHandler(this.AreaTrianguloLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.Label label4;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.Label label2;

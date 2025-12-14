@@ -65,6 +65,7 @@ namespace TrabajoExamen
 			this.radioButton1 = new System.Windows.Forms.RadioButton();
 			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
 			this.dtpFecha = new System.Windows.Forms.DateTimePicker();
+			this.btnOcultar = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dgvDatos)).BeginInit();
 			this.groupBox1.SuspendLayout();
@@ -197,7 +198,7 @@ namespace TrabajoExamen
 			this.btnQuitar.Name = "btnQuitar";
 			this.btnQuitar.Size = new System.Drawing.Size(75, 23);
 			this.btnQuitar.TabIndex = 12;
-			this.btnQuitar.Text = "Quitar";
+			this.btnQuitar.Text = "Remover";
 			this.btnQuitar.UseVisualStyleBackColor = false;
 			this.btnQuitar.Click += new System.EventHandler(this.Button2Click);
 			// 
@@ -334,6 +335,19 @@ namespace TrabajoExamen
 			this.dtpFecha.Name = "dtpFecha";
 			this.dtpFecha.Size = new System.Drawing.Size(200, 22);
 			this.dtpFecha.TabIndex = 19;
+			this.dtpFecha.Value = new System.DateTime(2025, 12, 12, 0, 0, 0, 0);
+			// 
+			// btnOcultar
+			// 
+			this.btnOcultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnOcultar.Font = new System.Drawing.Font("Stencil", 10F);
+			this.btnOcultar.Location = new System.Drawing.Point(13, 420);
+			this.btnOcultar.Name = "btnOcultar";
+			this.btnOcultar.Size = new System.Drawing.Size(88, 23);
+			this.btnOcultar.TabIndex = 20;
+			this.btnOcultar.Text = "Ocultar";
+			this.btnOcultar.UseVisualStyleBackColor = false;
+			this.btnOcultar.Click += new System.EventHandler(this.BtnOcultarClick);
 			// 
 			// DetallesEmpleado
 			// 
@@ -341,6 +355,7 @@ namespace TrabajoExamen
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(615, 455);
+			this.Controls.Add(this.btnOcultar);
 			this.Controls.Add(this.dtpFecha);
 			this.Controls.Add(this.groupBox1);
 			this.Controls.Add(this.label6);
@@ -371,6 +386,7 @@ namespace TrabajoExamen
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button btnOcultar;
 		private System.Windows.Forms.DateTimePicker dtpFecha;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Column5;

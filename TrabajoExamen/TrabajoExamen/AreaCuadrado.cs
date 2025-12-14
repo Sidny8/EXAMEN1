@@ -29,15 +29,44 @@ namespace TrabajoExamen
 			//
 		}
 		
+		private bool NumeroA(){
+			int num;
+			if(!int.TryParse(txtLadoA.Text, out num)){
+                erpError.SetError(txtLadoA,"Debe de poner un numerico");
+                txtLadoA.Clear();
+                txtLadoA.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtLadoA,"");
+                return true;
+            }
+		}
+		private bool NumeroB(){
+			int num2;
+			if(!int.TryParse(txtLadoB.Text, out num2)){
+                erpError.SetError(txtLadoB,"Debe de poner un numerico");
+                txtLadoB.Clear();
+                txtLadoB.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtLadoB,"");
+                return true;
+            }
+		}
+		
 		void BtnCalcularClick(object sender, EventArgs e)
-		{
-			double LadoA, LadoB, area;
-			LadoA=Convert.ToDouble(txtLadoA.Text);
-			LadoB=Convert.ToDouble(txtLadoB.Text);
-			
-			area= LadoA*LadoB;
-			
-			lblArea.Text=area.ToString();
+		{	
+			if(txtLadoA.Text != "" && txtLadoB.Text!= ""){
+				double LadoA, LadoB, area;
+				LadoA=Convert.ToDouble(txtLadoA.Text);
+				LadoB=Convert.ToDouble(txtLadoB.Text);
+				area= LadoA*LadoB;
+				lblArea.Text=area.ToString();
+			}else{
+				MessageBox.Show("Rellene los datos");
+			}
 		}
 		
 		void BtnLimpiarClick(object sender, EventArgs e)
@@ -51,6 +80,29 @@ namespace TrabajoExamen
 		void AreaCuadradoLoad(object sender, EventArgs e)
 		{
 			pictureBox1.Image=Resource1.cuadrado; 
+		}
+		
+		void TxtLadoATextChanged(object sender, EventArgs e)
+		{
+			if(txtLadoA.Text!=""){
+				if(NumeroA()==false){
+					return;
+				}
+			}
+		}
+		
+		void TxtLadoBTextChanged(object sender, EventArgs e)
+		{
+			if(txtLadoB.Text!=""){
+				if(NumeroB()==false){
+					return;
+				}
+			}
+		}
+		
+		void Button1Click(object sender, EventArgs e)
+		{
+			this.Hide();
 		}
 	}
 }

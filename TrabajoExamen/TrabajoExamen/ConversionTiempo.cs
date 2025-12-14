@@ -30,58 +30,84 @@ namespace TrabajoExamen
 			//
 		}
 		
+		private bool NumeroA(){
+			int num;
+			if(!int.TryParse(txtvalor.Text, out num)){
+                erpError.SetError(txtvalor,"Debe de poner un numerico");
+                txtvalor.Clear();
+                txtvalor.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtvalor,"");
+                return true;
+            }
+		}
+		
 		void BtnconvertirClick(object sender, EventArgs e)
 		{
+			if(txtvalor.Text!="" && cmba.Text!= "" && cmbde.Text!=""){
 			 if (cmbde.SelectedItem.ToString() == "Segundos" && cmba.SelectedItem.ToString() == "Segundos")
    			 {
       			  conversion = int.Parse(txtvalor.Text) * 1;
-      			  txtresultado.Text = conversion.ToString();
+      			  lblresultado.Text = conversion.ToString();
    			 }
 	   		 else if (cmbde.SelectedItem.ToString() == "Segundos" && cmba.SelectedItem.ToString() == "Minutos")
 		    {
  	  		    conversion = int.Parse(txtvalor.Text) * 0.0166667;
-	   			txtresultado.Text = conversion.ToString();
+	   			lblresultado.Text = conversion.ToString();
 	   		}
 		  	else if (cmbde.SelectedItem.ToString() == "Segundos" && cmba.SelectedItem.ToString() == "Horas")
 	  		{
 	      	  conversion = int.Parse(txtvalor.Text) * 0.00027777833333;
-        	  txtresultado.Text = conversion.ToString();
+        	  lblresultado.Text = conversion.ToString();
    	 		}
     		else if (cmbde.SelectedItem.ToString() == "Minutos" && cmba.SelectedItem.ToString() == "Minutos")
     		{
         		conversion = int.Parse(txtvalor.Text) * 1;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
   			 }
     		else if (cmbde.SelectedItem.ToString() == "Minutos" && cmba.SelectedItem.ToString() == "Segundos")
     		{
         		conversion = int.Parse(txtvalor.Text) * 60;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
     		}	
 			else if (cmbde.SelectedItem.ToString() == "Minutos" && cmba.SelectedItem.ToString() == "Horas")
     		{
         		conversion = int.Parse(txtvalor.Text) * 0.0166667;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
     		}
     		else if (cmbde.SelectedItem.ToString() == "Horas" && cmba.SelectedItem.ToString() == "Horas")
    			{
         		conversion = int.Parse(txtvalor.Text) * 1;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
     		}
     		else if (cmbde.SelectedItem.ToString() == "Horas" && cmba.SelectedItem.ToString() == "Segundos")
     		{
         		conversion = int.Parse(txtvalor.Text) * 3600;
-        		txtresultado.Text = conversion.ToString();
+        		lblresultado.Text = conversion.ToString();
     		}
   			else if (cmbde.SelectedItem.ToString() == "Horas" && cmba.SelectedItem.ToString() == "Minutos")
    			{
       		   conversion = int.Parse(txtvalor.Text) * 60;
-       		   txtresultado.Text = conversion.ToString();
-   			 }    		
+       		   lblresultado.Text = conversion.ToString();
+   			 }
+  			}
+			else{
+    			MessageBox.Show("Escriba la cantidad y escoja las opciones");
+			}
 		}
 		
-		void BtnsalirClick(object sender, EventArgs e)
+		void TxtvalorTextChanged(object sender, EventArgs e)
 		{
-			this.Close();
+			if(NumeroA()==false){
+				return;
+			}
+		}
+		
+		void BtnSalirClick(object sender, EventArgs e)
+		{
+			this.Hide();
 		}
 	}
 }

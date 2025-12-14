@@ -36,6 +36,7 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.lblPerimetro = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -50,20 +51,25 @@ namespace TrabajoExamen
 			this.txtLadoC = new System.Windows.Forms.TextBox();
 			this.txtLadoD = new System.Windows.Forms.TextBox();
 			this.label6 = new System.Windows.Forms.Label();
+			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
+			this.button1 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblPerimetro
 			// 
-			this.lblPerimetro.Location = new System.Drawing.Point(240, 313);
+			this.lblPerimetro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.lblPerimetro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblPerimetro.Location = new System.Drawing.Point(214, 245);
 			this.lblPerimetro.Name = "lblPerimetro";
-			this.lblPerimetro.Size = new System.Drawing.Size(100, 23);
+			this.lblPerimetro.Size = new System.Drawing.Size(128, 23);
 			this.lblPerimetro.TabIndex = 19;
 			// 
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Sitka Text", 10F);
-			this.label3.Location = new System.Drawing.Point(178, 290);
+			this.label3.Location = new System.Drawing.Point(182, 204);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(208, 23);
 			this.label3.TabIndex = 18;
@@ -71,7 +77,7 @@ namespace TrabajoExamen
 			// 
 			// pictureBox1
 			// 
-			this.pictureBox1.Location = new System.Drawing.Point(240, 180);
+			this.pictureBox1.Location = new System.Drawing.Point(252, 79);
 			this.pictureBox1.Name = "pictureBox1";
 			this.pictureBox1.Size = new System.Drawing.Size(108, 97);
 			this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -82,7 +88,7 @@ namespace TrabajoExamen
 			// 
 			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 10F);
-			this.btnLimpiar.Location = new System.Drawing.Point(41, 245);
+			this.btnLimpiar.Location = new System.Drawing.Point(41, 224);
 			this.btnLimpiar.Name = "btnLimpiar";
 			this.btnLimpiar.Size = new System.Drawing.Size(98, 23);
 			this.btnLimpiar.TabIndex = 15;
@@ -94,7 +100,7 @@ namespace TrabajoExamen
 			// 
 			this.btnCalcular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnCalcular.Font = new System.Drawing.Font("Stencil", 10F);
-			this.btnCalcular.Location = new System.Drawing.Point(41, 204);
+			this.btnCalcular.Location = new System.Drawing.Point(41, 195);
 			this.btnCalcular.Name = "btnCalcular";
 			this.btnCalcular.Size = new System.Drawing.Size(98, 23);
 			this.btnCalcular.TabIndex = 14;
@@ -110,6 +116,7 @@ namespace TrabajoExamen
 			this.txtLadoB.Name = "txtLadoB";
 			this.txtLadoB.Size = new System.Drawing.Size(100, 21);
 			this.txtLadoB.TabIndex = 13;
+			this.txtLadoB.TextChanged += new System.EventHandler(this.TxtLadoBTextChanged);
 			// 
 			// txtLadoA
 			// 
@@ -119,6 +126,7 @@ namespace TrabajoExamen
 			this.txtLadoA.Name = "txtLadoA";
 			this.txtLadoA.Size = new System.Drawing.Size(100, 21);
 			this.txtLadoA.TabIndex = 12;
+			this.txtLadoA.TextChanged += new System.EventHandler(this.TxtLadoATextChanged);
 			// 
 			// label2
 			// 
@@ -164,6 +172,7 @@ namespace TrabajoExamen
 			this.txtLadoC.Name = "txtLadoC";
 			this.txtLadoC.Size = new System.Drawing.Size(100, 21);
 			this.txtLadoC.TabIndex = 22;
+			this.txtLadoC.TextChanged += new System.EventHandler(this.TxtLadoCTextChanged);
 			// 
 			// txtLadoD
 			// 
@@ -173,6 +182,7 @@ namespace TrabajoExamen
 			this.txtLadoD.Name = "txtLadoD";
 			this.txtLadoD.Size = new System.Drawing.Size(100, 21);
 			this.txtLadoD.TabIndex = 23;
+			this.txtLadoD.TextChanged += new System.EventHandler(this.TxtLadoDTextChanged);
 			// 
 			// label6
 			// 
@@ -183,12 +193,29 @@ namespace TrabajoExamen
 			this.label6.TabIndex = 24;
 			this.label6.Text = "Perímetro del Trapecio";
 			// 
+			// erpError
+			// 
+			this.erpError.ContainerControl = this;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.button1.Font = new System.Drawing.Font("Stencil", 10F);
+			this.button1.Location = new System.Drawing.Point(41, 253);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(98, 23);
+			this.button1.TabIndex = 25;
+			this.button1.Text = "quitar";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
+			// 
 			// PeriTrapecio
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-			this.ClientSize = new System.Drawing.Size(402, 362);
+			this.ClientSize = new System.Drawing.Size(396, 300);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.txtLadoD);
 			this.Controls.Add(this.txtLadoC);
@@ -203,14 +230,18 @@ namespace TrabajoExamen
 			this.Controls.Add(this.txtLadoA);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.label1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
 			this.Name = "PeriTrapecio";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "PeriTrapecio";
 			this.Load += new System.EventHandler(this.PeriTrapecioLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.TextBox txtLadoD;
 		private System.Windows.Forms.TextBox txtLadoC;

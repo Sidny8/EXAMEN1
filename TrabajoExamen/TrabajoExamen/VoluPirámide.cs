@@ -29,6 +29,34 @@ namespace TrabajoExamen
 			//
 		}
 		
+		private bool NumeroA(){
+			int num;
+			if(!int.TryParse(txtAreaBase.Text, out num)){
+                erpError.SetError(txtAreaBase,"Debe de poner un numerico");
+                txtAreaBase.Clear();
+                txtAreaBase.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtAreaBase,"");
+                return true;
+            }
+		}
+		
+		private bool NumeroB(){
+			int num;
+			if(!int.TryParse(txtAltura.Text, out num)){
+                erpError.SetError(txtAltura,"Debe de poner un numerico");
+                txtAltura.Clear();
+                txtAltura.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtAltura,"");
+                return true;
+            }
+		}
+		
 		void BtnCalcularClick(object sender, EventArgs e)
 		{
 			double AreaBase, Altura, volumen;
@@ -51,6 +79,29 @@ namespace TrabajoExamen
 		void VoluPirámideLoad(object sender, EventArgs e)
 		{
 			pictureBox1.Image=Resource1.piramide;
+		}
+		
+		void TxtAreaBaseTextChanged(object sender, EventArgs e)
+		{
+			if(txtAreaBase.Text!=""){
+				if(NumeroA()==false){
+					return;
+				}
+			}
+		}
+		
+		void TxtAlturaTextChanged(object sender, EventArgs e)
+		{
+			if(txtAltura.Text!=""){
+				if(NumeroB()==false){
+					return;
+				}
+			}
+		}
+		
+		void Button1Click(object sender, EventArgs e)
+		{
+			this.Hide();
 		}
 	}
 }

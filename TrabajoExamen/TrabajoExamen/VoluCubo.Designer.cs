@@ -36,6 +36,7 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.lblVolumen = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -44,12 +45,17 @@ namespace TrabajoExamen
 			this.txtLado = new System.Windows.Forms.TextBox();
 			this.label1 = new System.Windows.Forms.Label();
 			this.label2 = new System.Windows.Forms.Label();
+			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
+			this.button1 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblVolumen
 			// 
-			this.lblVolumen.Location = new System.Drawing.Point(191, 238);
+			this.lblVolumen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.lblVolumen.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblVolumen.Location = new System.Drawing.Point(182, 238);
 			this.lblVolumen.Name = "lblVolumen";
 			this.lblVolumen.Size = new System.Drawing.Size(100, 23);
 			this.lblVolumen.TabIndex = 55;
@@ -57,7 +63,7 @@ namespace TrabajoExamen
 			// label3
 			// 
 			this.label3.Font = new System.Drawing.Font("Sitka Text", 10F);
-			this.label3.Location = new System.Drawing.Point(173, 215);
+			this.label3.Location = new System.Drawing.Point(149, 215);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(186, 23);
 			this.label3.TabIndex = 54;
@@ -76,9 +82,9 @@ namespace TrabajoExamen
 			// 
 			this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnLimpiar.Font = new System.Drawing.Font("Stencil", 10F);
-			this.btnLimpiar.Location = new System.Drawing.Point(22, 149);
+			this.btnLimpiar.Location = new System.Drawing.Point(22, 167);
 			this.btnLimpiar.Name = "btnLimpiar";
-			this.btnLimpiar.Size = new System.Drawing.Size(75, 23);
+			this.btnLimpiar.Size = new System.Drawing.Size(88, 23);
 			this.btnLimpiar.TabIndex = 51;
 			this.btnLimpiar.Text = "Limpiar";
 			this.btnLimpiar.UseVisualStyleBackColor = false;
@@ -102,8 +108,9 @@ namespace TrabajoExamen
 			this.txtLado.Font = new System.Drawing.Font("Sitka Text", 8F);
 			this.txtLado.Location = new System.Drawing.Point(173, 58);
 			this.txtLado.Name = "txtLado";
-			this.txtLado.Size = new System.Drawing.Size(100, 21);
+			this.txtLado.Size = new System.Drawing.Size(118, 21);
 			this.txtLado.TabIndex = 49;
+			this.txtLado.TextChanged += new System.EventHandler(this.TxtLadoTextChanged);
 			// 
 			// label1
 			// 
@@ -123,12 +130,29 @@ namespace TrabajoExamen
 			this.label2.TabIndex = 56;
 			this.label2.Text = "Volúmen del Cubo";
 			// 
+			// erpError
+			// 
+			this.erpError.ContainerControl = this;
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.button1.Font = new System.Drawing.Font("Stencil", 10F);
+			this.button1.Location = new System.Drawing.Point(22, 138);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(88, 23);
+			this.button1.TabIndex = 57;
+			this.button1.Text = "Quitar";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.Button1Click);
+			// 
 			// VoluCubo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(359, 301);
+			this.Controls.Add(this.button1);
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.lblVolumen);
 			this.Controls.Add(this.label3);
@@ -142,9 +166,12 @@ namespace TrabajoExamen
 			this.Text = "VoluCubo";
 			this.Load += new System.EventHandler(this.VoluCuboLoad);
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.Label label2;
 		private System.Windows.Forms.Label label1;
 		private System.Windows.Forms.TextBox txtLado;

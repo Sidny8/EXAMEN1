@@ -36,17 +36,20 @@ namespace TrabajoExamen
 		/// </summary>
 		private void InitializeComponent()
 		{
+			this.components = new System.ComponentModel.Container();
 			this.label1 = new System.Windows.Forms.Label();
 			this.cmbde = new System.Windows.Forms.ComboBox();
 			this.cmba = new System.Windows.Forms.ComboBox();
 			this.txtvalor = new System.Windows.Forms.TextBox();
-			this.txtresultado = new System.Windows.Forms.TextBox();
+			this.lblresultado = new System.Windows.Forms.TextBox();
 			this.label2 = new System.Windows.Forms.Label();
 			this.label3 = new System.Windows.Forms.Label();
 			this.label6 = new System.Windows.Forms.Label();
 			this.label5 = new System.Windows.Forms.Label();
 			this.btnconvertir = new System.Windows.Forms.Button();
-			this.btnsalir = new System.Windows.Forms.Button();
+			this.erpError = new System.Windows.Forms.ErrorProvider(this.components);
+			this.btnSalir = new System.Windows.Forms.Button();
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -61,6 +64,7 @@ namespace TrabajoExamen
 			// cmbde
 			// 
 			this.cmbde.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.cmbde.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmbde.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmbde.FormattingEnabled = true;
 			this.cmbde.Items.AddRange(new object[] {
@@ -76,6 +80,7 @@ namespace TrabajoExamen
 			// cmba
 			// 
 			this.cmba.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.cmba.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cmba.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.cmba.FormattingEnabled = true;
 			this.cmba.Items.AddRange(new object[] {
@@ -90,22 +95,23 @@ namespace TrabajoExamen
 			// 
 			// txtvalor
 			// 
-			this.txtvalor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.txtvalor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.txtvalor.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txtvalor.Location = new System.Drawing.Point(12, 167);
 			this.txtvalor.Name = "txtvalor";
 			this.txtvalor.Size = new System.Drawing.Size(121, 21);
 			this.txtvalor.TabIndex = 14;
+			this.txtvalor.TextChanged += new System.EventHandler(this.TxtvalorTextChanged);
 			// 
-			// txtresultado
+			// lblresultado
 			// 
-			this.txtresultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.txtresultado.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtresultado.Location = new System.Drawing.Point(164, 167);
-			this.txtresultado.Name = "txtresultado";
-			this.txtresultado.ReadOnly = true;
-			this.txtresultado.Size = new System.Drawing.Size(121, 21);
-			this.txtresultado.TabIndex = 15;
+			this.lblresultado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.lblresultado.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblresultado.Location = new System.Drawing.Point(164, 167);
+			this.lblresultado.Name = "lblresultado";
+			this.lblresultado.ReadOnly = true;
+			this.lblresultado.Size = new System.Drawing.Size(121, 21);
+			this.lblresultado.TabIndex = 15;
 			// 
 			// label2
 			// 
@@ -145,27 +151,31 @@ namespace TrabajoExamen
 			// 
 			// btnconvertir
 			// 
-			this.btnconvertir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+			this.btnconvertir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
 			this.btnconvertir.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnconvertir.Location = new System.Drawing.Point(21, 214);
+			this.btnconvertir.Location = new System.Drawing.Point(23, 203);
 			this.btnconvertir.Name = "btnconvertir";
-			this.btnconvertir.Size = new System.Drawing.Size(96, 26);
+			this.btnconvertir.Size = new System.Drawing.Size(110, 37);
 			this.btnconvertir.TabIndex = 20;
 			this.btnconvertir.Text = "CONVERTIR";
 			this.btnconvertir.UseVisualStyleBackColor = false;
 			this.btnconvertir.Click += new System.EventHandler(this.BtnconvertirClick);
 			// 
-			// btnsalir
+			// erpError
 			// 
-			this.btnsalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-			this.btnsalir.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.btnsalir.Location = new System.Drawing.Point(185, 214);
-			this.btnsalir.Name = "btnsalir";
-			this.btnsalir.Size = new System.Drawing.Size(96, 26);
-			this.btnsalir.TabIndex = 21;
-			this.btnsalir.Text = "SALIR";
-			this.btnsalir.UseVisualStyleBackColor = false;
-			this.btnsalir.Click += new System.EventHandler(this.BtnsalirClick);
+			this.erpError.ContainerControl = this;
+			// 
+			// btnSalir
+			// 
+			this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+			this.btnSalir.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnSalir.Location = new System.Drawing.Point(164, 203);
+			this.btnSalir.Name = "btnSalir";
+			this.btnSalir.Size = new System.Drawing.Size(107, 37);
+			this.btnSalir.TabIndex = 21;
+			this.btnSalir.Text = "QUITAR";
+			this.btnSalir.UseVisualStyleBackColor = false;
+			this.btnSalir.Click += new System.EventHandler(this.BtnSalirClick);
 			// 
 			// ConversionTiempo
 			// 
@@ -173,13 +183,13 @@ namespace TrabajoExamen
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.ClientSize = new System.Drawing.Size(297, 261);
-			this.Controls.Add(this.btnsalir);
+			this.Controls.Add(this.btnSalir);
 			this.Controls.Add(this.btnconvertir);
 			this.Controls.Add(this.label5);
 			this.Controls.Add(this.label6);
 			this.Controls.Add(this.label3);
 			this.Controls.Add(this.label2);
-			this.Controls.Add(this.txtresultado);
+			this.Controls.Add(this.lblresultado);
 			this.Controls.Add(this.txtvalor);
 			this.Controls.Add(this.cmba);
 			this.Controls.Add(this.cmbde);
@@ -187,16 +197,18 @@ namespace TrabajoExamen
 			this.Name = "ConversionTiempo";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "ConversionTiempo";
+			((System.ComponentModel.ISupportInitialize)(this.erpError)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
-		private System.Windows.Forms.Button btnsalir;
+		private System.Windows.Forms.Button btnSalir;
+		private System.Windows.Forms.ErrorProvider erpError;
 		private System.Windows.Forms.Button btnconvertir;
 		private System.Windows.Forms.Label label5;
 		private System.Windows.Forms.Label label6;
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.TextBox txtresultado;
+		private System.Windows.Forms.TextBox lblresultado;
 		private System.Windows.Forms.TextBox txtvalor;
 		private System.Windows.Forms.ComboBox cmba;
 		private System.Windows.Forms.ComboBox cmbde;

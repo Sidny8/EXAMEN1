@@ -29,14 +29,32 @@ namespace TrabajoExamen
 			//
 		}
 		
+		private bool NumeroA(){
+			int num;
+			if(!int.TryParse(txtLado.Text, out num)){
+                erpError.SetError(txtLado,"Debe de poner un numerico");
+                txtLado.Clear();
+                txtLado.Focus();
+                return false;
+            }
+            else{
+                erpError.SetError(txtLado,"");
+                return true;
+            }
+		}
+		
 		void BtnCalcularClick(object sender, EventArgs e)
 		{
-			double Lado, volumen;
-			Lado=Convert.ToDouble(txtLado.Text);
+			if(txtLado.Text!= ""){
+				double Lado, volumen;
+				Lado=Convert.ToDouble(txtLado.Text);
 			
-			volumen= Lado*Lado*Lado;
+				volumen= Lado*Lado*Lado;
 			
-			lblVolumen.Text=volumen.ToString();
+				lblVolumen.Text=volumen.ToString();
+			}else{
+				MessageBox.Show("Diga el dato que se requiere");
+			}
 		}
 		
 		void BtnLimpiarClick(object sender, EventArgs e)
@@ -49,6 +67,20 @@ namespace TrabajoExamen
 		void VoluCuboLoad(object sender, EventArgs e)
 		{
 			pictureBox1.Image=Resource1.cubo;
+		}
+		
+		void TxtLadoTextChanged(object sender, EventArgs e)
+		{
+			if(txtLado.Text!=""){
+				if(NumeroA()==false){
+					return;
+				}
+			}
+		}
+		
+		void Button1Click(object sender, EventArgs e)
+		{
+			this.Hide();
 		}
 	}
 }
