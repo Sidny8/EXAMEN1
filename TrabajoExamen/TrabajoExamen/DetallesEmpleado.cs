@@ -253,12 +253,13 @@ namespace TrabajoExamen
           		//Hacer la union de las listas
             	milista.Add(Empleado);
            
-            	AgregarProducto(int.Parse(txtCodigo.Text),txtCodigo.Text,cboPuesto.SelectedItem.ToString(),dtpFecha.Text,
+            	AgregarProducto(int.Parse(txtCodigo.Text),txtNombre.Text,cboPuesto.SelectedItem.ToString(),dtpFecha.Text,
                             cboSex.SelectedItem.ToString(), estado);
             	dgvDatos.Rows.Clear();
             	llenar();
             	Limpiar();
             	txtCodigo.Focus();
+            	pictureBox1.Visible=false;
 			}
 
 		}
