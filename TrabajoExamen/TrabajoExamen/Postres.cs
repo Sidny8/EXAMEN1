@@ -32,6 +32,7 @@ namespace TrabajoExamen
 		int contaprimir=0;
 	
 		List<ClaseDePostres1> fillas = new List<ClaseDePostres1>();
+		List<ClaseDePostres1> LineasAmort = new List<ClaseDePostres1>();
 		
 		public Postres()
 		{
@@ -144,30 +145,47 @@ namespace TrabajoExamen
 			}
 		}
 		
-		//Metodo de la conexion, para agregar
-		public bool AgregarProducto(string produc, double precio, int cantimy, double totalmy)
-        {
-            /// CREAR LA CONEXIÓN, CONFIGURAR Y ABRIRLA
-            MySqlConnection cn = new MySqlConnection();
-            cn.ConnectionString = "server=localhost; database=Examen; user=root;pwd=root;";
-            cn.Open();
-            /// AGREGAR EL REGISTRO A LA BASE DE DATOS
-            string strSQL = "insert into Productos (productos, precio, cantidad, total)" +
-                " values (@productos, @precio, @cantidad, @total)";
-            MySqlCommand comando = new MySqlCommand(strSQL, cn);
-            comando.Parameters.AddWithValue("Productos", produc);
-            comando.Parameters.AddWithValue("Precio", precio);
-            comando.Parameters.AddWithValue("Cantidad",cantimy);
-            comando.Parameters.AddWithValue("Total", totalmy);
-            comando.ExecuteNonQuery();
-            MessageBox.Show("Producto agregado");
-            /// FINALIZAMOS LA CONEXION CERRAMOS TODO
+//		//Metodo para agregar
+//		public void Transaccion(List<ClaseDePostres1> lineasAmort)
+//		{
+//
+//    	/// CREAR LA CONEXIÓN, CONFIGURAR Y ABRIRLA
+//   			 MySqlConnection cn = new MySqlConnection();
+//    		cn.ConnectionString = cn.ConnectionString = "server=localhost; database=Examen; user=root; pwd=root";
+//    		cn.Open();
+//    		MySqlTransaction trans = cn.BeginTransaction();
+//    		try
+//    		{
+//        	foreach (ClaseDePostres1 coma in lineasAmort)
+//        	{
+//             /// AGREGAR PRODUCTO POR PRODUCTO A LA BASE DE DATOS
+//             string strSQL = "insert into Productos (productos, precio, cantidad, total)" +  " values (@productos, @precio, @cantidad, @total)";
+//             MySqlCommand comando = new MySqlCommand(strSQL, cn);
+//			 comando.Transaction = trans;
+//             comando = new MySqlCommand(strSQL, cn);
+//             comando.Parameters.AddWithValue("@productos", coma.Producto);
+//             comando.Parameters.AddWithValue("@precio", coma.Precio);
+//             comando.Parameters.AddWithValue("@cantidad", coma.Cantidad);
+//             comando.Parameters.AddWithValue("@total", coma.Total);  
+//             comando.ExecuteNonQuery();
+//        	}
+//        	trans.Commit();
+//    		}
+//    		catch
+//    		{
+//        	// SE DESHACE LA TRANSACCIÓN SI OCURRE UN ERROR
+//        	trans.Rollback();
+//    		}
+//    		finally
+//    		{
+//        	/// FINALIZAMOS LA CONEXION CERRAMOS TODO
+//        	cn.Close();
+//        	cn.Dispose();
+//        	MessageBox.Show("Guardado");
+//    		}
+//		}
 
-            comando.Dispose();
-            cn.Close();
-            cn.Dispose();
-            return true;
-        }
+		
 		//Metodo para la eliminacion
 		public bool Eliminacion(int clave)
         {
@@ -178,7 +196,7 @@ namespace TrabajoExamen
             string strSQL = "delete from Productos where clave = " + clave;
        		MySqlCommand comando = new MySqlCommand(strSQL, cn);
             comando.ExecuteNonQuery();
-            MessageBox.Show("Empleado eliminado");
+            MessageBox.Show("Producto eliminado");
 
             comando.Dispose();
             cn.Close();
@@ -205,12 +223,6 @@ namespace TrabajoExamen
 		void Button3Click(object sender, EventArgs e)
 		{
 			//Validacion de cosas:
-//			if(Des()==false){
-//			return;
-//			}
-//			if(Cambio()==false){
-//				return;
-//			}
 			if(contaprimir == 1){
 				PostresTicket pk = new PostresTicket();
 				foreach(ClaseDePostres1 fila in fillas){
@@ -230,6 +242,11 @@ namespace TrabajoExamen
 			}else{
 				MessageBox.Show("Primero debe de guardar");
 			}
+			btnBorrar.Enabled=true;
+			lblPrecio.Enabled=true;
+			txtCant.Enabled=true;
+			txtDes.Enabled=true;
+			txtImpP.Enabled=true;
 		}
 		
 		//Boton para agregar producto
@@ -258,12 +275,8 @@ namespace TrabajoExamen
 			
 			preciot += sub;
 			lblSub.Text= preciot.ToString();
-			//lblTotal.Text= sub.ToString();
 		
 			Limpiar();
-			//btnAgregar.Enabled=false;
-			//txtCant.Enabled=false;
-			//
 		}
 		
 		//Tipos de pastel (DULCE/SALADO)
@@ -322,26 +335,30 @@ namespace TrabajoExamen
 		//El descuento
 		void TxtDesTextChanged(object sender, EventArgs e)
 		{
-			if(MetDes()==false){
-				return;
-			}
-			if(txtDes.Text != "" && Des()!=false){
-				des = Convert.ToDouble(txtDes.Text);
-				tot = preciot - des;
-				lblimpP.Text= tot.ToString();
+			if(txtDes.Text!=""){
+				if(MetDes()==false){
+					return;
+				}
+				if(txtDes.Text != "" && Des()!=false){
+					des = Convert.ToDouble(txtDes.Text);
+					tot = preciot - des;
+					lblimpP.Text= tot.ToString();
+				}
 			}
 		}
 		
 		//Para pagar
 		void TxtImpPTextChanged(object sender, EventArgs e)
 		{
-			if(MetPago()==false){
-			return;
-			}
+			if(txtImpP.Text!=""){
+				if(MetPago()==false){
+					return;
+				}
 		
-			if(txtImpP.Text!="" && Pago()!=false){
-				impP = Convert.ToDouble(txtImpP.Text);
-				lblCambio.Text= Convert.ToString(impP - tot);
+				if(txtImpP.Text!="" && Pago()!=false){
+					impP = Convert.ToDouble(txtImpP.Text);
+					lblCambio.Text= Convert.ToString(impP - tot);
+				}
 			}
 		}
 		
@@ -364,23 +381,61 @@ namespace TrabajoExamen
 			}
 			if(Cambio()==false){
 				return;
-			};
-			ClaseDePostres1 fila= new ClaseDePostres1();
-			
-			fila.Producto= produc;
-			fila.Precio= precio;
-			fila.Cantidad= cant;
-			fila.Total= int.Parse(lblTotal.Text);
-			
-			fillas.Add(fila);
-			
-			foreach(ClaseDePostres1 linea in fillas){
-				AgregarProducto(produc,precio,cant,int.Parse(lblTotal.Text));
-				llenar();
-			}
+			};	 		
+
+			ClaseDePostres1 filas = new ClaseDePostres1();
+			filas.Producto = produc;
+			filas.Precio=precio;
+            filas.Cantidad =cant;
+            filas.Total=Convert.ToDouble(lblTotal.Text);
+            fillas.Add(filas);
+			MySqlConnection cn = new MySqlConnection();
+    		cn.ConnectionString = "server=localhost; database=Examen; user=root;pwd=root;";
+        	cn.Open();
+        	
+            foreach (ListViewItem item in lvProductos.Items)
+            {  	
+            	string strSQL = "insert into Productos (productos, precio, cantidad, total)" +  " values (@productos, @precio, @cantidad, @total)";
+            	MySqlCommand comando = new MySqlCommand(strSQL, cn);
+               	// Obtener datos de las columnas como si fueran arreglos
+               	comando.Parameters.AddWithValue("@productos", item.SubItems[0].Text);
+               	comando.Parameters.AddWithValue("@precio", item.SubItems[1].Text);
+               	comando.Parameters.AddWithValue("@cantidad", item.SubItems[2].Text);
+               	comando.Parameters.AddWithValue("@total", item.SubItems[3].Text);  
+               	comando.ExecuteNonQuery();
+               	MessageBox.Show("Todos los datos se guardaron correctamente.");
+               	comando.Dispose();
+            }
+            lvProductos.Items.Clear();
+            cn.Close();
+            cn.Dispose();
 			llenar();
+
+//   			List<ClaseDePostres1> LineasAmort = new List<ClaseDePostres1>();
+//    		for (int i = 0; i < fillas.Count; i++)
+//    		{
+//        		ClaseDePostres1 nueva = new ClaseDePostres1();
+//        		//nueva.OrderId = claveorden;
+//        		nueva.Producto =fillas[i].Producto;
+//        		nueva.Precio = fillas [i].Precio;
+//        		nueva.Cantidad =fillas [i].Cantidad;
+//        		nueva.Total =fillas [i].Total;
+//        		LineasAmort .Add(nueva);
+//        //ordenes.AgregarOrderdetails(nueva);
+//    		}
+//    		Transaccion(LineasAmort);
+//    		MessageBox.Show("Guardado");
+		
 			contaprimir = 1;
+			btnBorrar.Enabled=false;
+			lblPrecio.Enabled=false;
+			txtCant.Enabled=false;
+			txtDes.Enabled=false;
+			txtImpP.Enabled=false;
+			
+			
 		}
+
 		
 		void BtnEliminarClick(object sender, EventArgs e)
 		{
@@ -397,6 +452,11 @@ namespace TrabajoExamen
 					}
 				}llenar();
 			}
+		}
+		
+		void BtnQuitarClick(object sender, EventArgs e)
+		{
+			this.Hide();
 		}
 	}
 }

@@ -82,15 +82,15 @@ namespace TrabajoExamen
 		//Metodo de validacion la fecha
 		private bool ValidarFecha(){
 			if(dtpFecha.Value>DateTime.Now){
-				erpError.SetError(txtCodigo,"Debe de poner una fecha que no sea futura");
+				erpError.SetError(dtpFecha,"Debe de poner una fecha que no sea futura");
                 return false;
 			}else{
 				if(dtpFecha.Value==DateTime.Today){
-					erpError.SetError(txtCodigo,"Debe de poner una fecha que no sea la de hoy");
+					erpError.SetError(dtpFecha,"Debe de poner una fecha que no sea la de hoy");
                 	return false;
 				}else{
-				erpError.SetError(dtpFecha,"");
-				return true;
+					erpError.SetError(dtpFecha,"");
+					return true;
 				}
 			}
 		}
@@ -123,6 +123,8 @@ namespace TrabajoExamen
 			}
 			return false;
 		}
+		
+		
 		//Metodo para la conexion
 		public bool AgregarProducto(int codigo, string nombre, string puesto, string fecha, string sexo, string estado)
         {
@@ -200,13 +202,6 @@ namespace TrabajoExamen
 		
 		void BtnGuardarClick(object sender, EventArgs e)
 		{
-			//Registrar si ya esta ese mismo codigo en otro empelado
-			if(Existe(int.Parse(txtCodigo.Text))){
-				erpError.SetError(txtCodigo,"Ya esta ese codigo resgitrado");
-				Limpiar();
-				txtCodigo.Focus();
-				return;
-			}
 			//Ver cual Estado escogio
 			if(radioButton1.Checked){
 				estado="Regulado";
@@ -233,27 +228,38 @@ namespace TrabajoExamen
 			if(ValidarSexo()==false){
 			return;
 			}
-			//Crear una "amortiguador" para ir agregando las columnas
-			ClaseDeDetalles Empleado = new ClaseDeDetalles();
+			if(pictureBox1.Image==null || pictureBox1.Visible == false){
+				erpError.SetError(pictureBox1,"Debe de poner una imagen antes");
+			}else{
+				erpError.SetError(pictureBox1,"");
+				//Registrar si ya esta ese mismo codigo en otro empelado
+				if(Existe(int.Parse(txtCodigo.Text))){
+					erpError.SetError(txtCodigo,"Ya esta ese codigo resgitrado");
+					Limpiar();
+					txtCodigo.Focus();
+					return;
+				}
+				//Crear una "amortiguador" para ir agregando las columnas
+				ClaseDeDetalles Empleado = new ClaseDeDetalles();
 			
-			//Añadimiento de cada columna y su valor
-			Empleado.Codigo = int.Parse(txtCodigo.Text);
-			Empleado.Nombre=txtNombre.Text;
-            Empleado.Puesto =cboPuesto.SelectedItem.ToString();
-            Empleado.Fecha=Convert.ToString(dtpFecha.Text);
-            Empleado.Sexo=cboSex.SelectedItem.ToString();
-          	Empleado.Estado=estado;
+				//Añadimiento de cada columna y su valor
+				Empleado.Codigo = int.Parse(txtCodigo.Text);
+				Empleado.Nombre=txtNombre.Text;
+            	Empleado.Puesto =cboPuesto.SelectedItem.ToString();
+            	Empleado.Fecha=Convert.ToString(dtpFecha.Text);
+            	Empleado.Sexo=cboSex.SelectedItem.ToString();
+          		Empleado.Estado=estado;
 			
-          	//Hacer la union de las listas
-            milista.Add(Empleado);
+          		//Hacer la union de las listas
+            	milista.Add(Empleado);
            
-            AgregarProducto(int.Parse(txtCodigo.Text),txtCodigo.Text,cboPuesto.SelectedItem.ToString(),dtpFecha.Text,
+            	AgregarProducto(int.Parse(txtCodigo.Text),txtCodigo.Text,cboPuesto.SelectedItem.ToString(),dtpFecha.Text,
                             cboSex.SelectedItem.ToString(), estado);
-            dgvDatos.Rows.Clear();
-            llenar();
-            Limpiar();
-
-            txtCodigo.Focus();
+            	dgvDatos.Rows.Clear();
+            	llenar();
+            	Limpiar();
+            	txtCodigo.Focus();
+			}
 
 		}
 		
@@ -293,6 +299,11 @@ namespace TrabajoExamen
 		{
 			dgvDatos.Rows.Clear();
     		llenar();
+		}
+		
+		void BtnOcultarClick(object sender, EventArgs e)
+		{
+			this.Hide();
 		}
 	}
 }

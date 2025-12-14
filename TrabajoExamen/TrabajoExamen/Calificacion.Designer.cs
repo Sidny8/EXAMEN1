@@ -348,7 +348,7 @@ namespace TrabajoExamen
 			// label10
 			// 
 			this.label10.Font = new System.Drawing.Font("Stencil", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label10.Location = new System.Drawing.Point(307, 485);
+			this.label10.Location = new System.Drawing.Point(307, 479);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(139, 23);
 			this.label10.TabIndex = 35;
@@ -358,7 +358,7 @@ namespace TrabajoExamen
 			// 
 			this.txtpromediogral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
 			this.txtpromediogral.Font = new System.Drawing.Font("Sitka Banner", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtpromediogral.Location = new System.Drawing.Point(461, 483);
+			this.txtpromediogral.Location = new System.Drawing.Point(461, 479);
 			this.txtpromediogral.Name = "txtpromediogral";
 			this.txtpromediogral.Size = new System.Drawing.Size(133, 21);
 			this.txtpromediogral.TabIndex = 36;
