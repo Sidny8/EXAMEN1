@@ -403,9 +403,9 @@ namespace TrabajoExamen
                	comando.Parameters.AddWithValue("@cantidad", item.SubItems[2].Text);
                	comando.Parameters.AddWithValue("@total", item.SubItems[3].Text);  
                	comando.ExecuteNonQuery();
-               	MessageBox.Show("Todos los datos se guardaron correctamente.");
                	comando.Dispose();
             }
+            MessageBox.Show("Todos los datos se guardaron correctamente.");
             lvProductos.Items.Clear();
             cn.Close();
             cn.Dispose();
